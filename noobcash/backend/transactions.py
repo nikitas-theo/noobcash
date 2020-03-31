@@ -11,11 +11,14 @@ class Transaction :
         self.inputs = inputs
         
         # hash obj
-        self.hash = hash if hash != None else SHA256.new(
-            self.sender + self.recepient + str(self.amount).encode() + self.input
-        )
-        self.id = hash.hexdigest()
-
+        if hash == None :
+            self.hash = SHA256.new(
+                self.sender + self.recepient + str(self.amount).encode() + self.input
+            )
+            self.id = hash.hexdigest()
+        else : 
+            self.hash = hash
+            self.id = hash 
     def sign(self,private_key):
         # TODO: private_key should be provided by state 
         signer = PKCS1_v1_5.new(private_key)

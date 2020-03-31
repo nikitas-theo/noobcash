@@ -24,7 +24,7 @@ class Block :
         # Create hash of transactions with a Merkel Tree
         tree = MerkleTree()
         for t in self.transactions :
-            tree.encryptRecord(t.hash)
+            tree.encryptRecord(t.id)
         merkel_hash = tree.rootHash
         
         # 32-bit sized nonce 
@@ -71,4 +71,4 @@ if __name__ == '__main__':
     y = Block(0,b'0x234234134',)
     y.transactions = x
     y.mine()
-    print(y.validate_hash())
+    print(y.validate())
