@@ -1,6 +1,9 @@
 from Crypto.PublicKey import RSA
 from Crypto import Random
 
+#from blockchain import Blockchain
+import blockchain
+
 class State :
     def __init__(self):
         """ generate wallet """ 
@@ -10,5 +13,18 @@ class State :
         self.pub = self.key.publickey
 
         # we need to communicate with the bootstrap node 
-        self.blockchain = []
+        self.blockchain = Blockchain()
+        #self.transactions= [] either here on in blockchain
+        self.participants = {} #tuples
+        self.participants_num = 0
+        self.utxos = {}
+        self.gen_block = None
+        self.gen_utxos = []
+
+        self.total_blocks = 0 #vasika xreiazetai auto?
         self.nodes = [{'ip' : '', 'port' : '', 'pub' : ''}]
+
+    def add_participant(pubkey, host, id):
+    	self.participants[pubkey] = {host, id} #uuhm ti grafw?
+    	self.participants_num+=1
+
