@@ -11,7 +11,7 @@ class Blockchain :
 
         self.chain.append(Block(index = 0 ,prev_hash = 1, nonce = 0))
         # create genesis block 
-
+  
 
     def validate_chain(self):
         for block in self.blockchain: 
