@@ -5,7 +5,8 @@ from pymerkle import MerkleTree
 from time import time
 import binascii
 
-from .transactions import Transaction
+from transactions import Transaction
+
 CAPACITY = 10
 
 class Block :
@@ -67,7 +68,9 @@ class Block :
 
 
 if __name__ == '__main__':
-    x = [Transaction('asdf','asdf',10) for i in range(5)]
+    ''' Α dummy mining test''' 
+    x = [Transaction('asdf','asdf',10,[],b'0x23423423') for i in range(5)]
     y = Block(0,b'0x234234134',)
     y.transactions = x
     y.mine()
+    print(y.validate_hash())
