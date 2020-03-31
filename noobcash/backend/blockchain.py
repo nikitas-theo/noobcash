@@ -1,9 +1,7 @@
-
-
+from block import Block
 
 class Blockchain : 
     def __init__(self):
-        self.block_capacity = CAPACITY
         self.chain = []
         # actual blochain 
         self.transactions = [] 

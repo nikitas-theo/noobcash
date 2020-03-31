@@ -1,9 +1,7 @@
-from Crypto import Random
 from Crypto.Hash import SHA256
 from random import randint
 from pymerkle import MerkleTree
 from time import time
-import binascii
 
 from transactions import Transaction
 
@@ -52,7 +50,7 @@ class Block :
         else : 
             self.mine()
 
-    def validate_hash(self):
+    def validate(self):
 
         tree = MerkleTree()
         for t in self.transactions :
