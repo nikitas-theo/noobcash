@@ -40,7 +40,7 @@ class Transaction :
     def sign(self):
        
         key = RSA.importKey(state.private)
-        signer = PKCS1_v1_5.new(state.key)
+        signer = PKCS1_v1_5.new(key)
         self.signature = signer.sign(self.hash)
 
     def verify_signature(self):
@@ -137,7 +137,6 @@ class Transaction :
         t = Transaction(sender, receiver, amount, inputs)
         t.sign()
 
-        budget = 0
         t.outputs = [{
             'trans_id': t.id,
             'id' : t.id + '0',
@@ -147,7 +146,7 @@ class Transaction :
             'trans_id': t.id,
             'id' : t.id + '1',
             'person': t.sender,
-            'amount': budget - t.amount
+            'amount': coins - t.amount
         }]
 
         state.add_utxo(t.outputs[0])

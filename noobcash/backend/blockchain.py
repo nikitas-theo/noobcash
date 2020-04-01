@@ -5,16 +5,15 @@ class Blockchain :
         self.chain = []
 
     def validate_chain(self):
-        for block in self.blockchain: 
-            if block.index == 0 : 
-                return True 
-            if not block.validate():
+        for block in self.blockchain[1:]: 
+            if not self.validate_block(block) :
                 return False 
+        return True
         
     def validate_block(self,block):
         """ check if prev_hash and computed has are valid 
         """
         return (
             self.blockchain[block.index-1] == block.prev_hash and 
-            block.validate_hash()
+            block.validate()
         )
