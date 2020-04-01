@@ -12,7 +12,7 @@ class State :
         utxos : unspent trans for all nodes
         nodes : node information
         transactions : list of valid transactions not in a block 
-        private: RSA private key :: string
+        key: RSA key including private and public key :: string
         pub : RSA public part of key :: string
     """
 
