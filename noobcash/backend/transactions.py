@@ -2,8 +2,7 @@ from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
 from Crypto.Signature import PKCS1_v1_5
 from Crypto import Random
-import State
-
+from state import *
 class Transaction :
     def __init__(self,sender,receiver,amount,inputs,hash = None):
         self.sender = sender
@@ -22,9 +21,9 @@ class Transaction :
             self.hash = hash
             self.id = hash 
 
-    def sign(self,private_key):
-        # TODO: private_key should be provided by state 
-        signer = PKCS1_v1_5.new(private_key)
+    def sign(self):
+
+        signer = PKCS1_v1_5.new(state.key)
         self.signature = signer.sign(self.hash)
 
     def verify_signature(self):
@@ -40,11 +39,10 @@ class Transaction :
             #raise Exception('invalid signature')
             return False
 
-        for bob in self.inputs: 
+        for utxo in self.inputs: 
             flag=False          
-
-            for utxo in State.utxos: #?? the utxos are in the node
-                                       #maybe check all and check of it's his
+            for utxo in State.utxos: 
+            #maybe check all and check of it's his
                 if utxo.hash == bob.hash:
                     flag=True
                     budget+=utxo.amount

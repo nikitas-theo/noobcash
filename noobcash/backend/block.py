@@ -30,13 +30,13 @@ class Block :
         # 32-bit sized nonce 
         for nonce in range(2 << 32):
             # header consists of prev_hash, nonce, merkel of transactions
-            # and the block timestamps. More could be added, 
+            # and the block timestamps. 
             # see: https://en.bitcoin.it/wiki/Block_hashing_algorithm
             nonce = hex(nonce).encode()
             header = self.previous_hash + nonce +\
                   merkel_hash + self.timestamp
             h = SHA256.new()
-            # apply crypto func 2 times 
+            # apply hashing 2 times 
             hash_value = h.new(h.new(header).digest()).hexdigest()
             hash_value = hash_value[::-1] # reverse, little endian
             if int(hash_value[0:self.difficulty],16) == 0 :
