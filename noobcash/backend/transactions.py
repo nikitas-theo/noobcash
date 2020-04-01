@@ -39,8 +39,7 @@ class Transaction :
 
     def sign(self):
        
-        key = RSA.importKey(state.private)
-        signer = PKCS1_v1_5.new(key)
+        signer = PKCS1_v1_5.new(state.key)
         self.signature = signer.sign(self.hash)
 
     def verify_signature(self):
