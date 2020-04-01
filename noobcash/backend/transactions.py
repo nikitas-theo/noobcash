@@ -138,12 +138,12 @@ class Transaction :
 
         t.outputs = [{
             'trans_id': t.id,
-            'id' : t.id + '0',
+            'id' : t.id + ':0',
             'owner': t.recepient,
             'amount': t.amount
         }, {
             'trans_id': t.id,
-            'id' : t.id + '1',
+            'id' : t.id + ':1',
             'person': t.sender,
             'amount': coins - t.amount
         }]
