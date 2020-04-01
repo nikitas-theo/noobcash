@@ -36,8 +36,8 @@ class State :
     def wallet_balance(self,public_key): 
         balance=0
         for utxo in utxos:
-            if utxo.sender == public_key: 
-                balance+=utxo.amount
+            if utxo[person] == public_key: 
+                balance+=utxo['amount']
         return balance 
 
 # this is the global state exposed to all modules

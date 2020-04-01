@@ -32,57 +32,77 @@ class Transaction :
         # use PKCS1 instead of plain RSA to avoid security vulnerabilities
         return verifier.verify(self.hash, self.signature)
 
-
-    def validate_transaction(self):
+    @staticmethod
+    def validate_transaction(json_trans):
+        t = Transaction(**json.loads(json_trans))
         budget = 0
         if not verify_signature():
             #raise Exception('invalid signature')
             return False
 
-        for bob in self.inputs: #ara to bob einai apla to id
+        for input_utxo in t.inputs: #ara to bob einai apla to id
             flag=False          
-            for utxo in State.utxos: 
+            for utxo in state.utxos[t.sender]: 
             #maybe check all and check of it's his
-                if utxo['id'] == bob: # and utxo['who'] == self.sender:
+                if utxo['id'] == input_utxo['id'] and utxo['person'] == t.sender: # and utxo['who'] == self.sender:
                     flag=True
                     budget+=utxo['amount']
-                    State.remove_utxo(utxo)
+                    state.remove_utxo(utxo)
                     break
             if not flag:
                 return False
                 # raise Exception('missing transaction inputs')
 
-        if budget < self.amount:
+        if budget < t.amount:
             return False
             #raise Exception('MONEY 404')
 
         # create outputs
-        self.outputs = [{
-            'id': self.id,
-            'person': self.recepient,
+        t.outputs = [{
+            'id': t.id,
+            'person': t.recepient,
             'amount': t.amount
         }, {
-            'id': self.id,
-            'person': self.sender,
-            'amount': budget - self.amount
+            'id': t.id,
+            'person': t.sender,
+            'amount': budget - t.amount
         }]
 
         #we need to replace the sender's utxo and add to the receiver's one
-        State.add_utxo(self.sender, self.outputs[1])
-        State.add_utxo(self.recepient, self.outputs[0])
+        state.add_utxo(t.sender, t.outputs[1])
+        state.add_utxo(t.recepient, t.outputs[0])
 
-        State.transaction.append(self) #can you do that? let's hope so
+        state.transaction.append(t) #can you do that? let's hope so
 
         return True
 
-        #return self???? UGGGH
+        #return t???? UGGGH
 
-    def create_transaction(recipient, amount):
+    def create_transaction(receiver, amount):
+        sender = state.pub
+        inputs =[]
 
+        for i in state.utxos[sender]:
+            inputs.append(i)
+         
         t = Transaction(sender=sender, receiver=receiver, amount=amount, inputs=inputs)
 
         t.sign()
 
+        t.outputs = [{
+            'id': t.id,
+            'person': t.recepient,
+            'amount': t.amount
+        }, {
+            'id': t.id,
+            'person': t.sender,
+            'amount': budget - t.amount
+        }]
+
+        state.add_utxo(t.sender, t.outputs[1])
+        state.add_utxo(t.recepient, t.outputs[0])
+
+        state.transaction.append(t)
         return t
 
 
