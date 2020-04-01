@@ -5,20 +5,30 @@ from Crypto import Random
 from blockchain import Blockchain
 
 class State :
+    """
+
+
+        blockchain : our version of the blockchain
+        utxos : unspent trans for all nodes
+        nodes : node information
+        transactions : list of valid transactions not in a block 
+        private: RSA private key :: string
+        pub : RSA public part of key :: string
+    """
+
     def __init__(self):
-        generate_wallet()
-        # we need to communicate with the bootstrap node 
+       
+        self.generate_wallet()
         self.blockchain = Blockchain()
-        self.utxos = {} # all utxos for all wallets  
-        # `utxos[pubkey] = [{transaction_id, who, amount}]
-
+        self.utxos = {}
         self.nodes = {}
-        # contains {'ip' : '', 'port' : '', 'pub' : ''}
 
-        self.transactions=[] #transactions not in block
+        # utxos[owner] = {trans_id, id, owner, amount}
+        # nodes[id] = {ip, port, pub }
 
-    def generate_wallet(self,):
-        """ generate wallet """ 
+        self.transactions=[] 
+
+    def generate_wallet(self): 
         random_generator = Random.new().read 
         self.key  = RSA.generate(2048,random_generator)
         #key is an RSA key object, the private key is not visible
@@ -27,17 +37,16 @@ class State :
     def add_participant(self,pubkey, ip, port, id):
         nodes[id] = {'ip' : ip , 'port' : port, 'pub' : pubkey}
  
-    def replace_utxo(self,utxo):
-        utxos.remove(utxo)
+    def remove_utxo(self, utxo):
+        self.utxos[utxo['owner']].remove(utxo)
 
-    def add_utxo(self, pk, utxo):
-        self.utxos[pk].append(utxo)
+    def add_utxo(self, utxo):
+        self.utxos[utxo['owner']].append(utxo)
     
-    def wallet_balance(self,public_key): 
-        balance=0
-        for utxo in utxos:
-            if utxo[person] == public_key: 
-                balance+=utxo['amount']
+    def wallet_balance(self): 
+        balance = 0
+        for u in self.utxo[self.pub]: 
+            balance+=self.utxo['amount']
         return balance 
 
 # this is the global state exposed to all modules

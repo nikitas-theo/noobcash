@@ -3,28 +3,46 @@ from random import randint
 from pymerkle import MerkleTree
 from time import time
 
+from state import *
 from transactions import Transaction
 
 CAPACITY = 10
-
+DIFFICULTY = 4
 class Block :
+    """ 
+
+        block index, int 
+        timestamp : current Unix time 
+        transactions : list of transaction objects contained in block 
+        previous_hash : hash of previous block in blockchain , bytestring 
+        nonce : solution of PoW
+        size : curr number of transactions 
+
+        header : header of block, bytestring
+
+        difficulty :  number of leading zeros required in Hex
+        capacity : number of transactions required for mining 
+
+    """
+
     def __init__(self,index, transactions, prev_hash, nonce =  None):
-        self.difficulty = 4 # number of leading zeros required in Hex
+        
+        self.difficulty = DIFFICULTY 
+        self.capacity = CAPACITY # number of transactions 
+
         self.index = index 
         self.timestamp = str(time()).encode()
         self.transactions = transactions
         self.previous_hash = prev_hash
         self.nonce = nonce
         self.size = 0 
-        self.capacity = CAPACITY # must be even number
     
     def mine(self):
-        " Proof Of Work"
         
         # Create hash of transactions with a Merkel Tree
         tree = MerkleTree()
         for t in self.transactions :
-            tree.encryptRecord(t.id)
+            tree.encryptRecord(t.id.encode()) # make bytestring
         merkel_hash = tree.rootHash
         
         # 32-bit sized nonce 
@@ -44,17 +62,18 @@ class Block :
                 break
         if solved :
             self.nonce = nonce
-            self.hash = hash_value
+            self.hash = hash_value.encode()
             self.header = header
             return 0
         else : 
             self.mine()
 
     def validate(self):
+        # validate block hash value
 
         tree = MerkleTree()
         for t in self.transactions :
-            tree.encryptRecord(t.hash)
+            tree.encryptRecord(t.hash.encode()) # make bytestring
         merkel_hash = tree.rootHash
 
         header = self.previous_hash + self.nonce+\

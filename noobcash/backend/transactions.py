@@ -2,105 +2,156 @@ from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
 from Crypto.Signature import PKCS1_v1_5
 from Crypto import Random
+import json
+
 from state import *
+
 class Transaction :
-    def __init__(self,sender,receiver,amount,inputs,hash = None):
+    """ sender : pub key, string
+        receiver : pub key, string
+        amount : float 
+        inputs : list of transaction ids 
+        outpus : list of utxos
+        id : hex number, transaction hash
+        hash : hash object 
+        signature : byte string
+    """
+    def __init__(self,sender,receiver,amount,inputs,
+        signature = None, id = None):
         self.sender = sender
         self.receiver = receiver
-        self.amount = amount 
-        self.inputs = inputs
-        self.ouputs = []
+        self.amount = float(amount) 
+        self.inputs = inputs 
+        self.ouputs = [] # outputs are assigned post creation
         
-        # hash obj
-        if hash == None :
-            self.hash = SHA256.new(
-                self.sender + self.recepient + str(self.amount).encode() + self.input
-            )
-            self.id = hash.hexdigest()
-        else : 
-            self.hash = hash
-            self.id = hash 
+        self.id = id
+        self.signature = signature
+
+        self.calculate_hash()
+
+    def to_json(self):
+        # use obj dict to convert to json 
+        return json.dumps(self.__dict__)
+
+    def calculate_hash(self):    
+        self.hash = SHA256.new(self.to_json.encode())
+        self.id = self.hash.hexdigest()
 
     def sign(self):
-
+       
+        key = RSA.importKey(state.private)
         signer = PKCS1_v1_5.new(state.key)
         self.signature = signer.sign(self.hash)
 
     def verify_signature(self):
 
-        verifier = PKCS1_v1_5.new(self.sender) 
+        rsa_key = RSA.importKey(self.sender.encode())
+        verifier = PKCS1_v1_5.new(rsa_key) 
         # use PKCS1 instead of plain RSA to avoid security vulnerabilities
         return verifier.verify(self.hash, self.signature)
 
+
+    """
+        The following methods are static, they belong to the class
+        and are not object specific 
+    """
+
     @staticmethod
     def validate_transaction(json_trans):
-        t = Transaction(**json.loads(json_trans))
+        """ 
+            validate incoming transaction,
+            update transaction list,
+            update corresponding utxos 
+
+            return Bool 
+            
+        """ 
+
+        # load transaction object from json string 
+        t = Transaction(**json.loads(json_trans)) 
+
+        
+        if not t.verify_signature():
+            return False 
+
+       
         budget = 0
-        if not verify_signature():
-            #raise Exception('invalid signature')
-            return False
-
-        for input_utxo in t.inputs: #ara to bob einai apla to id
-            flag=False          
+        pending_removed = []
+        for utxo_input in t.inputs: 
+            found = False          
             for utxo in state.utxos[t.sender]: 
-            #maybe check all and check of it's his
-                if utxo['id'] == input_utxo['id'] and utxo['person'] == t.sender: # and utxo['who'] == self.sender:
-                    flag=True
-                    budget+=utxo['amount']
-                    state.remove_utxo(utxo)
+            
+                if utxo['id'] == utxo_input and utxo['owner'] == t.sender: 
+                    found = True
+                    budget += utxo['amount']
+                    pending_removed.append(utxo)
                     break
-            if not flag:
+            
+            if not found:
                 return False
-                # raise Exception('missing transaction inputs')
-
+            
         if budget < t.amount:
             return False
-            #raise Exception('MONEY 404')
+
+
+        # remove all spent transactions    
+        for utxo in pending_removed : 
+            state.remove_utxo(utxo)
 
         # create outputs
+
         t.outputs = [{
-            'id': t.id,
-            'person': t.recepient,
+            'trans_id': t.id,
+            'id' : t.id + ":0",
+            'owner': t.receiver,
             'amount': t.amount
         }, {
-            'id': t.id,
-            'person': t.sender,
+            'trans_id': t.id,
+            'id' : t.id + ":1",
+            'owner': t.sender,
             'amount': budget - t.amount
         }]
 
-        #we need to replace the sender's utxo and add to the receiver's one
-        state.add_utxo(t.sender, t.outputs[1])
-        state.add_utxo(t.recepient, t.outputs[0])
+        state.add_utxo(t.outputs[0])
+        state.add_utxo(t.outputs[1])
+        
+        # save transaction
+        state.transaction.append(t) 
 
-        state.transaction.append(t) #can you do that? let's hope so
-
+        # bool value indicating a verified transaction
         return True
-
-        #return t???? UGGGH
-
+    
+    @staticmethod
     def create_transaction(receiver, amount):
+
         sender = state.pub
-        inputs =[]
+        inputs = []
 
-        for i in state.utxos[sender]:
-            inputs.append(i)
-         
-        t = Transaction(sender=sender, receiver=receiver, amount=amount, inputs=inputs)
+        coins = 0
+        for utxo in state.utxos[sender]:
+            coins += utxo['amount']
+            inputs.append(utxo['id'])
+            if coins >= amount :
+                break 
 
+        t = Transaction(sender, receiver, amount, inputs)
         t.sign()
 
+        budget = 0
         t.outputs = [{
-            'id': t.id,
-            'person': t.recepient,
+            'trans_id': t.id,
+            'id' : t.id + '0',
+            'owner': t.recepient,
             'amount': t.amount
         }, {
-            'id': t.id,
+            'trans_id': t.id,
+            'id' : t.id + '1',
             'person': t.sender,
             'amount': budget - t.amount
         }]
 
-        state.add_utxo(t.sender, t.outputs[1])
-        state.add_utxo(t.recepient, t.outputs[0])
+        state.add_utxo(t.outputs[0])
+        state.add_utxo(t.outputs[1])
 
         state.transaction.append(t)
         return t
@@ -114,11 +165,13 @@ class Transaction :
 
 if __name__ == '__main__':
     hash  = SHA256.new(b'234234223')
+    print(hash.hexdigest())
     random_generator = Random.new().read 
     key  = RSA.generate(2048,random_generator)
     pub = key.publickey()
     signer = PKCS1_v1_5.new(key)
     sig = signer.sign(hash)
+    print(sig)
     verifier = PKCS1_v1_5.new(pub) 
     print(verifier.verify(hash, sig))
 

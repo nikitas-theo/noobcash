@@ -3,13 +3,6 @@ from block import Block
 class Blockchain : 
     def __init__(self):
         self.chain = []
-        # actual blochain 
-        self.transactions = [] 
-        # list of transactions that will be added on the next block
-
-        self.chain.append(Block(index = 0 ,prev_hash = 1, nonce = 0))
-        # create genesis block 
-  
 
     def validate_chain(self):
         for block in self.blockchain: 
