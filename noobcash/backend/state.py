@@ -9,9 +9,13 @@ class State :
         generate_wallet()
         # we need to communicate with the bootstrap node 
         self.blockchain = Blockchain()
-        self.utxos = [] # all utxos for all wallets 
+        self.utxos = {} # all utxos for all wallets  
+        # `utxos[pubkey] = [{transaction_id, who, amount}]
+
         self.nodes = {}
         # contains {'ip' : '', 'port' : '', 'pub' : ''}
+
+        self.transactions=[] #transactions not in block
 
     def generate_wallet(self,):
         """ generate wallet """ 
@@ -23,8 +27,11 @@ class State :
     def add_participant(self,pubkey, ip, port, id):
         nodes[id] = {'ip' : ip , 'port' : port, 'pub' : pubkey}
  
-    def remove_utxo(self,utxo):
+    def replace_utxo(self,utxo):
         utxos.remove(utxo)
+
+    def add_utxo(self, pk, utxo):
+        self.utxos[pk].append(utxo)
     
     def wallet_balance(self,public_key): 
         balance=0

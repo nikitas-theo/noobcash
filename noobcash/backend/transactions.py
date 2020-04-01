@@ -39,13 +39,13 @@ class Transaction :
             #raise Exception('invalid signature')
             return False
 
-        for utxo in self.inputs: 
+        for bob in self.inputs: #ara to bob einai apla to id
             flag=False          
             for utxo in State.utxos: 
             #maybe check all and check of it's his
-                if utxo.hash == bob.hash:
+                if utxo['id'] == bob: # and utxo['who'] == self.sender:
                     flag=True
-                    budget+=utxo.amount
+                    budget+=utxo['amount']
                     State.remove_utxo(utxo)
                     break
             if not flag:
@@ -54,10 +54,27 @@ class Transaction :
 
         if budget < self.amount:
             return False
-            raise Exception('MONEY 404')
-        else:
-            return True
-    #def wallet_balance(wallet): #I put that in state i dunno
+            #raise Exception('MONEY 404')
+
+        # create outputs
+        self.outputs = [{
+            'id': self.id,
+            'person': self.recepient,
+            'amount': t.amount
+        }, {
+            'id': self.id,
+            'person': self.sender,
+            'amount': budget - self.amount
+        }]
+
+        #we need to replace the sender's utxo and add to the receiver's one
+        State.add_utxo(self.sender, self.outputs[1])
+        State.add_utxo(self.recepient, self.outputs[0])
+
+        State.transaction.append(self) #can you do that? let's hope so
+
+    def create_transaction(recipient, amount):
+        
 
  
 

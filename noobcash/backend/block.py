@@ -8,11 +8,11 @@ from transactions import Transaction
 CAPACITY = 10
 
 class Block :
-    def __init__(self,index, prev_hash, nonce =  None):
+    def __init__(self,index, transactions, prev_hash, nonce =  None):
         self.difficulty = 4 # number of leading zeros required in Hex
         self.index = index 
         self.timestamp = str(time()).encode()
-        self.transactions = []
+        self.transactions = transactions
         self.previous_hash = prev_hash
         self.nonce = nonce
         self.size = 0 
