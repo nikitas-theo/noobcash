@@ -2,6 +2,7 @@ from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
 from Crypto.Signature import PKCS1_v1_5
 from Crypto import Random
+import State
 
 class Transaction :
     def __init__(self,sender,receiver,amount,inputs,hash = None):
@@ -9,6 +10,7 @@ class Transaction :
         self.receiver = receiver
         self.amount = amount 
         self.inputs = inputs
+        self.ouputs = []
         
         # hash obj
         if hash == None :
@@ -19,6 +21,7 @@ class Transaction :
         else : 
             self.hash = hash
             self.id = hash 
+
     def sign(self,private_key):
         # TODO: private_key should be provided by state 
         signer = PKCS1_v1_5.new(private_key)
@@ -29,6 +32,39 @@ class Transaction :
         verifier = PKCS1_v1_5.new(self.sender) 
         # use PKCS1 instead of plain RSA to avoid security vulnerabilities
         return verifier.verify(self.hash, self.signature)
+
+
+    def validate_transaction(self):
+        budget = 0
+        if not verify_signature():
+            #raise Exception('invalid signature')
+            return False
+
+        for bob in self.inputs: 
+            flag=False          
+
+            for utxo in State.utxos: #?? the utxos are in the node
+                                       #maybe check all and check of it's his
+                if utxo.hash == bob.hash:
+                    flag=True
+                    budget+=utxo.amount
+                    State.remove_utxo(utxo)
+                    break
+            if not flag:
+                return False
+                # raise Exception('missing transaction inputs')
+
+        if budget < self.amount:
+            return False
+            raise Exception('MONEY 404')
+        else:
+            return True
+    #def wallet_balance(wallet): #I put that in state i dunno
+
+ 
+
+
+
 
 
 if __name__ == '__main__':

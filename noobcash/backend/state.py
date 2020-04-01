@@ -17,7 +17,7 @@ class State :
         #self.transactions= [] either here on in blockchain
         self.participants = {} #tuples
         self.participants_num = 0
-        self.utxos = {}
+        self.utxos = []
         self.gen_block = None
         self.gen_utxos = []
 
@@ -28,3 +28,12 @@ class State :
     	self.participants[pubkey] = {host, id} #uuhm ti grafw?
     	self.participants_num+=1
 
+    def remove_utxo(utxo):
+        utxos.remove(utxo)
+
+    def wallet_balance(public_key): 
+        balance=0
+        for utxo in utxos:
+            if utxo.sender == public_key: 
+                balance+=utxo.amount
+        return amount
