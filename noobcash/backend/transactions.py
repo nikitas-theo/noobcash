@@ -73,8 +73,18 @@ class Transaction :
 
         State.transaction.append(self) #can you do that? let's hope so
 
+        return True
+
+        #return self???? UGGGH
+
     def create_transaction(recipient, amount):
-        
+
+        t = Transaction(sender=sender, receiver=receiver, amount=amount, inputs=inputs)
+
+        t.sign()
+
+        return t
+
 
  
 
