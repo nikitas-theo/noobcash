@@ -8,7 +8,8 @@ class Blockchain :
         for block in self.blockchain[1:]: 
             if not self.validate_block(block) :
                 return False 
-        return True
+        if self.blockchain[0].index == 0:
+            return True
         
     def validate_block(self,block):
         """ check if prev_hash and computed has are valid 
