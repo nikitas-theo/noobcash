@@ -39,8 +39,7 @@ class Transaction :
 
     def sign(self):
        
-        key = RSA.importKey(state.private)
-        signer = PKCS1_v1_5.new(key)
+        signer = PKCS1_v1_5.new(state.key)
         self.signature = signer.sign(self.hash)
 
     def verify_signature(self):
@@ -139,12 +138,12 @@ class Transaction :
 
         t.outputs = [{
             'trans_id': t.id,
-            'id' : t.id + '0',
+            'id' : t.id + ':0',
             'owner': t.recepient,
             'amount': t.amount
         }, {
             'trans_id': t.id,
-            'id' : t.id + '1',
+            'id' : t.id + ':1',
             'person': t.sender,
             'amount': coins - t.amount
         }]
