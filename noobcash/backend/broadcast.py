@@ -21,13 +21,18 @@ import requests
 
 app = Flask(__name__)
 
-@app.route('/add_block', methods=['POST'])
-def add_block(json_block):
+@app.route('/receive_block', methods=['POST'])
+def receive_block(json_block):
     '''
     check if the proof is valid (if the hash is correct)
     and if the previous hash of the block is the previous
     hash of the chain.
-    then move on to add the received block in the chain
+    then move on to add the received block in the chain.
+    
+    right after the block is added to the chain, remove
+    any transaction from the list transactions[]
+    that is both included in the list
+    transactions[] of state and in the block.
     '''
     info = json.loads(json_block)
     block = Block(info['index'], info['transactions'], info['prev_hash'], info['nonce'])
@@ -44,15 +49,42 @@ def add_block(json_block):
         return False
     
     state.blockchain.chain.append(block)
+
+    '''
+    remove transaction from transactions not in block
+    '''
+
+    for block_transaction in block.transactions:
+        for state_transaction in state.transactions:
+            if (state_transaction.hash == block_transaction.hash):
+                state.transactions.remove(state_transaction)
+                
+                
+    return True
+
+    
+@app.route('/receive_transaction', methods=['POST'])
+def receive_transaction(json_trans):
+    '''
+    as happening with json_block, we validate the transaction
+    we just received, by calling validate.transaction()
+    '''
+    if (Transaction.validate_transaction(json_trans)):
+        return True
+    
+    return False
+    
+@app.route('/receive_other_node_info', methods=['POST'])
+def receive_other_note_info(json_nodes):
+    '''
+    as happening with json_block, we validate the transaction
+    we just received, by calling validate.transaction()
+    '''
+    nodes = json.loads(json_nodes)
+    state.nodes = nodes
+    
     return True
     
-
-@app.route('/new_transaction',methods=['POST'])
-def new_transaction(receiver, amount):
-    #creates t, the new transaction
-    t = Transaction.create_transaction(receiver, amount)
-    return "Success", 201
-
 
 @app.route('/chain',methods=['GET'])
 def get_chain():
@@ -99,12 +131,23 @@ def register_new_nodes():
 
 
 @app.route('/register_with', methods=['POST'])
-def register_node_with_another_existing_node():
+def communicate_with_all():
     '''
-    todo: register the new node so that some other existing node
-    has knowledge that the new node was registered
+    when all nodes are in the state.nodes dictionary, tell
+    every node about the existing nodes
     '''
-    pass
+    json_nodes = json.dumps(state.nodes)
+    for node in state.nodes:
+        #broadcast to everyone except sender
+        if (node['pub'] == state.pub):
+            continue
+        ip = node["id"]
+        port = node["port"]
+        response = requests.post(f'http://{ip}:{port}/receive_other_node_info', json=json_nodes)
+        if (response.status_code != 200):
+            return False
+    
+    return True
 
 def resolve_conflict():
     '''
@@ -118,12 +161,31 @@ def index():
     return f'Hello world!'
 
 @app.route('/broadcast_transaction', methods=['POST'])
-def broadcast_transaction(json_trans):
+def broadcast_transaction(transaction):
     '''
     broadcast the transaction to every other node
     '''
     # load transaction object from json string 
-    t = Transaction(**json.loads(json_trans)) 
+    json_trans = json.dumps(transaction.__dict__)
+    for node in state.nodes:
+        #broadcast to everyone except sender
+        if (node['pub'] == state.pub):
+            continue
+        ip = node["id"]
+        port = node["port"]
+        response = requests.post(f'http://{ip}:{port}/receive_transaction', json=json_trans)
+        if (response.status_code != 200):
+            return False
+        
+    return True
+    
+@app.route('/new_transaction',methods=['POST'])
+def new_transaction(receiver, amount):
+    #creates t, the new transaction, and broadcasts it
+    t = Transaction.create_transaction(receiver, amount)
+    broadcast_transaction(t)
+    return "Success", 201
+
 
 @app.route('/broadcast_block', methods=['POST'])
 def broadcast_block(block):
@@ -137,5 +199,9 @@ def broadcast_block(block):
             continue
         ip = node["id"]
         port = node["port"]
-        response = requests.post(f'http://{ip}:{port}/add_block', json=json_block)
+        response = requests.post(f'http://{ip}:{port}/receive_block', json=json_block)
+        if (response.status_code != 200):
+            return False
+        
+    return True
     

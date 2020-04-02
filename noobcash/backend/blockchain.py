@@ -9,7 +9,7 @@ from state import state
 class Blockchain : 
     def __init__(self):
         '''
-        transactions (imported from state): list of UNCONFIRMED valid transactions in chain
+        transactions (imported from state): list of transactions not in block
         chain: the list (chain) of blocks. chain[0] = genesis block
         
         miner implementation and calls are also implemented here

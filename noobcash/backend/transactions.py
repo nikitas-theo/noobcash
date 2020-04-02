@@ -4,6 +4,8 @@ from Crypto.Signature import PKCS1_v1_5
 from Crypto import Random
 import simplejson as json
 from state import state
+from transactions import Transaction
+import block
 
 class Transaction :
     """ sender : pub key, string
@@ -115,6 +117,8 @@ class Transaction :
         
         # save transaction
         state.transactions.append(t)
+        if (len(state.transactions) == block.CAPACITY):
+            state.blockchain.mine_unconfirmed_transactions()
 
         # bool value indicating a verified transaction
         return True
@@ -151,6 +155,8 @@ class Transaction :
         state.add_utxo(t.outputs[1])
 
         state.transactions.append(t)
+        if (len(state.transactions) == block.CAPACITY):
+            state.blockchain.mine_unconfirmed_transactions()
         return t
     
 

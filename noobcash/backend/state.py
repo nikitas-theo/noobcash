@@ -11,7 +11,7 @@ class State :
         blockchain : our version of the blockchain
         utxos : unspent trans for all nodes
         nodes : node information
-        transactions : list of valid but unconfirmed transactions not in a block 
+        transactions : list of verified transactions not in a block 
         key: RSA key including private and public key :: string
         pub : RSA public part of key :: string
     """
