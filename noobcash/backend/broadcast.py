@@ -1,18 +1,17 @@
 from Crypto.PublicKey import RSA
 from Crypto import Random
-from flask import Flask, request
+from flask import request
 import requests
 import simplejson as json
 
 
 from block import Block
-from state import state
+from state import state,app
 from transaction import Transaction
 from config import * 
 
 
 
-app = Flask(__name__)
 
 
 #------------------------------------------------------------

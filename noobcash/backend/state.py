@@ -14,6 +14,7 @@ import broadcast
 from transaction import Transaction
 
 
+from flask import Flask
 
 
 
@@ -163,6 +164,6 @@ class State :
         
 # this is the global state exposed to all modules
 state = State()
-
+app = Flask(__name__)
 if __name__ == '__main__':
-    print(state)
+    app.run(debug = True)
