@@ -8,6 +8,7 @@ import simplejson as json
 from state import state
 from transaction import Transaction
 from block import Block
+from config import * 
 
 class Transaction :
     """ sender : pub key :: string
@@ -111,9 +112,9 @@ class Transaction :
         state.transactions.append(t)
 
         # mine if block is full 
-        if (len(state.transactions) == Block.CAPACITY):
+        if (len(state.transactions) == CAPACITY):
             state.blockchain.mine_block()
-
+        
         return (t,True)
     
     @staticmethod
@@ -156,7 +157,7 @@ class Transaction :
         state.transactions.append(t)
         
         # mine if block is full 
-        if (len(state.transactions) == Block.CAPACITY):
+        if (len(state.transactions) == CAPACITY):
             state.blockchain.mine_block()
         
         return t

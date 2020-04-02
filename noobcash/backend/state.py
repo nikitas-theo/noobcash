@@ -28,41 +28,29 @@ class State :
     
     def connect_to_coordinator(self, coordinator_ip, coordinator_port, client_ip, client_port):
         """
-        send a POST request for connection to the
-        coordinator.
+        send a POST request for connection to the coordinator.
         returns the blockchain 
         """
+
         response = requests.post(f'http://{coordinator_ip}:{coordinator_port}/register_node',\
                       json={f'"ip":"{client_ip}"',f'"port":"{client_port}"',\
                             f'"pubkey":"{self.pub}"'})
-        if (response.status_code == 200):
-            self.generate_chain_from_json_dump(response.json()['chain'])
-        
-        '''
-        todo: sync the newly inserted node to every other network node,
-        using register_node_with_another_existing_node() for
-        all nodes linked to coordinator
-        '''
+        # we request node_id
+        if response.status_code == 200 :
+            state.id = response.json()['id']
 
+            # we also request the chain
+            response = requests.post(f'http://{coordinator_ip}:{coordinator_port}/request_chain',\
+                    json={f'"ip":"{client_ip}"',f'"port":"{client_port}"',\
+                        f'"pubkey":"{self.pub}"'})
 
-    def generate_chain_from_json_dump(self, json_chain):
-        '''
-        generate the chain from json dump and validate it
-        '''
-        new_blockchain = Blockchain()
-        chain = json.loads(json_chain)
-        for json_block in chain['chain']:
-            info = json.loads(json_block)
-            block = Block(info['index'], info['transactions'], info['prev_hash'], info['nonce'])
-            block.put_extra_info(info)
-
-        new_blockchain.append(block)
-        if len(new_blockchain) == int(chain['length']) and new_blockchain.validate_chain():
-            self.blockchain = new_blockchain
-            return True
-        
-        return False
-        
+            if response.status_code == 200 :
+                block_list = json.loads(response.json()['chain'])
+                chain = [Block(**json.loads(block))for block in block_list]
+                if Blockchain.validate_chain(chain) : 
+                    state.blockchain.chain = chain
+                return True 
+        return False 
 
     def generate_wallet(self): 
         random_generator = Random.new().read 

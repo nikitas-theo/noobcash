@@ -3,8 +3,10 @@ from time import time
 from pymerkle import MerkleTree
 from Crypto.Hash import SHA256
 import simplejson as json
+
 from state import state
-from transactions import Transaction
+from transaction import Transaction
+from config import * 
 
 
 class Block :
@@ -21,10 +23,6 @@ class Block :
 
     """
 
-    """ static """
-    CAPACITY = 10
-    DIFFICULTY = 4
-    
     def __init__(self, id, transactions, prev_hash, nonce =  None):
         
         self.difficulty = DIFFICULTY
@@ -68,8 +66,9 @@ class Block :
             # and the block timestamps. 
             # see: https://en.bitcoin.it/wiki/Block_hashing_algorithm
             nonce = hex(nonce).encode()
+            timestamp = str(time()).encode()
             header = self.previous_hash + nonce +\
-                    merkle_hash + self.timestamp
+                    merkle_hash + timestamp
             h = SHA256.new()
             # apply hashing 2 times 
             hash_value = h.new(h.new(header).digest()).hexdigest()
@@ -80,7 +79,10 @@ class Block :
         if solved :
             self.hash = hash_value.encode()
             self.nonce = nonce
+            self.timestamp = timestamp
+        
             return 0
+            
         else : 
             self.mine()
 

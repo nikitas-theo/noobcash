@@ -4,11 +4,13 @@ from time import time
 from pymerkle import MerkleTree
 from random import randint
 from copy import deepcopy
-
+import requests 
+import simplejson as json
 from state import state
 from block import Block
 from broadcast import broadcast_block
 from transaction import Transaction
+from config import * 
 
 class Blockchain : 
     def __init__(self):
@@ -37,14 +39,42 @@ class Blockchain :
                 if (state_t.hash == block_t.hash):
                     state.transactions.remove(state_t)
                         
-        return False
+        return True
         
 
     def mine_block(self):
         
         copy_trans = deepcopy(self.transactions) # deep copy is needed, lists are passed by reference!
         block = Block(id = len(self.chain)+1, transactions = copy_trans, prev_hash = self.chain[-1].hash)
+        block.mine()
         self.transactions = []
+        broadcast_block(block)
+
+    def resolve_conflict(self):
+        MAX_LENGTH = len(state.chain)
+        for node in state.nodes :
+            if node["pub"] == state.pub :
+                continue 
+            ip = node['ip']
+            port = node['port']
+            response = requests.get(f'http://{ip}:{port}/request_chain')
+
+            if (response.status_code != 200):
+                return False
+            # extract blocks from chain, they are in string format
+            chain_temp = json.loads(response.json()['chain'])
+            chain = []
+            for block in chain_temp : 
+                chain.append(**Block(json.loads(block)))
+            if not validate_chain(chain) :
+                continue
+            if len(chain) > MAX_LENGTH : 
+                state.chain = chain
+                MAX_LENGTH = len(chain)
+        # TODO: Do we need to change utxos? 
+        # do we need to change transactions? 
+        # see: https://github.com/neoaggelos/noobcash/blob/master/noobcash/backend/consensus.py
+         
 
     @staticmethod
     def validate_chain(chain):

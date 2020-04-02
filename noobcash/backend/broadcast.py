@@ -9,20 +9,12 @@ from blockchain import Blockchain
 from block import Block
 from state import state
 from transaction import Transaction
-
+from config import * 
 
 
 
 app = Flask(__name__)
 
-
-def resolve_conflict():
-    """
-    #TODO: implementation of consensus algorithm that can occur
-    from the entrance of the new node being synced with another
-    existing node
-    """
-    pass
 
 #------------------------------------------------------------
 # BROADCASTING
@@ -35,10 +27,6 @@ def broadcast_transaction(t,node_id = None ) :
     json_t = t.to_json()
     return broadcast(json_t,'receive_transaction',node_id)
 
-def broadcast_chain(node_id = None):
-    block_list = [block.to_json() for block in state.blockchain]        
-    json_chain = json.dumps(block_list)
-    return broadcast(json_chain,'receive_chain',node_id)
 
 def broadcast(json_obj,rest_point,node_id = None):
     """ Broadcast object to network """
@@ -74,7 +62,9 @@ def new_transaction(receiver, amount):
     return broadcast_transaction(t)
 
 # ------------------------------------------
-# RECEIVERS
+
+##? What do these return? Some sort of status code? 
+##? Some values? 
 
 @app.route('/receive_block', methods=['POST'])
 def receive_block(json_string):
@@ -91,22 +81,12 @@ def receive_transaction(json_string):
         state.transactions.append(t)
     return return_val
     
-@app.route('/receive_chain',methods=['POST'])
-def receive_chain(json_string):
-    """ get chain from coordinator and validate """
-    block_list = json.loads(json_string)
-    chain = [Block(**json.loads(block))for block in block_list]
-    if Blockchain.validate_chain(chain) : 
-        state.blockchain.chain = chain
-        return True
-    return False
-
 
 @app.route('/register_node', methods=['POST'])
 def register_new_node():
     '''
-    register the node of the peer node who has submitted a request
-    and give them the blockchain
+    An incoming node posts a request to enter the network 
+    - Handle request and post in return 
     '''
     data = request.get_json()
     node_ip = data['ip']
@@ -121,10 +101,18 @@ def register_new_node():
     state.nodes[new_id]['port'] = node_port
     state.nodes[new_id]['pubkey'] = node_pubkey
     
-    #sync the new node with the blockchain, by broadcasting chain
-    return_val = broadcast_chain()
     # broadcast 100 NBC
-    t = Transaction.create_transaction(node_pubkey,100)
-    return_val = return_val and broadcast_transaction(t,new_id)
-    return return_val
+    #sync the new node with the blockchain, by broadcasting chain
+   
+
+    if new_transaction(node_pubkey,100):
+        return json.dump(new_id)
+    
+
+# A node requests the chain via a GET request , we return the chain
+@app.route('./request_chain',methods=['GET'])
+def request_chain():
+    block_list = [block.to_json() for block in state.blockchain]        
+    json_chain = json.dumps({"chain": block_list})
+    return json_chain 
 
