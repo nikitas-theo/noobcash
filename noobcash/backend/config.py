@@ -1,4 +1,5 @@
 # ----- Global Settings -----
+
 CAPACITY = 10
 DIFFICULTY = 4
 coordinator_ip = ""

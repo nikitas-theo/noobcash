@@ -5,7 +5,6 @@ import requests
 import simplejson as json
 
 
-from blockchain import Blockchain
 from block import Block
 from state import state
 from transaction import Transaction
@@ -70,7 +69,7 @@ def new_transaction(receiver, amount):
 def receive_block(json_string):
     block =  Block(**json.loads(json_string))
     # pass to Blockchain to add block
-    return state.blockchain.add_block()
+    return state.add_block()
 
     
 @app.route('/receive_transaction', methods=['POST'])
@@ -110,9 +109,10 @@ def register_new_node():
     
 
 # A node requests the chain via a GET request , we return the chain
-@app.route('./request_chain',methods=['GET'])
+@app.route('/request_chain',methods=['GET'])
 def request_chain():
-    block_list = [block.to_json() for block in state.blockchain]        
+    block_list = [block.to_json() for block in state.chain]        
     json_chain = json.dumps({"chain": block_list})
     return json_chain 
+
 

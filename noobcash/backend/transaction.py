@@ -1,13 +1,9 @@
-
 from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
 from Crypto.Signature import PKCS1_v1_5
 from Crypto import Random
 import simplejson as json
 
-from state import state
-from transaction import Transaction
-from block import Block
 from config import * 
 
 class Transaction :
@@ -23,6 +19,9 @@ class Transaction :
 
     def __init__(self,sender,receiver,amount,inputs,
         signature = None, id = None):
+        
+        from state import state
+
         self.sender = sender
         self.receiver = receiver
         self.amount = float(amount) 
@@ -113,7 +112,7 @@ class Transaction :
 
         # mine if block is full 
         if (len(state.transactions) == CAPACITY):
-            state.blockchain.mine_block()
+            state.mine_block()
         
         return (t,True)
     
@@ -123,8 +122,7 @@ class Transaction :
             - Create a transaction for broadcasting 
             - update transaction listg
             - update utxos 
-            - mine if necessary 
-
+            - mine if necessary W
         """
         sender = state.pub
         inputs = []
@@ -158,14 +156,10 @@ class Transaction :
         
         # mine if block is full 
         if (len(state.transactions) == CAPACITY):
-            state.blockchain.mine_block()
+            state.mine_block()
         
         return t
     
-
-
-
-
 
 if __name__ == '__main__':
     hash  = SHA256.new(b'234234223')

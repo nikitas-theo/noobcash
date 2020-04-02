@@ -4,7 +4,6 @@ from pymerkle import MerkleTree
 from Crypto.Hash import SHA256
 import simplejson as json
 
-from state import state
 from transaction import Transaction
 from config import * 
 
@@ -56,7 +55,7 @@ class Block :
 
         # Create hash of transactions with a Merkle Tree
         tree = MerkleTree()
-        for t in state.transactions :
+        for t in self.transactions :
             tree.encryptRecord(t.id.encode()) # make bytestring
         merkle_hash = tree.rootHash
         
@@ -79,10 +78,7 @@ class Block :
         if solved :
             self.hash = hash_value.encode()
             self.nonce = nonce
-            self.timestamp = timestamp
-        
-            return 0
-            
+            self.timestamp = timestamp            
         else : 
             self.mine()
 
