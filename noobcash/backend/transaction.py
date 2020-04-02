@@ -1,22 +1,25 @@
+
 from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
 from Crypto.Signature import PKCS1_v1_5
 from Crypto import Random
 import simplejson as json
+
 from state import state
-from transactions import Transaction
-import block
+from transaction import Transaction
+from block import Block
 
 class Transaction :
-    """ sender : pub key, string
-        receiver : pub key, string
-        amount : float 
-        inputs : list of transaction ids 
-        outpus : list of utxos
-        id : hex number, transaction hash
-        hash : hash object 
-        signature : byte string
+    """ sender : pub key :: string
+        receiver : pub key :: string
+        amount :: float 
+        inputs : list of transaction ids :: list(string) 
+        outpus : list of utxos 
+        id : transaction hash :: hex number
+        hash : transaction hash, but as a hash object :: SHA256 obj
+        signature :: byte string 
     """
+
     def __init__(self,sender,receiver,amount,inputs,
         signature = None, id = None):
         self.sender = sender
@@ -51,28 +54,20 @@ class Transaction :
         return verifier.verify(self.hash, self.signature)
 
 
-    """
-        The following methods are static, they belong to the class
-        and are not object specific 
-    """
-
+    """ Static methods, not object specific, belong to the class s"""
     @staticmethod
     def validate_transaction(json_trans):
         """ 
-            validate incoming transaction,
-            update transaction list,
-            update corresponding utxos 
-
-            return Bool 
-            
+            - validate incoming transaction
+            - update transaction list
+            - update corresponding utxos 
+            - mine if necessary  
+            return :: tuple of (Transaction obj, Bool val)
         """ 
-
-        # load transaction object from json string 
+        # load and verify sig
         t = Transaction(**json.loads(json_trans)) 
-
-        
         if not t.verify_signature():
-            return False 
+            return (None,False)
 
        
         budget = 0
@@ -86,12 +81,10 @@ class Transaction :
                     budget += utxo['amount']
                     pending_removed.append(utxo)
                     break
-            
             if not found:
-                return False
-            
+                return (None,False)
         if budget < t.amount:
-            return False
+            return (None,False)
 
 
         # remove all spent transactions    
@@ -99,7 +92,6 @@ class Transaction :
             state.remove_utxo(utxo)
 
         # create outputs
-
         t.outputs = [{
             'trans_id': t.id,
             'id' : t.id + ":0",
@@ -117,15 +109,22 @@ class Transaction :
         
         # save transaction
         state.transactions.append(t)
-        if (len(state.transactions) == block.CAPACITY):
-            state.blockchain.mine_unconfirmed_transactions()
 
-        # bool value indicating a verified transaction
-        return True
+        # mine if block is full 
+        if (len(state.transactions) == Block.CAPACITY):
+            state.blockchain.mine_block()
+
+        return (t,True)
     
     @staticmethod
     def create_transaction(receiver, amount):
+        """
+            - Create a transaction for broadcasting 
+            - update transaction listg
+            - update utxos 
+            - mine if necessary 
 
+        """
         sender = state.pub
         inputs = []
 
@@ -155,8 +154,11 @@ class Transaction :
         state.add_utxo(t.outputs[1])
 
         state.transactions.append(t)
-        if (len(state.transactions) == block.CAPACITY):
-            state.blockchain.mine_unconfirmed_transactions()
+        
+        # mine if block is full 
+        if (len(state.transactions) == Block.CAPACITY):
+            state.blockchain.mine_block()
+        
         return t
     
 

@@ -6,54 +6,40 @@ import simplejson as json
 from state import state
 from transactions import Transaction
 
-CAPACITY = 10
-DIFFICULTY = 4
+
 class Block :
     """ 
 
-        block index, the unique ID of the block
-        timestamp : current Unix time 
-        transactions : list of CONFIRMED transactions in block 
-        previous_hash : hash of previous block in blockchain , bytestring 
-        nonce : solution of PoW
-        size : curr number of transactions 
-
-        header : header of block, bytestring
-        hash: the hash of the block
-        difficulty :  number of leading zeros required in Hex
-        capacity : number of transactions required for mining 
+         id : the unique ID of the block :: int 
+         timestamp : current Unix time :: string  
+         transactions : list of verified transactions in block :: list(T) 
+         previous_hash : hash of previous block in blockchain :: bytestring 
+         nonce : solution of PoW :: bytestring
+         hash : the hash of the block :: bytestring
+         difficulty :  number of leading zeros required in Hex :: int
+         capacity : number of transactions required for mining :: int
 
     """
 
-    def __init__(self, index, transactions, prev_hash, nonce =  None):
+    """ static """
+    CAPACITY = 10
+    DIFFICULTY = 4
+    
+    def __init__(self, id, transactions, prev_hash, nonce =  None):
         
-        self.difficulty = DIFFICULTY 
-        self.capacity = CAPACITY # number of transactions 
-        '''
-        shouldnt we initialize the header  and the hashas well?
-        '''
-        self.header = 'a'
-        self.hash = 'b'
-        self.index = index 
+        self.difficulty = DIFFICULTY
+        self.capacity = CAPACITY
+
+        self.id = id
         self.timestamp = str(time()).encode()
         self.transactions = transactions
         self.previous_hash = prev_hash
         self.nonce = nonce
-        self.size = 0 
-        
-    def put_extra_info(self,j):
-        '''
-        fill the extra attributes from the json object j to the block
-        '''
-        self.difficulty = j['difficulty']
-        self.capacity = j['capacity']
-        self.header = j['header']
-        self.hash = j['hash']
-        self.timestamp = j['timestamp']
-        self.size = j['size']
-        
+    
+    def to_json(self):
+        return json.dumps(self.__dict__)
 
-    def validate_block_hash_value(self):
+    def validate_hash(self):
         # validate block hash value
 
         tree = MerkleTree()
@@ -67,13 +53,36 @@ class Block :
         hash_value = h.new(h.new(header).digest()).hexdigest()[::-1]
         return  int(hash_value[0:self.difficulty],16) == 0 
     
-    def to_json(self):
-        # use obj dict to convert to json, needed for broadcasting
-        return json.dumps(self.__dict__)
-    
-    def calculate_hash(self):    
-        self.hash = SHA256.new(self.to_json.encode())
-        self.id = self.hash.hexdigest()
+  
+    def mine_block(self):
+
+        # Create hash of transactions with a Merkle Tree
+        tree = MerkleTree()
+        for t in state.transactions :
+            tree.encryptRecord(t.id.encode()) # make bytestring
+        merkle_hash = tree.rootHash
+        
+        # 32-bit sized nonce 
+        for nonce in range(2 << 32):
+            # header consists of prev_hash, nonce, merkle of transactions
+            # and the block timestamps. 
+            # see: https://en.bitcoin.it/wiki/Block_hashing_algorithm
+            nonce = hex(nonce).encode()
+            header = self.previous_hash + nonce +\
+                    merkle_hash + self.timestamp
+            h = SHA256.new()
+            # apply hashing 2 times 
+            hash_value = h.new(h.new(header).digest()).hexdigest()
+            hash_value = hash_value[::-1] # reverse, little endian
+            if int(hash_value[0:self.difficulty],16) == 0 :
+                solved = True
+                break
+        if solved :
+            self.hash = hash_value.encode()
+            self.nonce = nonce
+            return 0
+        else : 
+            self.mine()
 
 if __name__ == '__main__':
     ''' Α dummy mining test''' 

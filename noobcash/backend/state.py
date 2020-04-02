@@ -8,12 +8,13 @@ import requests
 
 class State :
     """
-        blockchain : our version of the blockchain
-        utxos : unspent trans for all nodes
-        nodes : node information
-        transactions : list of verified transactions not in a block 
+        blockchain : our version of the blockchain :: list(B)
+        utxos : unspent trans for all nodes :: utxos[owner] = {trans_id, id, owner, amount}
+        nodes : node information :: nodes[id] = {ip,port,pub}
+        transactions : list of verified transactions not in a block :: 
         key: RSA key including private and public key :: string
         pub : RSA public part of key :: string
+
     """
 
     def __init__(self):
@@ -22,19 +23,15 @@ class State :
         self.blockchain = Blockchain()
         self.utxos = {}
         self.nodes = {}
-
         self.transactions = []
-        # utxos[owner] = {trans_id, id, owner, amount}
-        # nodes[id] = {ip, port, pub }
+   
     
     def connect_to_coordinator(self, coordinator_ip, coordinator_port, client_ip, client_port):
-        '''
-        generate an (empty) wallet and then
+        """
         send a POST request for connection to the
         coordinator.
-        
-        returns the chain 
-        '''
+        returns the blockchain 
+        """
         response = requests.post(f'http://{coordinator_ip}:{coordinator_port}/register_node',\
                       json={f'"ip":"{client_ip}"',f'"port":"{client_port}"',\
                             f'"pubkey":"{self.pub}"'})
@@ -46,8 +43,8 @@ class State :
         using register_node_with_another_existing_node() for
         all nodes linked to coordinator
         '''
-        pass    
-        
+
+
     def generate_chain_from_json_dump(self, json_chain):
         '''
         generate the chain from json dump and validate it
@@ -58,8 +55,9 @@ class State :
             info = json.loads(json_block)
             block = Block(info['index'], info['transactions'], info['prev_hash'], info['nonce'])
             block.put_extra_info(info)
+
         new_blockchain.append(block)
-        if (len(new_blockchain) == int(chain['length']) and new_blockchain.validate_chain()):
+        if len(new_blockchain) == int(chain['length']) and new_blockchain.validate_chain():
             self.blockchain = new_blockchain
             return True
         
@@ -72,9 +70,6 @@ class State :
         #key is an RSA key object, the private key is not visible
         self.pub = self.key.publickey
 
-    def add_participant(self,pubkey, ip, port, id):
-        self.nodes[id] = {'ip' : ip , 'port' : port, 'pub' : pubkey}
- 
     def remove_utxo(self, utxo):
         self.utxos[utxo['owner']].remove(utxo)
 

@@ -1,125 +1,120 @@
-
-# TODO: Define broadcasting 
-"""
-    How do we receive a block or a transaction? 
-    Need to specify communication
-
-"""
-import simplejson as json
-from block import Block
-from state import state
-from transactions import Transaction
 from Crypto.PublicKey import RSA
 from Crypto import Random
-
-#from blockchain import Blockchain
-from blockchain import Blockchain
-
 from flask import Flask, request
 import requests
+import simplejson as json
+
+
+from blockchain import Blockchain
+from block import Block
+from state import state
+from transaction import Transaction
+
+
 
 
 app = Flask(__name__)
 
-@app.route('/receive_block', methods=['POST'])
-def receive_block(json_block):
-    '''
-    check if the proof is valid (if the hash is correct)
-    and if the previous hash of the block is the previous
-    hash of the chain.
-    then move on to add the received block in the chain.
-    
-    right after the block is added to the chain, remove
-    any transaction from the list transactions[]
-    that is both included in the list
-    transactions[] of state and in the block.
-    '''
-    info = json.loads(json_block)
-    block = Block(info['index'], info['transactions'], info['prev_hash'], info['nonce'])
-    block.put_extra_info(info)
-    
-    '''
-    todo: this might need to involve proof of work
-    instead of hash
-    
-    we use the length of the chain as index, because the function
-    will use that index minus one for the previous block validation
-    '''
-    if (not state.blockchain.validate_block(block, len(state.blockchain.chain))):
-        return False
-    
-    state.blockchain.chain.append(block)
 
-    '''
-    remove transaction from transactions not in block
-    '''
+def resolve_conflict():
+    """
+    #TODO: implementation of consensus algorithm that can occur
+    from the entrance of the new node being synced with another
+    existing node
+    """
+    pass
 
-    for block_transaction in block.transactions:
-        for state_transaction in state.transactions:
-            if (state_transaction.hash == block_transaction.hash):
-                state.transactions.remove(state_transaction)
-                
-                
+#------------------------------------------------------------
+# BROADCASTING
+
+def broadcast_block(block,node_id = None) :
+    json_block = block.to_json()
+    return broadcast(json_block,'receive_block',node_id)
+
+def broadcast_transaction(t,node_id = None ) :
+    json_t = t.to_json()
+    return broadcast(json_t,'receive_transaction',node_id)
+
+def broadcast_chain(node_id = None):
+    block_list = [block.to_json() for block in state.blockchain]        
+    json_chain = json.dumps(block_list)
+    return broadcast(json_chain,'receive_chain',node_id)
+
+def broadcast(json_obj,rest_point,node_id = None):
+    """ Broadcast object to network """
+    if node_id == None :
+        broadcast_nodes = state.nodes 
+    else :
+        broadcast_nodes = [state.nodes[node_id]]
+
+    for node in broadcast_nodes:
+        #broadcast to everyone except sender
+        if (node['pub'] == state.pub):
+            continue
+        ip = node["ip"]
+        port = node["port"]
+        response = requests.post(f'http://{ip}:{port}/{rest_point}', json=json_obj)
+        if (response.status_code != 200):
+            return False
     return True
+
+
+def broadcast_nodes_info():
+    '''
+    when all nodes are in the state.nodes dictionary,
+    notify all nodes about the others
+    '''
+    json_nodes = json.dumps(state.nodes)
+    return broadcast(json_nodes)    
+    return True
+    
+def new_transaction(receiver, amount):
+    #creates t, the new transaction, and broadcasts it
+    t = Transaction.create_transaction(receiver, amount)
+    return broadcast_transaction(t)
+
+# ------------------------------------------
+# RECEIVERS
+
+@app.route('/receive_block', methods=['POST'])
+def receive_block(json_string):
+    block =  Block(**json.loads(json_string))
+    # pass to Blockchain to add block
+    return state.blockchain.add_block()
 
     
 @app.route('/receive_transaction', methods=['POST'])
-def receive_transaction(json_trans):
-    '''
-    as happening with json_block, we validate the transaction
-    we just received, by calling validate.transaction()
-    '''
-    if (Transaction.validate_transaction(json_trans)):
+def receive_transaction(json_string):
+    # Call static method, object creation is handled in function
+    return_val,t = Transaction.validate_transaction(json_string)
+    if return_val :
+        state.transactions.append(t)
+    return return_val
+    
+@app.route('/receive_chain',methods=['POST'])
+def receive_chain(json_string):
+    """ get chain from coordinator and validate """
+    block_list = json.loads(json_string)
+    chain = [Block(**json.loads(block))for block in block_list]
+    if Blockchain.validate_chain(chain) : 
+        state.blockchain.chain = chain
         return True
-    
     return False
-    
-@app.route('/receive_other_node_info', methods=['POST'])
-def receive_other_note_info(json_nodes):
-    '''
-    as happening with json_block, we validate the transaction
-    we just received, by calling validate.transaction()
-    '''
-    nodes = json.loads(json_nodes)
-    state.nodes = nodes
-    
-    return True
-    
 
-@app.route('/chain',methods=['GET'])
-def get_chain():
-    '''
-    get chain, in order to sync new nodes with the blockchain.
-    after that, they have to validate the chain by themselves,
-    calling validate_chain()
-    '''
-    chain_data = []
-    for block in state.blockchain.chain:
-        chain_data.append(block.__dict__)
-    return json.dumps({"length": len(chain_data), "chain": chain_data})
-
-
-@app.route('/mine',methods=['GET'])
-def mine_unconfirmed_transactions():
-    '''
-    todo: will give the instruction to mine unconfirmed
-    transactions for the specific node
-    '''
-    pass
 
 @app.route('/register_node', methods=['POST'])
-def register_new_nodes():
+def register_new_node():
     '''
     register the node of the peer node who has submitted a request
     and give them the blockchain
     '''
-    node_ip = request.get_json()['ip']
-    node_port = request.get_json()['port']
-    node_pubkey = request.get_json()['pubkey']
+    data = request.get_json()
+    node_ip = data['ip']
+    node_port = data['port']
+    node_pubkey = data['pub']
     if (not node_ip or not node_port or not node_pubkey):
         return "Invalid", 400
     
-    #create that node and put it in the dictionary of nodes
     maxid = max(state.nodes, key=int)
     new_id = maxid + 1
     state.nodes[new_id]['ip'] = node_ip
@@ -127,81 +122,9 @@ def register_new_nodes():
     state.nodes[new_id]['pubkey'] = node_pubkey
     
     #sync the new node with the blockchain, by broadcasting chain
-    return get_chain()
+    return_val = broadcast_chain()
+    # broadcast 100 NBC
+    t = Transaction.create_transaction(node_pubkey,100)
+    return_val = return_val and broadcast_transaction(t,new_id)
+    return return_val
 
-
-@app.route('/register_with', methods=['POST'])
-def communicate_with_all():
-    '''
-    when all nodes are in the state.nodes dictionary, tell
-    every node about the existing nodes
-    '''
-    json_nodes = json.dumps(state.nodes)
-    for node in state.nodes:
-        #broadcast to everyone except sender
-        if (node['pub'] == state.pub):
-            continue
-        ip = node["id"]
-        port = node["port"]
-        response = requests.post(f'http://{ip}:{port}/receive_other_node_info', json=json_nodes)
-        if (response.status_code != 200):
-            return False
-    
-    return True
-
-def resolve_conflict():
-    '''
-    todo: implementation of consensus algorithm that can occur
-    from the entrance of the new node being synced with another
-    existing node
-    '''
-    pass
-    
-def index():
-    return f'Hello world!'
-
-@app.route('/broadcast_transaction', methods=['POST'])
-def broadcast_transaction(transaction):
-    '''
-    broadcast the transaction to every other node
-    '''
-    # load transaction object from json string 
-    json_trans = json.dumps(transaction.__dict__)
-    for node in state.nodes:
-        #broadcast to everyone except sender
-        if (node['pub'] == state.pub):
-            continue
-        ip = node["id"]
-        port = node["port"]
-        response = requests.post(f'http://{ip}:{port}/receive_transaction', json=json_trans)
-        if (response.status_code != 200):
-            return False
-        
-    return True
-    
-@app.route('/new_transaction',methods=['POST'])
-def new_transaction(receiver, amount):
-    #creates t, the new transaction, and broadcasts it
-    t = Transaction.create_transaction(receiver, amount)
-    broadcast_transaction(t)
-    return "Success", 201
-
-
-@app.route('/broadcast_block', methods=['POST'])
-def broadcast_block(block):
-    '''
-    broadcast the block in json mode when it is complete
-    '''
-    json_block = block.to_json()
-    for node in state.nodes:
-        #broadcast to everyone except sender
-        if (node['pub'] == state.pub):
-            continue
-        ip = node["id"]
-        port = node["port"]
-        response = requests.post(f'http://{ip}:{port}/receive_block', json=json_block)
-        if (response.status_code != 200):
-            return False
-        
-    return True
-    
