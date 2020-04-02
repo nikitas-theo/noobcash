@@ -1,0 +1,139 @@
+[33mcommit 93c9e4c16637be57ed6a2f689dca18bcaf79adb2[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Merge: e1164e8 92d836b
+Author: stelkasouridis <stelkasouridis@gmail.com>
+Date:   Wed Apr 1 22:56:25 2020 +0300
+
+    Merge branch 'master' of https://github.com/nikitas-theo/distrib
+
+[33mcommit e1164e888e24a631fd88ec1cfb7235326835b50d[m
+Author: stelkasouridis <stelkasouridis@gmail.com>
+Date:   Wed Apr 1 22:55:21 2020 +0300
+
+    put broadcast.py to the correct folder
+
+[33mcommit 92d836b8f7902e9f5989ebcc565446bb22ef08b3[m
+Author: stelkasouridis <44243832+stelkasouridis@users.noreply.github.com>
+Date:   Wed Apr 1 22:49:01 2020 +0300
+
+    Update transactions.py
+
+[33mcommit 624774567db2bbfe760eee3351421d5446ceace3[m
+Author: stelkasouridis <44243832+stelkasouridis@users.noreply.github.com>
+Date:   Wed Apr 1 22:45:38 2020 +0300
+
+    Update transactions.py
+
+[33mcommit e4ee83198ebe6f2b7b0925065a4356661246bc23[m
+Author: stelkasouridis <44243832+stelkasouridis@users.noreply.github.com>
+Date:   Wed Apr 1 22:43:06 2020 +0300
+
+    Update state.py
+
+[33mcommit 0ca3d870c277540861ce6d47da78d957c8be49ca[m
+Author: stelkasouridis <44243832+stelkasouridis@users.noreply.github.com>
+Date:   Wed Apr 1 22:37:12 2020 +0300
+
+    Update blockchain.py
+
+[33mcommit 1dd03771ef6da3f2ad90b4d91927ec08471f8ce5[m
+Author: nikitas-theo <nikitastheodorop@gmail.com>
+Date:   Wed Apr 1 22:33:42 2020 +0300
+
+    minor changes
+
+[33mcommit bee6506fe82b5fa4f0c7214c10e54d512be64352[m
+Author: nikitas-theo <nikitastheodorop@gmail.com>
+Date:   Wed Apr 1 22:13:48 2020 +0300
+
+    restrcutured code, only communication missing;
+
+[33mcommit e7b8e676a359d8c3ccd8f637eb53eb6a6bfc21ca[m
+Author: orestis <orestischar@gmail.com>
+Date:   Wed Apr 1 20:16:41 2020 +0300
+
+    create transaction
+
+[33mcommit 0e83ed1c40d5504cba6443e9c3b8411eae6dc9d5[m
+Author: orestis <orestischar@gmail.com>
+Date:   Wed Apr 1 19:18:14 2020 +0300
+
+    changes
+
+[33mcommit ba2e5d641f3b51f5215aabacef7632cbeacb0915[m
+Author: orestis <orestischar@gmail.com>
+Date:   Wed Apr 1 19:04:37 2020 +0300
+
+    changes
+
+[33mcommit 28cc728e3f874df5a3a1f76454b1282a7a1da1f4[m
+Author: nikitas-theo <nikitastheodorop@gmail.com>
+Date:   Wed Apr 1 16:20:42 2020 +0300
+
+    minor changes
+
+[33mcommit 25b7546a7e3af6cddfd8d4cdec08508e73a2f820[m
+Author: orestis <orestischar@gmail.com>
+Date:   Wed Apr 1 03:53:11 2020 +0300
+
+    added validate transaction, wallet_balance
+
+[33mcommit d32eae550b93f36e773eab16d5c1e2ff7bf368e0[m
+Merge: 4fd4c41 818b45b
+Author: nikitas-theo <nikitastheodorop@gmail.com>
+Date:   Wed Apr 1 00:10:12 2020 +0300
+
+    Merge branch 'master' of github.com:nikitas-theo/distrib
+
+[33mcommit 818b45b4661045459d3c73d798a6bd5bd5f362ab[m
+Author: orestis <orestischar@gmail.com>
+Date:   Wed Apr 1 00:08:04 2020 +0300
+
+    added things on status.py
+
+[33mcommit 4fd4c41830bd0a7114e48845ed25fc0460862765[m
+Author: nikitas-theo <nikitastheodorop@gmail.com>
+Date:   Tue Mar 31 23:20:31 2020 +0300
+
+    changed block.py , transaction.py
+
+[33mcommit 0d89273f821f997d78996c5b47f0d962c1fe1cdd[m
+Author: nikitas-theo <nikitastheodorop@gmail.com>
+Date:   Tue Mar 31 22:44:03 2020 +0300
+
+    simple changes
+
+[33mcommit c0abc00d23474c5dc1bf9d0cf70c57e6aeeb8fbe[m
+Author: nikitas-theo <nikitastheodorop@gmail.com>
+Date:   Tue Mar 31 22:04:46 2020 +0300
+
+    changed layout again
+
+[33mcommit 1e8c75d4fb33e84fcb9a543a148494e02b785b1a[m
+Author: nikitas-theo <nikitastheodorop@gmail.com>
+Date:   Tue Mar 31 21:35:47 2020 +0300
+
+    changed layout
+
+[33mcommit c9ec7c6881f0fdcd42652e50a2f16f4434ca5f22[m
+Author: nikitas-theo <nikitastheodorop@gmail.com>
+Date:   Tue Mar 31 21:25:48 2020 +0300
+
+    implementing signatures
+
+[33mcommit e7e1c332086bc7ebb5f4e3856e31934f404b739e[m
+Author: nikitas-theo <nikitastheodorop@gmail.com>
+Date:   Tue Mar 31 20:16:16 2020 +0300
+
+    finished mining
+
+[33mcommit b2f6f4dccac275ded40af4461e84d043e20777e6[m
+Author: nikitas-theo <nikitastheodorop@gmail.com>
+Date:   Tue Mar 31 18:34:26 2020 +0300
+
+    implementing backend
+
+[33mcommit 9238cb5fbe2289aed3f618d13b135ffd48ed71e0[m
+Author: nikitas-theo <nikitastheodorop@gmail.com>
+Date:   Tue Mar 31 13:01:29 2020 +0300
+
+    init commit, exercise prerequisits

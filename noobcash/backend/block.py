@@ -1,9 +1,9 @@
-from Crypto.Hash import SHA256
-from random import randint
-from pymerkle import MerkleTree
 from time import time
 
-from state import *
+from pymerkle import MerkleTree
+from Crypto.Hash import SHA256
+import simplejson as json
+from state import state
 from transactions import Transaction
 
 CAPACITY = 10
@@ -11,78 +11,69 @@ DIFFICULTY = 4
 class Block :
     """ 
 
-        block index, int 
+        block index, the unique ID of the block
         timestamp : current Unix time 
-        transactions : list of transaction objects contained in block 
+        transactions : list of CONFIRMED transactions in block 
         previous_hash : hash of previous block in blockchain , bytestring 
         nonce : solution of PoW
         size : curr number of transactions 
 
         header : header of block, bytestring
-
+        hash: the hash of the block
         difficulty :  number of leading zeros required in Hex
         capacity : number of transactions required for mining 
 
     """
 
-    def __init__(self,index, transactions, prev_hash, nonce =  None):
+    def __init__(self, index, transactions, prev_hash, nonce =  None):
         
         self.difficulty = DIFFICULTY 
         self.capacity = CAPACITY # number of transactions 
-
+        '''
+        shouldnt we initialize the header  and the hashas well?
+        '''
+        self.header = 'a'
+        self.hash = 'b'
         self.index = index 
         self.timestamp = str(time()).encode()
         self.transactions = transactions
         self.previous_hash = prev_hash
         self.nonce = nonce
         self.size = 0 
-    
-    def mine(self):
         
-        # Create hash of transactions with a Merkel Tree
-        tree = MerkleTree()
-        for t in self.transactions :
-            tree.encryptRecord(t.id.encode()) # make bytestring
-        merkel_hash = tree.rootHash
+    def put_extra_info(self,j):
+        '''
+        fill the extra attributes from the json object j to the block
+        '''
+        self.difficulty = j['difficulty']
+        self.capacity = j['capacity']
+        self.header = j['header']
+        self.hash = j['hash']
+        self.timestamp = j['timestamp']
+        self.size = j['size']
         
-        # 32-bit sized nonce 
-        for nonce in range(2 << 32):
-            # header consists of prev_hash, nonce, merkel of transactions
-            # and the block timestamps. 
-            # see: https://en.bitcoin.it/wiki/Block_hashing_algorithm
-            nonce = hex(nonce).encode()
-            header = self.previous_hash + nonce +\
-                  merkel_hash + self.timestamp
-            h = SHA256.new()
-            # apply hashing 2 times 
-            hash_value = h.new(h.new(header).digest()).hexdigest()
-            hash_value = hash_value[::-1] # reverse, little endian
-            if int(hash_value[0:self.difficulty],16) == 0 :
-                solved = True
-                break
-        if solved :
-            self.nonce = nonce
-            self.hash = hash_value.encode()
-            self.header = header
-            return 0
-        else : 
-            self.mine()
 
-    def validate(self):
+    def validate_block_hash_value(self):
         # validate block hash value
 
         tree = MerkleTree()
         for t in self.transactions :
             tree.encryptRecord(t.hash.encode()) # make bytestring
-        merkel_hash = tree.rootHash
+        merkle_hash = tree.rootHash
 
         header = self.previous_hash + self.nonce+\
-                merkel_hash + self.timestamp
+                merkle_hash + self.timestamp
         h = SHA256.new()
         hash_value = h.new(h.new(header).digest()).hexdigest()[::-1]
         return  int(hash_value[0:self.difficulty],16) == 0 
-
-
+    
+    def to_json(self):
+        # use obj dict to convert to json, needed for broadcasting
+        return json.dumps(self.__dict__)
+    
+    def calculate_hash(self):    
+        self.hash = SHA256.new(self.to_json.encode())
+        self.id = self.hash.hexdigest()
 
 if __name__ == '__main__':
     ''' Α dummy mining test''' 

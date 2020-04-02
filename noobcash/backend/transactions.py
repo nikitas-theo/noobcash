@@ -2,9 +2,8 @@ from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
 from Crypto.Signature import PKCS1_v1_5
 from Crypto import Random
-import json
-
-from state import *
+import simplejson as json
+from state import state
 
 class Transaction :
     """ sender : pub key, string
@@ -37,7 +36,7 @@ class Transaction :
         self.hash = SHA256.new(self.to_json.encode())
         self.id = self.hash.hexdigest()
 
-    def sign(self):
+    def sign_transaction(self):
        
         signer = PKCS1_v1_5.new(state.key)
         self.signature = signer.sign(self.hash)
@@ -115,7 +114,7 @@ class Transaction :
         state.add_utxo(t.outputs[1])
         
         # save transaction
-        state.transaction.append(t) 
+        state.transactions.append(t)
 
         # bool value indicating a verified transaction
         return True
@@ -134,7 +133,7 @@ class Transaction :
                 break 
 
         t = Transaction(sender, receiver, amount, inputs)
-        t.sign()
+        t.sign_transaction()
 
         t.outputs = [{
             'trans_id': t.id,
@@ -151,11 +150,9 @@ class Transaction :
         state.add_utxo(t.outputs[0])
         state.add_utxo(t.outputs[1])
 
-        state.transaction.append(t)
+        state.transactions.append(t)
         return t
-
-
- 
+    
 
 
 
