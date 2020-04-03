@@ -65,15 +65,27 @@ class State :
         
     def add_block(self, block):
         """ Validate a block and add it to the chain """
-        if not (block.validate_hash() and (block.previous_hash == self.chain[-1].hash)) :
-            return False 
+        self.lock.acquire() #we need to ensure consensus is not running
         
+        if not block.validate_hash():
+            #the block cannot be validated; the hash is bogus
+            return self.resolve_conflict()
+        
+        if not (block.previous_hash == self.chain[-1].hash) :
+            #the block cannot be validated; the chain is invalid
+            return self.resolve_conflict()
+        
+        #the block is valid, add it to the chain
         self.chain.append(block)
+        
+        #remove block transactions from the transactions not in a block
         for block_t in block.transactions:
             for state_t in self.transactions:
                 if (state_t.hash == block_t.hash):
                     self.transactions.remove(state_t)
-                        
+        
+        #now release the lock
+        self.lock.release()
         return True
         
 
@@ -83,48 +95,62 @@ class State :
         block = Block(id = len(self.chain)+1, transactions = copy_trans, prev_hash = self.chain[-1].hash)
         block.mine()
         #! We need lock, to change state independently from api calls, E.g. when we write a block to state we must not be interrupted with a new block!!!
-        if  block.previous_hash == chain[-1].hash  :
+        if  block.previous_hash == self.chain[-1].hash  :
             self.transactions = []
             self.add_block(block)
             broadcast.broadcast_block(block)
 
     def resolve_conflict(self):
-        MAX_LENGTH = len(self.chain)
+        '''
+        implementation of consensus algorithm
+        '''
+        #acquire lock so that no new blocks get validated during consensus
+        self.lock.acquire()
+        
+        #we have to put a default chain here, we consider our old one as default
+        MAX_LENGTH = len(self.chain) 
         for node in self.nodes :
             if node["pub"] == state.pub :
                 continue 
             ip = node['ip']
-            port = node['port']
-            response = requests.get(f'http://{ip}:{port}/request_chain')
+            response = requests.get(f'http://{ip}/request_chain')
 
             if (response.status_code != 200):
+                self.lock.release()
                 return False
             # extract blocks from chain, they are in string format
             chain_temp = json.loads(response.json()['chain'])
             chain = []
             for block in chain_temp : 
                 chain.append(**Block(json.loads(block)))
-            if not validate_chain(chain) :
+            if not state.validate_chain(chain) :
                 continue
             if len(chain) > MAX_LENGTH : 
+                #get the biggest chain from the nodes
                 self.chain = chain
                 MAX_LENGTH = len(chain)
+        
+        self.lock.release()
         # TODO: Do we need to change utxos? 
         # do we need to change transactions? 
         # see: https://github.com/neoaggelos/noobcash/blob/master/noobcash/backend/consensus.py
          
-
-    @staticmethod
-    def validate_chain(chain):
+    def validate_chain(self,chain):
         """ validate the blockchain """
+        #we should enter this function only if we have the lock from consensus
+        self.lock.acquire()
         for block,block_prev in zip(chain,chain[1:]):
             
             if not block_prev.hash == block.prev_hash and block.validate_hash() :
+                self.lock.release()
                 return False 
             
         # validate that the first block is the genesis block
         if chain[0].index == 0:
+            self.lock.release()
             return True
-        
+        else:
+            self.lock.release()
+            return False
 # this is the global state exposed to all modules
 state = State()
