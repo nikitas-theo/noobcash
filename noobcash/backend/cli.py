@@ -6,6 +6,7 @@ import argparse
 import simplejson as json
 from flask import Flask, request
 from config import *
+import time
 
 
 """
@@ -44,9 +45,18 @@ else:
     COORDINATOR_HOST = f'http://{args.ch}:{args.cp}'
     URL = f'{HOST}/start_client'
     response = requests.post(URL, json=json.dumps({'host': HOST, 'coordinator_host' : COORDINATOR_HOST}))
+    while(True):
+        response = requests.get(f'{HOST}/notify_start')
+        answer = response.json()['resp']
+        if (answer == "no"):
+            #to avoid overflooding the server
+            time.sleep(1)
+        else:
+            break
+    
 
 my_id = response.json()['id']
-f = open(f'5nodes/transaction{my_id}.txt','r')
+f = open(f'5nodes/transactions{my_id}.txt','r')
 transactions = []
 for line in f.readline():
     transactions.append(line[2:-1])

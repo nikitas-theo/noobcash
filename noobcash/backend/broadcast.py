@@ -224,3 +224,11 @@ def start_client():
     State.state.id = response.json()['id']
     print('Our very own id is :',State.state.id)
     return make_response(json.dumps({"id" : State.state.id}),200)
+
+@API_communication.route('/notify_start', methods=['GET'])
+def notify_start():
+    
+    if (len(State.state.nodes) == config.NODE_CAPACITY):
+        return make_response(json.dumps({"resp" : "yes"}),200)
+    else:
+        return make_response(json.dumps({"resp": "no", }),200)
