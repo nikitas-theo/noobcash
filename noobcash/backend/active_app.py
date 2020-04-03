@@ -20,14 +20,6 @@ from state import state
 from flask import Flask, request
 from config import *
 
-import click
-import os
-
-@click.group()
-
-def cli():
-    pass
-
 parser = argparse.ArgumentParser()
 parser.add_argument('host', type=str) #the host of the address 
 parser.add_argument('port', type=int) #the port of the address
@@ -57,12 +49,15 @@ else:
 
 while(True):
     '''
-    CLI implementation with click
+    CLI implementation
     '''
-    @cli.command()
-    @click.option('--recipient_address', type=str)
-    @click.option('--amount', type=float)
-    def new_transaction(recipient_address, amount):
+    
+    cli = input('$ ') #gets the command, adding a $ to prompt in style
+    
+    if (cli[0] == 't'):
+        command = cli.split()
+        recipient_address = command[2]
+        amount = command[4]
         '''
         
 
@@ -87,12 +82,11 @@ while(True):
                 node_pub = node['pubkey']
         
         if (broadcast.new_transaction(node_pub, amount)):
-            return True
+            print('OK')
         else:
-            return False
+            print('NOT OK')
     
-    @cli.command()
-    def view():
+    elif (cli == 'view'):
         '''
         
         Parameters
@@ -108,8 +102,7 @@ while(True):
         '''
         state.view_transactions()
     
-    @cli.command()
-    def balance():
+    elif (cli == 'balance'):
         '''
         
         Print the current balance of the wallet,
@@ -118,11 +111,8 @@ while(True):
         '''
         print(state.wallet_balance())
     
-    @cli.command()
-    def help():
-        
+    elif (cli == 'help'):
         '''
         explanation of the above commands
         '''
-        
-        pass
+            
