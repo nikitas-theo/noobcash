@@ -64,6 +64,8 @@ def broadcast_nodes_info():
 def new_transaction(receiver, amount,new_id = None):
     #creates t, the new transaction, and broadcasts it
     t = Transaction.create_transaction(receiver, amount)
+    if t == False : 
+        return False 
     return broadcast_transaction(t,new_id)
 
 # ------------------------------------------
@@ -85,9 +87,9 @@ def receive_block():
     ret = State.state.add_block(block) 
     print('Return valu',ret)
     if ret : 
-        make_response("OK",200)
+        return make_response("OK",200)
     else :
-        make_response("NOT OK",500)
+        return make_response("NOT OK",500)
     
 @API_communication.route('/receive_transaction', methods=['POST'])
 def receive_transaction():

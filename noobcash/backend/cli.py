@@ -58,6 +58,8 @@ while(True):
 
         command = cli.split()[1:]
         response = requests.post(f'{HOST}/new_transaction', json = json.dumps({'recipient_address': f'{command[0]}', 'amount': f'{command[1]}'}))
+        if (response.status_code != 200):
+            print('Invalid Transaction')
         
         """ 
 

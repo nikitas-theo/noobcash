@@ -70,7 +70,7 @@ class State :
         """ Validate a block and add it to the chain """
         print('Acquiring Lock')
         self.lock.acquire() #we need to ensure consensus is not running
-        
+        self.transactions = []
         if not block.validate_hash():
             #the block cannot be validated; the hash is bogus
             return self.resolve_conflict()
@@ -101,7 +101,6 @@ class State :
         block.mine()
 
         if  block.previous_hash == self.chain[-1].hash  :
-            self.transactions = []
             self.add_block(block)
             broadcast.broadcast_block(block)
 
@@ -110,9 +109,7 @@ class State :
         implementation of consensus algorithm
         '''
         print('----------------------- Resolve Confict -----------------------')
-        #acquire lock so that no new blocks get validated during consensus
-        self.lock.acquire()
-        
+        #acquire lock so that no new blocks get validated during consensus        
         #we have to put a default chain here, we consider our old one as default
         MAX_LENGTH = len(self.chain) 
         for node in self.nodes.values() :
@@ -130,7 +127,7 @@ class State :
             chain = []
             for block in chain_temp : 
                 b = Block(**json.loads(block))
-                b.transcations = [Transaction(**json.loads(t)) for t in b.transactions]
+                b.transactions = [Transaction(**json.loads(t)) for t in b.transactions]
                 b.hash = str(b.hash).encode()
                 b.nonce = str(b.nonce).encode()
                 b.previous_hash = str(b.previous_hash).encode()
@@ -144,7 +141,7 @@ class State :
                 MAX_LENGTH = len(chain)
         
         self.lock.release()
-      
+        return True
     def validate_chain(self,chain):
         """ validate the blockchain """
         #we should enter this function only if we have the lock from consensus
@@ -156,7 +153,7 @@ class State :
                 return False 
             
         # validate that the first block is the genesis block
-        if chain[0].index == 0:
+        if chain[0].id == 0:
             self.lock.release()
             return True
         else:
