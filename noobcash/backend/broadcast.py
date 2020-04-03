@@ -61,8 +61,7 @@ def new_transaction(receiver, amount):
 
 # ------------------------------------------
 
-##? What do these return? Some sort of status code? 
-##? Some values?     
+
 
 API_communication = Blueprint('API_communication',__name__)
 
@@ -108,7 +107,7 @@ def register_new_node():
    
 
     if new_transaction(node_pubkey,100):
-        return json.dumps(new_id)
+        return make_response(json.dumps(new_id),200)
     
 
 # A node requests the chain via a GET request , we return the chain

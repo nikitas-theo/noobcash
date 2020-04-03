@@ -3,10 +3,9 @@
 application in order to send requests and perform functions
 
 usage:
-
-python active_app.py HOST PORT --l COORD_HOST --lp COORD_PORT: start a client and coordinate it to the coordinator.
-python active_app.py HOST PORT --c CLIENTS --m MONEY: start the coordinator,
-with a capacity of CLIENTS clients and give them MONEY money in the wallet.
+    python active_app.py HOST PORT --l COORD_HOST --lp COORD_PORT: start a client and coordinate it to the coordinator.
+    python active_app.py HOST PORT --c CLIENTS --m MONEY: start the coordinator,
+    with a capacity of CLIENTS clients and give them MONEY money in the wallet.
 
 Also includes a full CLI implementation.
 '''
@@ -47,12 +46,15 @@ else:
     print(state.pub)
     response = requests.post(URL, json=json.dumps({'ip': HOST, 'port': str(PORT), 'pub': state.pub.exportKey().decode()}))
 
+
+
+
 while(True):
     '''
     CLI implementation
     '''
     
-    cli = input('$ ') #gets the command, adding a $ to prompt in style
+    cli = input('(cli) > ') #gets the command, adding a $ to prompt in style
     
     if (cli[0] == 't'):
         command = cli.split()
@@ -115,4 +117,3 @@ while(True):
         '''
         explanation of the above commands
         '''
-            

@@ -13,10 +13,8 @@ from block import Block
 
 
 from flask import Flask
+import broadcast
 
-
-yuko = []
-yugi = {}
 class State :
     """
         chain : our version of the blockchain :: list(B)
@@ -76,8 +74,8 @@ class State :
     
     def wallet_balance(self): 
         balance = 0
-        for u in self.utxo[Transaction.get_node_id(self.pub)]: 
-            balance+=self.utxo['amount']
+        for u in self.utxos[Transaction.get_node_id(self.pub)]: 
+            balance+=self.utxos['amount']
         return balance 
         
     def genesis(self):
