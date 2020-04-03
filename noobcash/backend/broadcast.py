@@ -48,10 +48,19 @@ def broadcast_nodes_info():
     when all nodes are in the state.nodes dictionary,
     notify all nodes about the others
     """
-    json_nodes = json.dumps(State.state.nodes)
-    return broadcast(json_nodes)    
-    return True
-    
+    json_obj = json.dumps({'chain' : [b.to_json() for b in State.state.chain] , 
+                           'utxos' : State.state.utxos, 
+                           'transactions' : [t.to_json() for t in State.state.transactions],
+                           'nodes' : State.state.nodes})
+
+
+    ret = broadcast(json_obj,'receive_info')  
+    for node in State.state.nodes.values():
+        if node['pub'] == State.state.pub : 
+            continue 
+        new_transaction(node['pub'],100)
+
+
 def new_transaction(receiver, amount,new_id = None):
     #creates t, the new transaction, and broadcasts it
     t = Transaction.create_transaction(receiver, amount)
@@ -81,8 +90,8 @@ def receive_transaction():
     
 
 # We receive a chain, this is in a different senario than the request_chain function
-@API_communication.route('/receive_chain',methods=['POST'])
-def receive_chain():
+@API_communication.route('/receive_info',methods=['POST'])
+def receive_info():
     json_obj = request.get_json()
     obj_dict = json.loads(json_obj)
     block_list = obj_dict['chain']
@@ -94,6 +103,9 @@ def receive_chain():
 
     transactions = obj_dict['transactions']
     utxos = obj_dict['utxos']
+    nodes = obj_dict['nodes']
+    State.state.nodes = nodes
+    print(States.state.nodes)
     for utxo in utxos.keys():
         utxos[utxo] = list(utxos[utxo])
 
@@ -102,6 +114,7 @@ def receive_chain():
     for b in State.state.chain :
         b.transactions = [Transaction(**json.loads(t)) for t in b.transactions]
     State.state.utxos = utxos 
+
     return make_response('OK',200)
 
 # All necessary communication for a new node to enter the network 
@@ -125,12 +138,11 @@ def register_node():
     State.state.nodes[new_id] = {}
     State.state.nodes[new_id]['ip'] = node_ip
     State.state.nodes[new_id]['pub'] = node_pubkey
-    json_obj = json.dumps({'chain' : [b.to_json() for b in State.state.chain] , 
-                           'utxos' : State.state.utxos, 'transactions' : [t.to_json() for t in State.state.transactions]})
-    ret = broadcast(json_obj,'receive_chain',new_id)
-    # we broadcast to everyone
-    if new_transaction(node_pubkey,100) :
-        return make_response(json.dumps({'id' : new_id}),200)
+
+    if (new_id == config.NODE_CAPACITY - 1) :
+        broadcast_nodes_info()
+
+    return make_response(json.dumps({'id' : new_id}),200)
 
 # A node requests the chain via a GET request , we return the chain
 @API_communication.route('/request_chain',methods=['GET'])
