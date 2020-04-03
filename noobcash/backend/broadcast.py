@@ -75,12 +75,9 @@ def receive_block():
 def receive_transaction():
     # Call static method, object creation is handled in function
     json_string = request.get_json()
-    return_val,t = Transaction.validate_transaction(json_string)
-    if return_val :
-        State.state.transactions.append(t)
-        for utxo in t.outputs:
-            State.state.add(utxo)
-    return return_val
+    t,return_val = Transaction.validate_transaction(json_string)
+    print(return_val)
+    return make_response("OK",200)
     
 
 # We receive a chain, this is in a different senario than the request_chain function
@@ -91,6 +88,7 @@ def receive_chain():
     block_list = obj_dict['chain']
     # we also receive transactions we might have missed 
     # this is the init so we do not validate!
+
     if State.state.chain != [] and State.state.transactions != []:
         return make_response('Bad Init',500)
 
@@ -100,9 +98,11 @@ def receive_chain():
         utxos[utxo] = list(utxos[utxo])
 
     State.state.transactions =  [Transaction(**json.loads(t)) for t in transactions]
-    State.state.chain = [Block(**json.loads(block))for block in block_list]
+    State.state.chain = [Block(**json.loads(block)) for block in block_list]
+    for b in State.state.chain :
+        b.transactions = [Transaction(**json.loads(t)) for t in b.transactions]
     State.state.utxos = utxos 
-
+    return make_response('OK',200)
 
 # All necessary communication for a new node to enter the network 
 @API_communication.route('/register_node', methods=['POST'])
@@ -127,7 +127,7 @@ def register_node():
     State.state.nodes[new_id]['pub'] = node_pubkey
     json_obj = json.dumps({'chain' : [b.to_json() for b in State.state.chain] , 
                            'utxos' : State.state.utxos, 'transactions' : [t.to_json() for t in State.state.transactions]})
-    broadcast(json_obj,'receive_chain',new_id)
+    ret = broadcast(json_obj,'receive_chain',new_id)
     # we broadcast to everyone
     if new_transaction(node_pubkey,100) :
         return make_response(json.dumps({'id' : new_id}),200)

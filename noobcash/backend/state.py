@@ -40,7 +40,7 @@ class State :
         self.nodes = {}
         self.transactions = []
     
-    
+
     def remove_utxo(self, utxo):
         self.utxos[utxo['owner']].remove(utxo)
 
@@ -55,14 +55,12 @@ class State :
         
     def genesis(self):
         print('-------- genesis --------')
-        print(config.NODE_CAPACITY)
         gen_transaction = Transaction(inputs = [],amount = 100*config.NODE_CAPACITY , sender = 0, receiver = self.pub)
-        print(gen_transaction.amount)
-        genesis_block = Block(id = 0,transactions = [gen_transaction], prev_hash = 0, nonce = 0)
+        gen_transaction.calculate_hash()
+        genesis_block = Block(id = 0,transactions = [gen_transaction], previous_hash = 0, nonce = 0)
         self.utxos[self.pub] = [{'trans_id' : gen_transaction.id, 
         'id' : gen_transaction.id + ':0', 'owner' : gen_transaction.receiver , 'amount' : gen_transaction.amount}]
         self.chain.append(genesis_block)
-        print(self.utxos)
 
         
     def add_block(self, block):

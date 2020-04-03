@@ -4,7 +4,7 @@ from pymerkle import MerkleTree
 from Crypto.Hash import SHA256
 import simplejson as json
 from config import * 
-
+from copy import deepcopy
 
 class Block :
     """ 
@@ -20,19 +20,17 @@ class Block :
 
     """
 
-    def __init__(self, id, transactions, prev_hash, nonce =  None):
-        
-        self.difficulty = DIFFICULTY
-        self.capacity = CAPACITY
+    def __init__(self, id, transactions, previous_hash,timestamp = None ,hash = None,nonce =  None):
 
         self.id = id
-        self.timestamp = str(time()).encode()
+        self.timestamp = str(time()).encode() if timestamp == None else timestamp
         self.transactions = transactions
-        self.previous_hash = prev_hash
-        self.nonce = nonce
+        self.previous_hash = previous_hash
+        self.nonce = nonce 
+        self.hash = hash
     
     def to_json(self):
-        dict_b = self.__dict__
+        dict_b = deepcopy(self.__dict__)
         dict_b['transactions'] = [t.to_json() for t in dict_b['transactions']]
         return json.dumps(dict_b)
 

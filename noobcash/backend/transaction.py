@@ -30,8 +30,6 @@ class Transaction :
         self.id = id
         self.signature = signature
 
-        self.calculate_hash()
-
     def to_json(self):
         # use obj dict to convert to json 
         return json.dumps(self.__dict__)
@@ -40,13 +38,16 @@ class Transaction :
         self.id = SHA256.new(self.to_json().encode()).hexdigest()
 
     def sign_transaction(self):
-        self.signature = base64.b64encode(str((State.state.key.sign(3,''))[0]).encode())
+        hash_obj = SHA256.new(data = self.id.encode())
+        rsa_key = State.state.key
+        signer = PKCS1_v1_5.new(rsa_key)
+        self.signature = base64.b64encode(signer.sign(hash_obj))
 
     def verify_signature(self):
-
         rsa_key = RSA.importKey(self.sender.encode())
-        # use PKCS1 instead of plain RSA to avoid security vulnerabilities
-        return rsa_key.verify(3, (int(base64.b64decode(self.signature)),))
+        verifier = PKCS1_v1_5.new(rsa_key)
+        hash_obj = SHA256.new(data = self.id.encode())
+        return verifier.verify(hash_obj, base64.b64decode(self.signature))
 
 
     """ Static methods, not object specific, belong to the class"""
@@ -64,6 +65,7 @@ class Transaction :
         t = Transaction(**json.loads(json_trans)) 
         
         if not t.verify_signature():
+            print('asdfsa')
             return (None,False)
 
         
@@ -100,10 +102,10 @@ class Transaction :
             'owner': t.sender,
             'amount': coins - t.amount
         }]
-
+        print(State.state.utxos)
         State.state.add_utxo(t.outputs[0])
         State.state.add_utxo(t.outputs[1])
-        
+        print(State.state.utxos)
         # save transaction
         State.state.transactions.append(t)
 
@@ -143,6 +145,7 @@ class Transaction :
         
         t = Transaction(sender = sender_key,receiver = receiver_key,
             amount =  amount,inputs =  inputs)
+        t.calculate_hash()
         t.sign_transaction()
 
         t.outputs = [{
