@@ -60,7 +60,7 @@ class State :
         print('-------- genesis --------')
         gen_transaction = Transaction(inputs = [],amount = 100*config.NODE_CAPACITY , sender = 0, receiver = self.pub)
         gen_transaction.calculate_hash()
-        genesis_block = Block(id = 0,transactions = [gen_transaction], previous_hash = 1, nonce = 0,hash = b'0')
+        genesis_block = Block(id = 0,transactions = [gen_transaction], previous_hash = 1, nonce = 0,hash = b'1')
         self.utxos[self.pub] = [{'trans_id' : gen_transaction.id, 
         'id' : gen_transaction.id + ':0', 'owner' : gen_transaction.receiver , 'amount' : gen_transaction.amount}]
         self.chain.append(genesis_block)

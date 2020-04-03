@@ -42,11 +42,11 @@ class Block :
             tree.encryptRecord(t.id.encode()) # make bytestring
         merkle_hash = tree.rootHash
 
-        header = self.previous_hash + self.nonce+\
+        header = str(self.previous_hash).encode() + self.nonce+\
                 merkle_hash + self.timestamp
         h = SHA256.new()
         hash_value = h.new(h.new(header).digest()).hexdigest()[::-1]
-        return int(hash_value[0:self.difficulty],16) == 0 
+        return int(hash_value[0:config.DIFFICULTY],16) == 0 
     
   
     def mine(self):
@@ -65,8 +65,7 @@ class Block :
             nonce = hex(nonce).encode()
             timestamp = str(time()).encode()
             print(merkle_hash,nonce,timestamp,self.previous_hash)
-            header = self.previous_hash + nonce +\
-                    merkle_hash + timestamp
+            header = str(self.previous_hash).encode() + nonce + merkle_hash + timestamp
             h = SHA256.new()
             # apply hashing 2 times 
             hash_value = h.new(h.new(header).digest()).hexdigest()
