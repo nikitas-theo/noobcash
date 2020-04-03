@@ -50,14 +50,15 @@ else:
     URL = f'{HOST}/start_client'
     response = requests.post(URL, json=json.dumps({'host': HOST, 'coordinator_host' : COORDINATOR_HOST, \
                                                    'CAPACITY': str(CAPACITY), 'DIFFICULTY': str(DIFFICULTY)}))
-    while(True):
-        response2 = requests.get(f'{HOST}/notify_start')
-        answer = response2.json()['resp']
-        if (answer == "no"):
-            #to avoid overflooding the server
-            time.sleep(1)
-        else:
-            break
+        
+while(True):
+    response2 = requests.get(f'{HOST}/notify_start')
+    answer = response2.json()['resp']
+    if (answer == 'no'):
+        #to avoid overflooding the server
+        time.sleep(1)
+    else:
+        break
 
 time.sleep(3)
 

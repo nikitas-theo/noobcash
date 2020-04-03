@@ -66,6 +66,8 @@ def broadcast_nodes_info():
             continue 
         ip = node['ip']
         res = requests.post(f'{ip}/start')
+        
+    config.START = 'yes'
 
 
 
