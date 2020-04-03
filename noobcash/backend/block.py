@@ -23,7 +23,7 @@ class Block :
     def __init__(self, id, transactions, previous_hash,timestamp = None ,hash = None,nonce =  None):
 
         self.id = id
-        self.timestamp = str(time()).encode() if timestamp == None else timestamp
+        self.timestamp = str(time()).encode() if timestamp == None else timestamp.encode()
         self.transactions = transactions
         self.previous_hash = previous_hash
         self.nonce = nonce 
@@ -64,7 +64,6 @@ class Block :
             # see: https://en.bitcoin.it/wiki/Block_hashing_algorithm
             nonce = hex(nonce).encode()
             timestamp = str(time()).encode()
-            print(merkle_hash,nonce,timestamp,self.previous_hash)
             header = self.previous_hash + nonce + merkle_hash + timestamp
             h = SHA256.new()
             # apply hashing 2 times 

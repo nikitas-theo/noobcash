@@ -68,6 +68,7 @@ class State :
         
     def add_block(self, block):
         """ Validate a block and add it to the chain """
+        print('Acquiring Lock')
         self.lock.acquire() #we need to ensure consensus is not running
         
         if not block.validate_hash():
@@ -88,6 +89,7 @@ class State :
                     self.transactions.remove(state_t)
         
         #now release the lock
+        print('Releasing Lock')
         self.lock.release()
         return True
         
@@ -97,7 +99,7 @@ class State :
         copy_trans = deepcopy(self.transactions) 
         block = Block(id = len(self.chain)+1, transactions = copy_trans, previous_hash = self.chain[-1].hash)
         block.mine()
-        #! We need lock, to change state independently from api calls, E.g. when we write a block to state we must not be interrupted with a new block!!!
+
         if  block.previous_hash == self.chain[-1].hash  :
             self.transactions = []
             self.add_block(block)
@@ -107,16 +109,17 @@ class State :
         '''
         implementation of consensus algorithm
         '''
+        print('----------------------- Resolve Confict -----------------------')
         #acquire lock so that no new blocks get validated during consensus
         self.lock.acquire()
         
         #we have to put a default chain here, we consider our old one as default
         MAX_LENGTH = len(self.chain) 
-        for node in self.nodes :
+        for node in self.nodes.values() :
             if node["pub"] == state.pub :
                 continue 
             ip = node['ip']
-            response = requests.get(f'http://{ip}/request_chain')
+            response = requests.get(f'{ip}/request_chain')
 
             if (response.status_code != 200):
                 self.lock.release()
@@ -155,5 +158,6 @@ class State :
         else:
             self.lock.release()
             return False
+
 # this is the global state exposed to all modules
 state = State()

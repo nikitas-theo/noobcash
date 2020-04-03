@@ -82,8 +82,12 @@ def receive_block():
     
     # pass to Blockchain to add block
     block.transactions = [Transaction(**json.loads(t)) for t in block.transactions]
-    return State.state.add_block(block)
-
+    ret = State.state.add_block(block) 
+    print('Return valu',ret)
+    if ret : 
+        make_response("OK",200)
+    else :
+        make_response("NOT OK",500)
     
 @API_communication.route('/receive_transaction', methods=['POST'])
 def receive_transaction():
