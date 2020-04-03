@@ -175,10 +175,11 @@ def start_coordinator():
     json_string = request.get_json()
     d = json.loads(json_string)
     config.NODE_CAPACITY = int(d['NODE_CAPACITY'])
+    State.state.id = '0'
     State.state.nodes['0'] = {'ip': d['host'], 'pub': State.state.pub}
     State.state.genesis() # Create genesis block and transaction
     
-    return make_response('OK', 201)
+    return make_response(json.dumps({"id" : State.state.id}), 201)
 
 @API_communication.route('/new_transaction', methods=['POST'])
 def cli_new_transaction():
@@ -222,4 +223,4 @@ def start_client():
     response = requests.post(f'{COORDINATOR_IP}/register_node', json=json_data)
     State.state.id = response.json()['id']
     print('Our very own id is :',State.state.id)
-    return make_response("OK",200)
+    return make_response(json.dumps({"id" : State.state.id}),200)
