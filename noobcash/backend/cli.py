@@ -13,8 +13,8 @@ import time
 Command Line Interface
 
 usage:
-    python cli.py HOST PORT -ch COORD_HOST -cp COORD_PORT: start a client and coordinate it to the coordinator.
-    python cli.py HOST PORT -n CLIENTS start the coordinator,
+    python cli.py HOST PORT -ch COORD_HOST -cp COORD_PORT -capacity CAPACITY -difficulty DIFFICULTY: start a client and coordinate it to the coordinator.
+    python cli.py HOST PORT -n CLIENTS -capacity CAPACITY -difficulty DIFFICULTY: start the coordinator,
     CLIENTS : number of nodes 
 Also includes a full CLI implementation.
 
@@ -27,12 +27,16 @@ parser.add_argument('port', type=int) #the port of the address
 parser.add_argument('-n', type=int) #the number of nodes (when running as coordinator)
 parser.add_argument('-ch', type=str) #the host of the coordinator address (when running as client)
 parser.add_argument('-cp', type=str) #the port of the coordinator address (when running as client)
+parser.add_argument('-capacity',type=int) #the capacity of the block
+parser.add_argument('-difficulty', type=int) #the difficulty of the block
 args = parser.parse_args()
 
 # ----- parse -----
 HOST = f'http://{args.host}:{args.port}'
 
 NODES = args.n
+CAPACITY = args.capacity
+DIFFICULTY = args.difficulty
 IS_COORDINATOR = True if NODES else False 
 
  
@@ -40,11 +44,12 @@ IS_COORDINATOR = True if NODES else False
 if (IS_COORDINATOR):
     URL = f'{HOST}/start_coordinator'
     response = requests.post(URL, json=json.dumps({'NODE_CAPACITY': str(NODES),\
-                             'host': HOST }))
+                             'host': HOST, 'CAPACITY': str(CAPACITY), 'DIFFICULTY': str(DIFFICULTY)}))
 else:
     COORDINATOR_HOST = f'http://{args.ch}:{args.cp}'
     URL = f'{HOST}/start_client'
-    response = requests.post(URL, json=json.dumps({'host': HOST, 'coordinator_host' : COORDINATOR_HOST}))
+    response = requests.post(URL, json=json.dumps({'host': HOST, 'coordinator_host' : COORDINATOR_HOST, \
+                                                   'CAPACITY': str(CAPACITY), 'DIFFICULTY': str(DIFFICULTY)}))
     while(True):
         response = requests.get(f'{HOST}/notify_start')
         answer = response.json()['resp']
@@ -53,12 +58,14 @@ else:
             time.sleep(1)
         else:
             break
-    
+
+time.sleep(3)
 
 my_id = response.json()['id']
 f = open(f'5nodes/transactions{my_id}.txt','r')
 transactions = []
-for line in f.readline():
+for line in f:
+    print(line)
     transactions.append(line[2:-1])
 
 for line in transactions:
@@ -67,7 +74,8 @@ for line in transactions:
     response = requests.post(f'{HOST}/new_transaction', json = json.dumps({'recipient_address': f'{command[0]}', 'amount': f'{command[1]}'}))
     if (response.status_code != 200):
         print('Invalid Transaction')
-
+    else:
+        print('Valid Transaction')
 '''
 while(True):
 
