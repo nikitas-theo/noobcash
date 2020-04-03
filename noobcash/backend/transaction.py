@@ -65,7 +65,6 @@ class Transaction :
         t = Transaction(**json.loads(json_trans)) 
         
         if not t.verify_signature():
-            print('asdfsa')
             return (None,False)
 
         

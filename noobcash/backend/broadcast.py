@@ -76,7 +76,12 @@ API_communication = Blueprint('API_communication',__name__)
 def receive_block():
     json_string = request.get_json()
     block =  Block(**json.loads(json_string))
+    block.hash = str(block.hash).encode()
+    block.previous_hash = str(block.previous_hash).encode()
+    block.nonce = str(block.nonce).encode()
+    
     # pass to Blockchain to add block
+    block.transactions = [Transaction(**json.loads(t)) for t in block.transactions]
     return State.state.add_block(block)
 
     
@@ -112,6 +117,9 @@ def receive_info():
     State.state.chain = [Block(**json.loads(block)) for block in block_list]
     for b in State.state.chain :
         b.transactions = [Transaction(**json.loads(t)) for t in b.transactions]
+        b.nonce = str(b.nonce).encode()
+        b.hash = str(b.hash).encode()
+        b.previous_hash = str(b.previous_hash).encode()
     State.state.utxos = utxos 
 
     return make_response('OK',200)
