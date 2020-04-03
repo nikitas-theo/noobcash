@@ -4,8 +4,8 @@ application in order to send requests and perform functions
 
 usage:
 
-python start_app.py HOST PORT --l COORD_HOST --lp COORD_PORT: start a client and coordinate it to the coordinator.
-python start_app.py HOST PORT --c CLIENTS --m MONEY: start the coordinator,
+python active_app.py HOST PORT --l COORD_HOST --lp COORD_PORT: start a client and coordinate it to the coordinator.
+python active_app.py HOST PORT --c CLIENTS --m MONEY: start the coordinator,
 with a capacity of CLIENTS clients and give them MONEY money in the wallet.
 
 Also includes a full CLI implementation.
