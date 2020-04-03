@@ -48,7 +48,7 @@ class Block :
                 merkle_hash + self.timestamp
         h = SHA256.new()
         hash_value = h.new(h.new(header).digest()).hexdigest()[::-1]
-        return  int(hash_value[0:self.difficulty],16) == 0 
+        return int(hash_value[0:self.difficulty],16) == 0 
     
   
     def mine_block(self):

@@ -10,14 +10,14 @@ import requests
 
 from config import *
 from block import Block
-import broadcast
 from transaction import Transaction
 
 
 from flask import Flask
 
 
-
+yuko = []
+yugi = {}
 class State :
     """
         chain : our version of the blockchain :: list(B)
@@ -29,14 +29,19 @@ class State :
 
     """
 
+    def generate_wallet(self): 
+        random_generator = Random.new().read 
+        self.key  = RSA.generate(2048,random_generator)
+        #key is an RSA key object, the private key is not visible
+        self.pub = self.key.publickey()
+
     def __init__(self):
        
         self.generate_wallet()
-        self.chain = ()
         self.utxos = {}
+        self.chain = []
         self.nodes = {}
         self.transactions = []
-   
     
     def connect_to_coordinator(self, coordinator_ip, coordinator_port, client_ip, client_port):
         """
@@ -64,36 +69,20 @@ class State :
                 return True 
         return False 
 
-    def generate_wallet(self): 
-        random_generator = Random.new().read 
-        self.key  = RSA.generate(2048,random_generator)
-        #key is an RSA key object, the private key is not visible
-        self.pub = self.key.publickey
+    def remove_utxo(self, node_id, utxo):
+        self.utxos[node_id].remove(utxo)
 
-    def remove_utxo(self, utxo):
-        self.utxos[utxo['owner']].remove(utxo)
-
-    def add_utxo(self, utxo):
-        self.utxos[utxo['owner']].append(utxo)
+    def add_utxo(self, node_id, utxo):
+        self.utxos[node_id].append(utxo)
     
     def wallet_balance(self): 
         balance = 0
-        for u in self.utxo[self.pub]: 
+        for u in self.utxo[Transaction.get_node_id(self.pub)]: 
             balance+=self.utxo['amount']
         return balance 
         
-    
-    def __init__(self):
-        """
-        transactions (imported from state): list of transactions not in block
-        chain: the blockchain (list of blocks), chain[0] = genesis block
-        """
-        self.chain = []
-       
-        
-    def genesis(self,n):
-        genesis_trans = Transaction(receiver = self.pub, sender = 0, amount = 100*n, inputs = [])
-        genesis_block = Block(id = 0,transactions = genesis_trans, previous_hash = 0, nonce = 0)
+    def genesis(self):
+        genesis_block = Block(id = 0,transactions = [], prev_hash = 0, nonce = 0)
         self.chain.append(genesis_block)
   
         
@@ -147,6 +136,17 @@ class State :
         # do we need to change transactions? 
         # see: https://github.com/neoaggelos/noobcash/blob/master/noobcash/backend/consensus.py
          
+    def view_transactions(self):
+        '''
+
+        Prints the transactions of the last block in chain.
+
+        '''
+        block = self.chain[-1]
+        for tx in block.transactions:
+            sender_id = Transaction.get_node_id(tx.sender)
+            receiver_id = Transaction.get_node_id(tx.receiver)
+            print(f'Sender: {sender_id}, Receiver: {receiver_id}, Amount: {tx.amount}')
 
     @staticmethod
     def validate_chain(chain):
@@ -160,10 +160,5 @@ class State :
         if chain[0].index == 0:
             return True
         
-
-        
 # this is the global state exposed to all modules
 state = State()
-app = Flask(__name__)
-if __name__ == '__main__':
-    app.run(debug = True)

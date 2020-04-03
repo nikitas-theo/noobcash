@@ -1,16 +1,16 @@
 from Crypto.PublicKey import RSA
 from Crypto import Random
-from flask import request
+from flask import Flask, request, Blueprint, make_response
 import requests
 import simplejson as json
 
 
 from block import Block
-from state import state,app
+from state import state
 from transaction import Transaction
 from config import * 
 
-
+app = Flask(__name__)
 
 
 
@@ -62,25 +62,29 @@ def new_transaction(receiver, amount):
 # ------------------------------------------
 
 ##? What do these return? Some sort of status code? 
-##? Some values? 
+##? Some values?     
 
-@app.route('/receive_block', methods=['POST'])
-def receive_block(json_string):
+API_communication = Blueprint('API_communication',__name__)
+
+@API_communication.route('/receive_block', methods=['POST'])
+def receive_block():
+    json_string = request.get_json()
     block =  Block(**json.loads(json_string))
     # pass to Blockchain to add block
-    return state.add_block()
+    return state.add_block(block)
 
     
-@app.route('/receive_transaction', methods=['POST'])
-def receive_transaction(json_string):
+@API_communication.route('/receive_transaction', methods=['POST'])
+def receive_transaction():
     # Call static method, object creation is handled in function
+    json_string = request.get_json()
     return_val,t = Transaction.validate_transaction(json_string)
     if return_val :
         state.transactions.append(t)
     return return_val
     
 
-@app.route('/register_node', methods=['POST'])
+@API_communication.route('/register_node', methods=['POST'])
 def register_new_node():
     '''
     An incoming node posts a request to enter the network 
@@ -92,9 +96,9 @@ def register_new_node():
     node_pubkey = data['pub']
     if (not node_ip or not node_port or not node_pubkey):
         return "Invalid", 400
-    
     maxid = max(state.nodes, key=int)
     new_id = maxid + 1
+    state.nodes[new_id] = {}
     state.nodes[new_id]['ip'] = node_ip
     state.nodes[new_id]['port'] = node_port
     state.nodes[new_id]['pubkey'] = node_pubkey
@@ -104,14 +108,38 @@ def register_new_node():
    
 
     if new_transaction(node_pubkey,100):
-        return json.dump(new_id)
+        return json.dumps(new_id)
     
 
 # A node requests the chain via a GET request , we return the chain
-@app.route('/request_chain',methods=['GET'])
+@API_communication.route('/request_chain',methods=['GET'])
 def request_chain():
     block_list = [block.to_json() for block in state.chain]        
     json_chain = json.dumps({"chain": block_list})
     return json_chain 
 
+@API_communication.route('/start_coordinator', methods=['POST'])
+def start_coordinator():
+    json_string = request.get_json()
+    print(json_string)
+    d = json.loads(json_string)
+    NODE_CAPACITY = int(d['num_clients'])
+    IS_COORDINATOR = True
+    state.nodes[0] = {'ip': d['host'], 'port': d['port'], 'pubkey': state.pub.exportKey().decode()}
+    state.genesis()
+    state.utxos[0] = []
+    state.utxos[0].append({'trans_id': '-1', 'id': '-1:1', 'owner':state.pub.exportKey().decode(), 'amount':int(d['initial_money'])}) #genesis utxo
+    return make_response('OK', 201)
 
+#Debugging
+@API_communication.route('/show_coordinator_data', methods=['GET'])
+def show_coordinator_data():
+    print(state.nodes)
+    print(state.chain)
+    print(state.utxos)
+    return make_response('OK', 202)
+    
+@API_communication.route('/start_client', methods=['POST'])
+def start_client():
+    json_string = request.get_json()
+    requests.post(f'http://{state.nodes[0]["host"]}:{state.nodes[0]["port"]}/register_node', json=json_string)

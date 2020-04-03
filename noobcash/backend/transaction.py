@@ -3,6 +3,8 @@ from Crypto.PublicKey import RSA
 from Crypto.Signature import PKCS1_v1_5
 from Crypto import Random
 import simplejson as json
+from state import state
+import base64
 
 from config import * 
 
@@ -18,15 +20,15 @@ class Transaction :
     """
 
     def __init__(self,sender,receiver,amount,inputs,
-        signature = None, id = None):
+        signature = None, id = None, outputs = None):
         
-        from state import state
+        #from state import state
 
         self.sender = sender
         self.receiver = receiver
         self.amount = float(amount) 
         self.inputs = inputs 
-        self.ouputs = [] # outputs are assigned post creation
+        self.outputs = [] # outputs are assigned post creation
         
         self.id = id
         self.signature = signature
@@ -38,23 +40,32 @@ class Transaction :
         return json.dumps(self.__dict__)
 
     def calculate_hash(self):    
-        self.hash = SHA256.new(self.to_json.encode())
-        self.id = self.hash.hexdigest()
+        self.id = SHA256.new(self.to_json().encode()).hexdigest()
 
     def sign_transaction(self):
-       
-        signer = PKCS1_v1_5.new(state.key)
-        self.signature = signer.sign(self.hash)
+        self.signature = base64.b64encode(str((state.key.sign(3,''))[0]).encode())
 
     def verify_signature(self):
 
         rsa_key = RSA.importKey(self.sender.encode())
-        verifier = PKCS1_v1_5.new(rsa_key) 
         # use PKCS1 instead of plain RSA to avoid security vulnerabilities
-        return verifier.verify(self.hash, self.signature)
+        return rsa_key.verify(3, (int(base64.b64decode(self.signature)),))
 
 
     """ Static methods, not object specific, belong to the class s"""
+    
+    @staticmethod
+    def get_node_id(public_key):
+        '''
+        returns the ID of the node that
+        has as public key the public_key
+        '''
+        for node in state.nodes.items():
+            if (node[1]['pubkey'] == public_key):
+                return node[0]
+            
+        return False
+    
     @staticmethod
     def validate_transaction(json_trans):
         """ 
@@ -66,10 +77,13 @@ class Transaction :
         """ 
         # load and verify sig
         t = Transaction(**json.loads(json_trans)) 
+        
         if not t.verify_signature():
             return (None,False)
 
-       
+        sender_id = Transaction.get_node_id(t.sender)
+        receiver_id = Transaction.get_node_id(t.receiver)
+
         budget = 0
         pending_removed = []
         for utxo_input in t.inputs: 
@@ -88,7 +102,7 @@ class Transaction :
 
 
         # remove all spent transactions    
-        for utxo in pending_removed : 
+        for utxo in pending_removed: 
             state.remove_utxo(utxo)
 
         # create outputs
@@ -104,8 +118,8 @@ class Transaction :
             'amount': budget - t.amount
         }]
 
-        state.add_utxo(t.outputs[0])
-        state.add_utxo(t.outputs[1])
+        state.add_utxo(receiver_id, t.outputs[0])
+        state.add_utxo(sender_id, t.outputs[1])
         
         # save transaction
         state.transactions.append(t)
@@ -117,30 +131,32 @@ class Transaction :
         return (t,True)
     
     @staticmethod
-    def create_transaction(receiver, amount):
+    def create_transaction(receiver_key, amount):
         """
             - Create a transaction for broadcasting 
             - update transaction listg
             - update utxos 
             - mine if necessary W
         """
-        sender = state.pub
+        sender_key = state.pub.exportKey().decode()
+        sender_id = Transaction.get_node_id(sender_key)
+        receiver_id = Transaction.get_node_id(receiver_key)
         inputs = []
 
         coins = 0
-        for utxo in state.utxos[sender]:
-            coins += utxo['amount']
-            inputs.append(utxo['id'])
+        for utxo in state.utxos[sender_id]:
+            coins += float(utxo['amount'])
+            inputs.append(utxo['id']) #!this needs to be determined!
             if coins >= amount :
                 break 
 
-        t = Transaction(sender, receiver, amount, inputs)
+        t = Transaction(sender_key, receiver_key, amount, inputs)
         t.sign_transaction()
 
         t.outputs = [{
             'trans_id': t.id,
             'id' : t.id + ':0',
-            'owner': t.recepient,
+            'owner': t.receiver,
             'amount': t.amount
         }, {
             'trans_id': t.id,
@@ -149,8 +165,8 @@ class Transaction :
             'amount': coins - t.amount
         }]
 
-        state.add_utxo(t.outputs[0])
-        state.add_utxo(t.outputs[1])
+        state.add_utxo(receiver_id, t.outputs[0])
+        state.add_utxo(sender_id, t.outputs[1])
 
         state.transactions.append(t)
         
