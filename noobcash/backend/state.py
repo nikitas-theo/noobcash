@@ -125,10 +125,17 @@ class State :
                 self.lock.release()
                 return False
             # extract blocks from chain, they are in string format
-            chain_temp = json.loads(response.json()['chain'])
+            print('Reached this far')
+            chain_temp = response.json()['chain']
             chain = []
             for block in chain_temp : 
-                chain.append(**Block(json.loads(block)))
+                b = Block(**json.loads(block))
+                b.transcations = [Transaction(**json.loads(t)) for t in b.transactions]
+                b.hash = str(b.hash).encode()
+                b.nonce = str(b.nonce).encode()
+                b.previous_hash = str(b.previous_hash).encode()
+                chain.append(b)
+                
             if not state.validate_chain(chain) :
                 continue
             if len(chain) > MAX_LENGTH : 
@@ -137,10 +144,7 @@ class State :
                 MAX_LENGTH = len(chain)
         
         self.lock.release()
-        # TODO: Do we need to change utxos? 
-        # do we need to change transactions? 
-        # see: https://github.com/neoaggelos/noobcash/blob/master/noobcash/backend/consensus.py
-         
+      
     def validate_chain(self,chain):
         """ validate the blockchain """
         #we should enter this function only if we have the lock from consensus
