@@ -85,7 +85,7 @@ def new_transaction(receiver, amount,new_id = None):
 
 API_communication = Blueprint('API_communication',__name__)
 
-@API_communication.route('./start',methods=['POST'])
+@API_communication.route('/start',methods=['POST'])
 def start():
     config.START = True
 @API_communication.route('/receive_block', methods=['POST'])
@@ -184,9 +184,11 @@ def request_chain():
 
 @API_communication.route('/start_coordinator', methods=['POST'])
 def start_coordinator():
-
+    
     json_string = request.get_json()
     d = json.loads(json_string)
+    config.DIFFICULTY = d['DIFFICULTY']
+    config.CAPACITY = d['CAPACITY']
     config.NODE_CAPACITY = int(d['NODE_CAPACITY'])
     State.state.id = '0'
     State.state.nodes['0'] = {'ip': d['host'], 'pub': State.state.pub}
@@ -230,7 +232,7 @@ def start_client():
     data = json.loads(json_string)
     COORDINATOR_IP = data['coordinator_host']
     State.state.nodes[0] = {'ip': data['coordinator_host']}
-    config.DIFFICULTY = data['FIFFICULTY']
+    config.DIFFICULTY = data['DIFFICULTY']
     config.CAPACITY = data['CAPACITY']
 
     # give coordinator 
