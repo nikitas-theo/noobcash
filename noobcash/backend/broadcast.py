@@ -105,7 +105,6 @@ def receive_info():
     utxos = obj_dict['utxos']
     nodes = obj_dict['nodes']
     State.state.nodes = nodes
-    print(States.state.nodes)
     for utxo in utxos.keys():
         utxos[utxo] = list(utxos[utxo])
 
@@ -130,7 +129,7 @@ def register_node():
     if (not node_ip or not node_pubkey):
         return "Invalid", 400
 
-    new_id = len(State.state.nodes)  # it works
+    new_id = str(len(State.state.nodes))  # it works
     print('new node id is:',new_id)
 
     State.state.utxos[node_pubkey] = []
@@ -139,7 +138,7 @@ def register_node():
     State.state.nodes[new_id]['ip'] = node_ip
     State.state.nodes[new_id]['pub'] = node_pubkey
 
-    if (new_id == config.NODE_CAPACITY - 1) :
+    if (int(new_id) == config.NODE_CAPACITY - 1) :
         broadcast_nodes_info()
 
     return make_response(json.dumps({'id' : new_id}),200)
@@ -171,7 +170,7 @@ def start_coordinator():
 def cli_new_transaction():
     json_string = request.get_json()
     d = json.loads(json_string)
-    node_id = int(d['recipient_address'])
+    node_id = d['recipient_address']
     amount = int(d['amount'])
     node = State.state.nodes[node_id]
     if (new_transaction(node['pub'], amount)):
@@ -207,6 +206,6 @@ def start_client():
     # give coordinator 
     json_data = json.dumps({'ip' : data['host'], 'pub' : State.state.pub})
     response = requests.post(f'{COORDINATOR_IP}/register_node', json=json_data)
-    State.state.id = int(response.json()['id'])
+    State.state.id = response.json()['id']
     print('Our very own id is :',State.state.id)
     return make_response("OK",200)
