@@ -59,6 +59,17 @@ def broadcast_nodes_info():
         if node['pub'] == State.state.pub : 
             continue 
         new_transaction(node['pub'],100)
+    
+    # notify everyone to start transactions
+    for node in State.state.nodes.values():
+        if node['pub'] == State.state.pub : 
+            continue 
+        ip = node['ip']
+        res = requests.post(f'{ip}/start')
+
+
+
+
 
 
 def new_transaction(receiver, amount,new_id = None):
@@ -74,6 +85,9 @@ def new_transaction(receiver, amount,new_id = None):
 
 API_communication = Blueprint('API_communication',__name__)
 
+@API_communication.route('./start',methods=['POST'])
+def start():
+    config.START = True
 @API_communication.route('/receive_block', methods=['POST'])
 def receive_block():
     json_string = request.get_json()
@@ -85,7 +99,6 @@ def receive_block():
     # pass to Blockchain to add block
     block.transactions = [Transaction(**json.loads(t)) for t in block.transactions]
     ret = State.state.add_block(block) 
-    print('Return valu',ret)
     if ret : 
         return make_response("OK",200)
     else :
@@ -217,6 +230,8 @@ def start_client():
     data = json.loads(json_string)
     COORDINATOR_IP = data['coordinator_host']
     State.state.nodes[0] = {'ip': data['coordinator_host']}
+    config.DIFFICULTY = data['FIFFICULTY']
+    config.CAPACITY = data['CAPACITY']
 
     # give coordinator 
     json_data = json.dumps({'ip' : data['host'], 'pub' : State.state.pub})
@@ -227,8 +242,4 @@ def start_client():
 
 @API_communication.route('/notify_start', methods=['GET'])
 def notify_start():
-    
-    if (len(State.state.nodes) == config.NODE_CAPACITY):
-        return make_response(json.dumps({"resp" : "yes"}),200)
-    else:
-        return make_response(json.dumps({"resp": "no", }),200)
+        return make_response(json.dumps({"resp" : config.START}),200)

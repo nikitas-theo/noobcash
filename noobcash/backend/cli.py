@@ -54,16 +54,17 @@ else:
         else:
             break
     
-
+time.sleep(1)
 my_id = response.json()['id']
 f = open(f'5nodes/transactions{my_id}.txt','r')
 transactions = []
-for line in f.readline():
+for line in f :
     transactions.append(line[2:-1])
 
 for line in transactions:
     cli = f't {line}'
     command = cli.split()[1:]
+    print(command)
     response = requests.post(f'{HOST}/new_transaction', json = json.dumps({'recipient_address': f'{command[0]}', 'amount': f'{command[1]}'}))
     if (response.status_code != 200):
         print('Invalid Transaction')
