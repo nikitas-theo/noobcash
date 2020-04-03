@@ -15,7 +15,6 @@ import broadcast
 import requests
 import argparse
 import simplejson as json
-from state import state
 from flask import Flask, request
 from config import *
 
@@ -60,6 +59,7 @@ while(True):
         command = cli.split()
         recipient_address = command[2]
         amount = command[4]
+        response = requests.post(f'{HOST}/new_transaction', json = json.dumps({'recipient_address': f'{command[2]}', 'amount': f'{command[4]}'})
         '''
         
 
@@ -78,15 +78,7 @@ while(True):
         500 if the request was good but the transaction failed
 
         '''
-        recipient_ip, recipient_port = recipient_address.split(':')
-        for node in state.nodes.values():
-            if node['ip'] == recipient_ip and node['port'] == recipient_port:
-                node_pub = node['pubkey']
         
-        if (broadcast.new_transaction(node_pub, amount)):
-            print('OK')
-        else:
-            print('NOT OK')
     
     elif (cli == 'view'):
         '''
@@ -102,7 +94,7 @@ while(True):
         functions that does this.
         
         '''
-        state.view_transactions()
+        response = requests.post(f'{HOST}/view_transactions')
     
     elif (cli == 'balance'):
         '''
@@ -111,7 +103,7 @@ while(True):
         by calculating UTXOs.
         
         '''
-        print(state.wallet_balance())
+        response = requests.post(f'{HOST}/balance')
     
     elif (cli == 'help'):
         '''

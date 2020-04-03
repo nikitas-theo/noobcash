@@ -137,6 +137,34 @@ def show_coordinator_data():
     print(state.chain)
     print(state.utxos)
     return make_response('OK', 202)
+
+@API_communication.route('/new_transaction', methods=['POST'])
+def new_transaction():
+    json_string = request.get_json()
+    d = json.loads(json_string)
+    recipient_ip, recipient_port = d['recipient_address'].split(':')
+    for node in state.nodes.values():
+        if node['ip'] == recipient_ip and node['port'] == recipient_port:
+            node_pub = node['pubkey']
+    
+    if (broadcast.new_transaction(node_pub, d['amount'])):
+        print('OK')
+    else:
+        print('NOT OK')
+        
+@API_communication.route('/view_transaction', methods=['POST'])
+def view_transactions():
+    desired_output = state.view_transactions()
+    '''
+    this must return a json object
+    '''
+    
+@API_communication.route('/balance', methods=['POST'])
+def show_balance():
+    desired_output = state.wallet_balance()
+    '''
+    this must return a json object
+    '''
     
 @API_communication.route('/start_client', methods=['POST'])
 def start_client():

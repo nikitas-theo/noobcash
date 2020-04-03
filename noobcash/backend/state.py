@@ -151,11 +151,14 @@ class State :
         Prints the transactions of the last block in chain.
 
         '''
+        out_json = []
         block = self.chain[-1]
         for tx in block.transactions:
             sender_id = self.get_node_id(tx.sender)
             receiver_id = self.get_node_id(tx.receiver)
-            print(f'Sender: {sender_id}, Receiver: {receiver_id}, Amount: {tx.amount}')
+            out_json.append({'Sender': f'{sender_id}', 'Receiver': f'{receiver_id}', 'Amount': f'{tx.amount}'})
+        
+        return out_json
         
 
     @staticmethod
