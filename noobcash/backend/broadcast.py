@@ -161,7 +161,7 @@ def start_coordinator():
     json_string = request.get_json()
     d = json.loads(json_string)
     config.NODE_CAPACITY = int(d['NODE_CAPACITY'])
-    State.state.nodes[0] = {'ip': d['host'], 'pub': State.state.pub}
+    State.state.nodes['0'] = {'ip': d['host'], 'pub': State.state.pub}
     State.state.genesis() # Create genesis block and transaction
     
     return make_response('OK', 201)

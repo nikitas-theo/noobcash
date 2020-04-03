@@ -95,7 +95,7 @@ class State :
     def mine_block(self):
         
         copy_trans = deepcopy(self.transactions) 
-        block = Block(id = len(self.chain)+1, transactions = copy_trans, prev_hash = self.chain[-1].hash)
+        block = Block(id = len(self.chain)+1, transactions = copy_trans, previous_hash = self.chain[-1].hash)
         block.mine()
         #! We need lock, to change state independently from api calls, E.g. when we write a block to state we must not be interrupted with a new block!!!
         if  block.previous_hash == self.chain[-1].hash  :
@@ -144,7 +144,7 @@ class State :
         self.lock.acquire()
         for block,block_prev in zip(chain,chain[1:]):
             
-            if not block_prev.hash == block.prev_hash and block.validate_hash() :
+            if not block_prev.hash == block.previous_hash and block.validate_hash() :
                 self.lock.release()
                 return False 
             
