@@ -90,6 +90,7 @@ API_communication = Blueprint('API_communication',__name__)
 @API_communication.route('/start',methods=['POST'])
 def start():
     config.START = True
+    
 @API_communication.route('/receive_block', methods=['POST'])
 def receive_block():
     json_string = request.get_json()
@@ -111,6 +112,7 @@ def receive_transaction():
     # Call static method, object creation is handled in function
     json_string = request.get_json()
     t,return_val = Transaction.validate_transaction(json_string)
+    print(return_val)
     return make_response("OK",200)
     
 
@@ -188,8 +190,8 @@ def start_coordinator():
     
     json_string = request.get_json()
     d = json.loads(json_string)
-    config.DIFFICULTY = d['DIFFICULTY']
-    config.CAPACITY = d['CAPACITY']
+    config.DIFFICULTY = int(d['DIFFICULTY'])
+    config.CAPACITY = int(d['CAPACITY'])
     config.NODE_CAPACITY = int(d['NODE_CAPACITY'])
     State.state.id = '0'
     State.state.nodes['0'] = {'ip': d['host'], 'pub': State.state.pub}
@@ -233,8 +235,8 @@ def start_client():
     data = json.loads(json_string)
     COORDINATOR_IP = data['coordinator_host']
     State.state.nodes[0] = {'ip': data['coordinator_host']}
-    config.DIFFICULTY = data['DIFFICULTY']
-    config.CAPACITY = data['CAPACITY']
+    config.DIFFICULTY = int(data['DIFFICULTY'])
+    config.CAPACITY = int(data['CAPACITY'])
 
     # give coordinator 
     json_data = json.dumps({'ip' : data['host'], 'pub' : State.state.pub})

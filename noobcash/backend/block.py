@@ -59,7 +59,7 @@ class Block :
         
         # 32-bit sized nonce 
         for nonce in range(2 << 32):
-            # header consists of prev_hash, nonce, merkle of transactions
+            # header consists ofev_hash, nonce, merkle of transactions
             # and the block timestamps. 
             # see: https://en.bitcoin.it/wiki/Block_hashing_algorithm
             nonce = hex(nonce).encode()

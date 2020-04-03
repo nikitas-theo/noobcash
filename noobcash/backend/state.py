@@ -119,6 +119,7 @@ class State :
         '''
         #acquire lock so that no new blocks get validated during consensus        
         #we have to put a default chain here, we consider our old one as default
+        print('resolve')
         MAX_LENGTH = len(self.chain) 
         for node in self.nodes.values() :
             if node["pub"] == state.pub :
@@ -148,6 +149,11 @@ class State :
                 MAX_LENGTH = len(chain)
         
         self.lock.release()
+        self.time4 = time.time()
+        self.total_time += (self.time4 - self.time3)
+        self.num_blocks_calculated += 1
+        self.avg_time = (self.total_time) / (self.num_blocks_calculated)
+        print('Average block addition time: ', self.avg_time)
         return True
     def validate_chain(self,chain):
         """ validate the blockchain """
