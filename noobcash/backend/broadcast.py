@@ -111,7 +111,6 @@ def receive_transaction():
     # Call static method, object creation is handled in function
     json_string = request.get_json()
     t,return_val = Transaction.validate_transaction(json_string)
-    print(return_val)
     return make_response("OK",200)
     
 

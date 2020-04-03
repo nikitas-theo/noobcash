@@ -16,6 +16,7 @@ from flask import Flask
 import broadcast
 
 from threading import RLock
+import time
 
 class State :
     """
@@ -42,7 +43,9 @@ class State :
         self.chain = []
         self.nodes = {}
         self.transactions = []
-    
+        
+        self.total_time = 0
+        self.num_blocks_calculated = 0
 
     def remove_utxo(self, utxo):
         self.utxos[utxo['owner']].remove(utxo)
@@ -68,7 +71,7 @@ class State :
         
     def add_block(self, block):
         """ Validate a block and add it to the chain """
-        print('Acquiring Lock')
+        self.time3 = time.time()
         self.lock.acquire() #we need to ensure consensus is not running
         self.transactions = []
         if not block.validate_hash():
@@ -89,8 +92,14 @@ class State :
                     self.transactions.remove(state_t)
         
         #now release the lock
-        print('Releasing Lock')
         self.lock.release()
+        
+        self.time4 = time.time()
+        self.total_time += (self.time4 - self.time3)
+        self.num_blocks_calculated += 1
+        self.avg_time = (self.total_time) / (self.num_blocks_calculated)
+        print('Average block addition time: ', self.avg_time)
+        
         return True
         
 
@@ -108,7 +117,6 @@ class State :
         '''
         implementation of consensus algorithm
         '''
-        print('----------------------- Resolve Confict -----------------------')
         #acquire lock so that no new blocks get validated during consensus        
         #we have to put a default chain here, we consider our old one as default
         MAX_LENGTH = len(self.chain) 
@@ -122,7 +130,6 @@ class State :
                 self.lock.release()
                 return False
             # extract blocks from chain, they are in string format
-            print('Reached this far')
             chain_temp = response.json()['chain']
             chain = []
             for block in chain_temp : 

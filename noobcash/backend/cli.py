@@ -60,7 +60,6 @@ while(True):
     else:
         break
 
-time.sleep(3)
 
 my_id = response.json()['id']
 f = open(f'5nodes/transactions{my_id}.txt','r')
@@ -68,6 +67,8 @@ transactions = []
 for line in f:
     print(line)
     transactions.append(line[2:-1])
+
+time1 = time.time()
 
 for line in transactions:
     cli = f't {line}'
@@ -78,6 +79,12 @@ for line in transactions:
         print('Invalid Transaction')
     else:
         print('Valid Transaction')
+        
+time2 = time.time()
+
+#how many transactions per second
+throughput = (len(transactions))/(time2-time1)
+print('Transactions per second: ', throughput)
 '''
 while(True):
 

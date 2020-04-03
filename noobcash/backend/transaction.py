@@ -101,15 +101,12 @@ class Transaction :
             'owner': t.sender,
             'amount': coins - t.amount
         }]
-        print(State.state.utxos)
         State.state.add_utxo(t.outputs[0])
         State.state.add_utxo(t.outputs[1])
-        print(State.state.utxos)
         # save transaction
         State.state.transactions.append(t)
 
         # mine if block is full 
-        print(len(State.state.transactions))
         if (len(State.state.transactions) == config.CAPACITY):
             State.state.mine_block()
         
