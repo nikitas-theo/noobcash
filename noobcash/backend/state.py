@@ -15,6 +15,8 @@ from transaction import Transaction
 from flask import Flask
 import broadcast
 
+from threading import RLock
+
 class State :
     """
         chain : our version of the blockchain :: list(B)
@@ -34,6 +36,7 @@ class State :
 
     def __init__(self):
        
+        self.lock = RLock()
         self.generate_wallet()
         self.utxos = {}
         self.chain = []
