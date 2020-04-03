@@ -10,7 +10,6 @@ import requests
 
 from config import *
 from block import Block
-from transaction import Transaction
 
 
 from flask import Flask
@@ -136,6 +135,18 @@ class State :
         # do we need to change transactions? 
         # see: https://github.com/neoaggelos/noobcash/blob/master/noobcash/backend/consensus.py
          
+    @staticmethod
+    def get_node_id(public_key):
+        '''
+        returns the ID of the node that
+        has as public key the public_key
+        '''
+        for node in self.nodes.items():
+            if (node[1]['pubkey'] == public_key):
+                return node[0]
+            
+        return False
+    
     def view_transactions(self):
         '''
 
@@ -144,9 +155,10 @@ class State :
         '''
         block = self.chain[-1]
         for tx in block.transactions:
-            sender_id = Transaction.get_node_id(tx.sender)
-            receiver_id = Transaction.get_node_id(tx.receiver)
+            sender_id = self.get_node_id(tx.sender)
+            receiver_id = self.get_node_id(tx.receiver)
             print(f'Sender: {sender_id}, Receiver: {receiver_id}, Amount: {tx.amount}')
+        
 
     @staticmethod
     def validate_chain(chain):

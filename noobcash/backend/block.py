@@ -3,8 +3,6 @@ from time import time
 from pymerkle import MerkleTree
 from Crypto.Hash import SHA256
 import simplejson as json
-
-from transaction import Transaction
 from config import * 
 
 
@@ -81,11 +79,3 @@ class Block :
             self.timestamp = timestamp            
         else : 
             self.mine()
-
-if __name__ == '__main__':
-    ''' Α dummy mining test''' 
-    x = [Transaction('asdf','asdf',10,[],b'0x23423423') for i in range(5)]
-    y = Block(0,b'0x234234134',)
-    y.transactions = x
-    y.mine()
-    print(y.validate())
