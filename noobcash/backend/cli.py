@@ -45,9 +45,20 @@ else:
     URL = f'{HOST}/start_client'
     response = requests.post(URL, json=json.dumps({'host': HOST, 'coordinator_host' : COORDINATOR_HOST}))
 
+my_id = response.json()['id']
+f = open(f'5nodes/transaction{my_id}.txt','r')
+transactions = []
+for line in f.readline():
+    transactions.append(line[2:-1])
 
+for line in transactions:
+    cli = f't {line}'
+    command = cli.split()[1:]
+    response = requests.post(f'{HOST}/new_transaction', json = json.dumps({'recipient_address': f'{command[0]}', 'amount': f'{command[1]}'}))
+    if (response.status_code != 200):
+        print('Invalid Transaction')
 
-
+'''
 while(True):
 
     """ CLI implementation """
@@ -121,3 +132,4 @@ while(True):
 
     else :
         print('Unknown command, see : help')
+'''
