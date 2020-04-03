@@ -3,11 +3,9 @@ from Crypto.PublicKey import RSA
 from Crypto.Signature import PKCS1_v1_5
 from Crypto import Random
 import simplejson as json
-from state import state
 import base64
-
-from config import * 
-
+import state as State 
+import config
 class Transaction :
     """ sender : pub key :: string
         receiver : pub key :: string
@@ -15,18 +13,17 @@ class Transaction :
         inputs : list of transaction ids :: list(string) 
         outpus : list of utxos 
         id : transaction hash :: hex number
-        hash : transaction hash, but as a hash object :: SHA256 obj
+        #?hash : transaction hash, but as a hash object :: SHA256 obj
         signature :: byte string 
     """
 
     def __init__(self,sender,receiver,amount,inputs,
         signature = None, id = None, outputs = None):
         
-        #from state import state
 
         self.sender = sender
         self.receiver = receiver
-        self.amount = float(amount) 
+        self.amount = amount 
         self.inputs = inputs 
         self.outputs = [] # outputs are assigned post creation
         
@@ -43,7 +40,7 @@ class Transaction :
         self.id = SHA256.new(self.to_json().encode()).hexdigest()
 
     def sign_transaction(self):
-        self.signature = base64.b64encode(str((state.key.sign(3,''))[0]).encode())
+        self.signature = base64.b64encode(str((State.state.key.sign(3,''))[0]).encode())
 
     def verify_signature(self):
 
@@ -52,20 +49,8 @@ class Transaction :
         return rsa_key.verify(3, (int(base64.b64decode(self.signature)),))
 
 
-    """ Static methods, not object specific, belong to the class s"""
-    
-    @staticmethod
-    def get_node_id(public_key):
-        '''
-        returns the ID of the node that
-        has as public key the public_key
-        '''
-        for node in state.nodes.items():
-            if (node[1]['pubkey'] == public_key):
-                return node[0]
-            
-        return False
-    
+    """ Static methods, not object specific, belong to the class"""
+
     @staticmethod
     def validate_transaction(json_trans):
         """ 
@@ -81,29 +66,27 @@ class Transaction :
         if not t.verify_signature():
             return (None,False)
 
-        sender_id = Transaction.get_node_id(t.sender)
-        receiver_id = Transaction.get_node_id(t.receiver)
-
-        budget = 0
+        
+        coins = 0
         pending_removed = []
         for utxo_input in t.inputs: 
             found = False          
-            for utxo in state.utxos[t.sender]: 
+            for utxo in State.state.utxos[t.sender]: 
             
                 if utxo['id'] == utxo_input and utxo['owner'] == t.sender: 
                     found = True
-                    budget += utxo['amount']
+                    coins += utxo['amount']
                     pending_removed.append(utxo)
                     break
             if not found:
                 return (None,False)
-        if budget < t.amount:
+        if coins < t.amount:
             return (None,False)
 
 
         # remove all spent transactions    
         for utxo in pending_removed: 
-            state.remove_utxo(utxo)
+            State.state.remove_utxo(utxo)
 
         # create outputs
         t.outputs = [{
@@ -115,18 +98,18 @@ class Transaction :
             'trans_id': t.id,
             'id' : t.id + ":1",
             'owner': t.sender,
-            'amount': budget - t.amount
+            'amount': coins - t.amount
         }]
 
-        state.add_utxo(receiver_id, t.outputs[0])
-        state.add_utxo(sender_id, t.outputs[1])
+        State.state.add_utxo(t.outputs[0])
+        State.state.add_utxo(t.outputs[1])
         
         # save transaction
-        state.transactions.append(t)
+        State.state.transactions.append(t)
 
         # mine if block is full 
-        if (len(state.transactions) == CAPACITY):
-            state.mine_block()
+        if (len(State.state.transactions) == config.CAPACITY):
+            State.state.mine_block()
         
         return (t,True)
     
@@ -138,19 +121,28 @@ class Transaction :
             - update utxos 
             - mine if necessary W
         """
-        sender_key = state.pub.exportKey().decode()
-        sender_id = Transaction.get_node_id(sender_key)
-        receiver_id = Transaction.get_node_id(receiver_key)
+        sender_key = State.state.pub
         inputs = []
 
         coins = 0
-        for utxo in state.utxos[sender_id]:
-            coins += float(utxo['amount'])
-            inputs.append(utxo['id']) #!this needs to be determined!
+        pending_removed = []
+        for utxo in State.state.utxos[sender_key]:
+            coins += utxo['amount']
+            inputs.append(utxo['id'])
+            pending_removed.append(utxo)
             if coins >= amount :
                 break 
+        
+        if coins < amount:
+            return (False)
 
-        t = Transaction(sender_key, receiver_key, amount, inputs)
+        # remove all spent transactions    
+        for utxo in pending_removed: 
+            State.state.remove_utxo(utxo)
+
+        
+        t = Transaction(sender = sender_key,receiver = receiver_key,
+            amount =  amount,inputs =  inputs)
         t.sign_transaction()
 
         t.outputs = [{
@@ -161,18 +153,18 @@ class Transaction :
         }, {
             'trans_id': t.id,
             'id' : t.id + ':1',
-            'person': t.sender,
+            'owner': t.sender,
             'amount': coins - t.amount
         }]
 
-        state.add_utxo(receiver_id, t.outputs[0])
-        state.add_utxo(sender_id, t.outputs[1])
+        State.state.add_utxo(t.outputs[0])
+        State.state.add_utxo(t.outputs[1])
 
-        state.transactions.append(t)
+        State.state.transactions.append(t)
         
         # mine if block is full 
-        if (len(state.transactions) == CAPACITY):
-            state.mine_block()
+        if (len(State.state.transactions) == config.CAPACITY):
+            State.state.mine_block()
         
         return t
     

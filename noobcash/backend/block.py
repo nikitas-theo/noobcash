@@ -32,7 +32,9 @@ class Block :
         self.nonce = nonce
     
     def to_json(self):
-        return json.dumps(self.__dict__)
+        dict_b = self.__dict__
+        dict_b['transactions'] = [t.to_json() for t in dict_b['transactions']]
+        return json.dumps(dict_b)
 
     def validate_hash(self):
         # validate block hash value

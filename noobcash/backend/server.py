@@ -8,7 +8,6 @@ import argparse
 import requests
 import flask
 from example import idiot_funcs
-from state import state
 from broadcast import API_communication
 
 parser = argparse.ArgumentParser()

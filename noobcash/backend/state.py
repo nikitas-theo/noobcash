@@ -8,9 +8,9 @@ from copy import deepcopy
 import simplejson as json
 import requests
 
-from config import *
+import config
 from block import Block
-
+from transaction import Transaction
 
 from flask import Flask
 import broadcast
@@ -19,18 +19,18 @@ class State :
     """
         chain : our version of the blockchain :: list(B)
         utxos : unspent trans for all nodes :: utxos[owner] = {trans_id, id, owner, amount}
-        nodes : node information :: nodes[id] = {ip,port,pub}
-        transactions : list of verified transactions not in a block :: 
+        nodes : node information :: nodes[id] = {ip,pub}
+        transactions : list of verified transactions not in a block :: list(T)
         key: RSA key including private and public key :: string
         pub : RSA public part of key :: string
+        id : our id
 
     """
 
     def generate_wallet(self): 
         random_generator = Random.new().read 
         self.key  = RSA.generate(2048,random_generator)
-        #key is an RSA key object, the private key is not visible
-        self.pub = self.key.publickey()
+        self.pub = self.key.publickey().exportKey().decode()
 
     def __init__(self):
        
@@ -40,48 +40,30 @@ class State :
         self.nodes = {}
         self.transactions = []
     
-    def connect_to_coordinator(self, coordinator_ip, coordinator_port, client_ip, client_port):
-        """
-        send a POST request for connection to the coordinator.
-        returns the blockchain 
-        """
+    
+    def remove_utxo(self, utxo):
+        self.utxos[utxo['owner']].remove(utxo)
 
-        response = requests.post(f'http://{coordinator_ip}:{coordinator_port}/register_node',\
-                      json={f'"ip":"{client_ip}"',f'"port":"{client_port}"',\
-                            f'"pubkey":"{self.pub}"'})
-        # we request node_id
-        if response.status_code == 200 :
-            self.id = response.json()['id']
-
-            # we also request the chain
-            response = requests.post(f'http://{coordinator_ip}:{coordinator_port}/request_chain',\
-                    json={f'"ip":"{client_ip}"',f'"port":"{client_port}"',\
-                        f'"pubkey":"{self.pub}"'})
-
-            if response.status_code == 200 :
-                block_list = json.loads(response.json()['chain'])
-                chain = [Block(**json.loads(block))for block in block_list]
-                if self.validate_chain(chain) : 
-                    self.chain = chain
-                return True 
-        return False 
-
-    def remove_utxo(self, node_id, utxo):
-        self.utxos[node_id].remove(utxo)
-
-    def add_utxo(self, node_id, utxo):
-        self.utxos[node_id].append(utxo)
+    def add_utxo(self, utxo):
+        self.utxos[utxo['owner']].append(utxo)
     
     def wallet_balance(self): 
         balance = 0
-        for u in self.utxos[Transaction.get_node_id(self.pub)]: 
-            balance+=self.utxos['amount']
+        for utxo in self.utxos[self.pub]: 
+            balance+=utxo['amount']
         return balance 
         
     def genesis(self):
-        genesis_block = Block(id = 0,transactions = [], prev_hash = 0, nonce = 0)
+        print('-------- genesis --------')
+        print(config.NODE_CAPACITY)
+        gen_transaction = Transaction(inputs = [],amount = 100*config.NODE_CAPACITY , sender = 0, receiver = self.pub)
+        print(gen_transaction.amount)
+        genesis_block = Block(id = 0,transactions = [gen_transaction], prev_hash = 0, nonce = 0)
+        self.utxos[self.pub] = [{'trans_id' : gen_transaction.id, 
+        'id' : gen_transaction.id + ':0', 'owner' : gen_transaction.receiver , 'amount' : gen_transaction.amount}]
         self.chain.append(genesis_block)
-  
+        print(self.utxos)
+
         
     def add_block(self, block):
         """ Validate a block and add it to the chain """
@@ -133,33 +115,6 @@ class State :
         # do we need to change transactions? 
         # see: https://github.com/neoaggelos/noobcash/blob/master/noobcash/backend/consensus.py
          
-    @staticmethod
-    def get_node_id(public_key):
-        '''
-        returns the ID of the node that
-        has as public key the public_key
-        '''
-        for node in self.nodes.items():
-            if (node[1]['pubkey'] == public_key):
-                return node[0]
-            
-        return False
-    
-    def view_transactions(self):
-        '''
-
-        Prints the transactions of the last block in chain.
-
-        '''
-        out_json = []
-        block = self.chain[-1]
-        for tx in block.transactions:
-            sender_id = self.get_node_id(tx.sender)
-            receiver_id = self.get_node_id(tx.receiver)
-            out_json.append({'Sender': f'{sender_id}', 'Receiver': f'{receiver_id}', 'Amount': f'{tx.amount}'})
-        
-        return out_json
-        
 
     @staticmethod
     def validate_chain(chain):
