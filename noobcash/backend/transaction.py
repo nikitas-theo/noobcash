@@ -110,6 +110,7 @@ class Transaction :
         State.state.transactions.append(t)
 
         # mine if block is full 
+        print(len(State.state.transactions))
         if (len(State.state.transactions) == config.CAPACITY):
             State.state.mine_block()
         

@@ -3,7 +3,7 @@ from time import time
 from pymerkle import MerkleTree
 from Crypto.Hash import SHA256
 import simplejson as json
-from config import * 
+import config
 from copy import deepcopy
 
 class Block :
@@ -39,7 +39,7 @@ class Block :
 
         tree = MerkleTree()
         for t in self.transactions :
-            tree.encryptRecord(t.hash.encode()) # make bytestring
+            tree.encryptRecord(t.id.encode()) # make bytestring
         merkle_hash = tree.rootHash
 
         header = self.previous_hash + self.nonce+\
@@ -49,7 +49,7 @@ class Block :
         return int(hash_value[0:self.difficulty],16) == 0 
     
   
-    def mine_block(self):
+    def mine(self):
 
         # Create hash of transactions with a Merkle Tree
         tree = MerkleTree()
@@ -64,13 +64,14 @@ class Block :
             # see: https://en.bitcoin.it/wiki/Block_hashing_algorithm
             nonce = hex(nonce).encode()
             timestamp = str(time()).encode()
+            print(merkle_hash,nonce,timestamp,self.previous_hash)
             header = self.previous_hash + nonce +\
                     merkle_hash + timestamp
             h = SHA256.new()
             # apply hashing 2 times 
             hash_value = h.new(h.new(header).digest()).hexdigest()
             hash_value = hash_value[::-1] # reverse, little endian
-            if int(hash_value[0:self.difficulty],16) == 0 :
+            if int(hash_value[0:config.DIFFICULTY],16) == 0 :
                 solved = True
                 break
         if solved :
