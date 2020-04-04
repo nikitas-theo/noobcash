@@ -7,8 +7,7 @@ import simplejson as json
 from flask import Flask, request
 from config import *
 import time
-import functools
-print = functools.partial(print, flush=True)
+
 
 """
 Command Line Interface
@@ -63,7 +62,7 @@ while(True):
     answer = response2.json()['resp']
     if (answer == 'no'):
         # we poll the server with a given time delay to avoid DDoS
-        time.sleep(1)
+        time.sleep(0.2)
     else:
         break
 if TEST: 

@@ -5,8 +5,10 @@ from Crypto.Hash import SHA256
 import simplejson as json
 import config
 from copy import deepcopy
+
 import functools
 print = functools.partial(print, flush=True)
+
 class Block :
     """ 
 
@@ -47,8 +49,8 @@ class Block :
         header = self.previous_hash + self.nonce+\
                 merkle_hash + self.timestamp
         h = SHA256.new()
-        hash_value = h.new(h.new(header).digest()).hexdigest()[::-1]
-        return int(hash_value[0:config.DIFFICULTY],16) == 0 
+        hash_value = str(h.new(h.new(header).digest()).hexdigest()[::-1])
+        return (int(hash_value[0:config.DIFFICULTY],16) == 0)
     
   
     def mine(self):
@@ -73,7 +75,7 @@ class Block :
             h = SHA256.new()
             # apply hashing 2 times 
             hash_value = h.new(h.new(header).digest()).hexdigest()
-            hash_value = hash_value[::-1] # reverse, little endian
+            hash_value = str(hash_value[::-1]) # reverse, little endian
             if int(hash_value[0:config.DIFFICULTY],16) == 0 :
                 solved = True
                 break
