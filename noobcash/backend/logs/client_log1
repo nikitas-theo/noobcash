@@ -3,67 +3,6 @@ t id2 8
 t id2 7
 t id2 5
 t id1 5
-t id3 6
-t id1 6
-t id4 6
-t id4 3
-t id4 4
-t id3 8
-t id4 7
-t id4 8
-t id2 4
-t id1 2
-t id3 3
-t id2 3
-t id1 1
-t id3 1014
-Invalid Transaction
-t id1 7
-t id4 5
-t id4 1025
-Invalid Transaction
-t id3 10
-t id3 1
-t id4 9
-t id2 1
-t id1 3
-t id2 1035
-Invalid Transaction
-t id4 3
-t id4 2
-t id4 1
-t id1 2
-t id4 6
-t id2 1
-t id3 1
-t id2 5
-t id4 6
-t id2 4
-t id3 10
-t id4 9
-t id4 3
-t id3 2
-t id2 4
-t id4 2
-t id3 5
-t id2 1
-t id2 10
-t id2 7
-t id3 1055
-Invalid Transaction
-t id3 4
-t id1 6
-t id2 8
-t id3 2
-t id2 8
-t id2 1
-t id1 1
-t id1 6
-t id3 8
-t id4 8
-t id3 3
-t id1 7
-t id1 1
 Traceback (most recent call last):
   File "/home/nikitas/anaconda3/lib/python3.7/site-packages/urllib3/connectionpool.py", line 600, in urlopen
     chunked=chunked)
@@ -109,7 +48,7 @@ urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Re
 During handling of the above exception, another exception occurred:
 
 Traceback (most recent call last):
-  File "cli.py", line 88, in <module>
+  File "cli.py", line 87, in <module>
     response = requests.post('{}/new_transaction'.format(HOST), json = json.dumps({'recipient_address': '{}'.format(node_id), 'amount': '{}'.format(amount)}))
   File "/home/nikitas/anaconda3/lib/python3.7/site-packages/requests/api.py", line 116, in post
     return request('post', url, data=data, json=json, **kwargs)
