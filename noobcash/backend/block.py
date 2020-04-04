@@ -5,7 +5,8 @@ from Crypto.Hash import SHA256
 import simplejson as json
 import config
 from copy import deepcopy
-
+import functools
+print = functools.partial(print, flush=True)
 class Block :
     """ 
 

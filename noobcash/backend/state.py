@@ -17,6 +17,8 @@ import broadcast
 
 from threading import RLock
 import time
+import functools
+print = functools.partial(print, flush=True)
 
 class State :
     """
@@ -71,34 +73,34 @@ class State :
         
     def add_block(self, block):
         """ Validate a block and add it to the chain """
-        self.time3 = time.time()
+        self.start = time.time()
         self.lock.acquire() #we need to ensure consensus is not running
         self.transactions = []
         if not block.validate_hash():
             #the block cannot be validated; the hash is bogus
-            return self.resolve_conflict()
+            ret = self.resolve_conflict()
         
-        if not (block.previous_hash == self.chain[-1].hash) :
+        elif not (block.previous_hash == self.chain[-1].hash) :
             #the block cannot be validated; the chain is invalid
-            return self.resolve_conflict()
+            ret =  self.resolve_conflict()
+        else :
+            #the block is valid, add it to the chain
+            self.chain.append(block)
         
-        #the block is valid, add it to the chain
-        self.chain.append(block)
-        
-        #remove block transactions from the transactions not in a block
-        for block_t in block.transactions:
-            for state_t in self.transactions:
-                if (state_t.hash == block_t.hash):
-                    self.transactions.remove(state_t)
+            #remove block transactions from the transactions not in a block
+            for block_t in block.transactions:
+                for state_t in self.transactions:
+                    if (state_t.hash == block_t.hash):
+                        self.transactions.remove(state_t)
         
         #now release the lock
         self.lock.release()
-        
-        self.time4 = time.time()
-        self.total_time += (self.time4 - self.time3)
+
+        self.end = time.time()
+        self.total_time += (self.end - self.start)
         self.num_blocks_calculated += 1
         self.avg_time = (self.total_time) / (self.num_blocks_calculated)
-        print('Average block addition time: ', self.avg_time)
+        print('Running average block addition time: ', self.avg_time,flush=True)
         
         return True
         
@@ -112,53 +114,53 @@ class State :
         if  block.previous_hash == self.chain[-1].hash  :
             self.add_block(block)
             broadcast.broadcast_block(block)
-
+        else :
+            self.resolve_confict()
+    
     def resolve_conflict(self):
         '''
         implementation of consensus algorithm
         '''
         #acquire lock so that no new blocks get validated during consensus        
         #we have to put a default chain here, we consider our old one as default
-        print('resolve')
-        MAX_LENGTH = len(self.chain) 
-        for node in self.nodes.values() :
-            if node["pub"] == state.pub :
-                continue 
-            ip = node['ip']
-            response = requests.get(f'{ip}/request_chain')
+        print('Resolve Confict')
+        MAX_LENGTH = 0
+        while(True):
+            for node in self.nodes.values() :
+                if node["pub"] == state.pub :
+                    continue 
+                ip = node['ip']
+                response = requests.get('{}/request_chain'.format(ip))
 
-            if (response.status_code != 200):
-                self.lock.release()
-                return False
-            # extract blocks from chain, they are in string format
-            chain_temp = response.json()['chain']
-            chain = []
-            for block in chain_temp : 
-                b = Block(**json.loads(block))
-                b.transactions = [Transaction(**json.loads(t)) for t in b.transactions]
-                b.hash = str(b.hash).encode()
-                b.nonce = str(b.nonce).encode()
-                b.previous_hash = str(b.previous_hash).encode()
-                chain.append(b)
-                
-            if not state.validate_chain(chain) :
-                continue
-            if len(chain) > MAX_LENGTH : 
-                #get the biggest chain from the nodes
+                if (response.status_code != 200):
+                    self.lock.release()
+                    return False
+                # extract blocks from chain, they are in string format
+                chain_temp = response.json()['chain']
+                chain = []
+                for block in chain_temp : 
+                    b = Block(**json.loads(block))
+                    b.transactions = [Transaction(**json.loads(t)) for t in b.transactions]
+                    b.hash = str(b.hash).encode()
+                    b.nonce = str(b.nonce).encode()
+                    b.previous_hash = str(b.previous_hash).encode()
+                    chain.append(b)
+                if not state.validate_chain(chain) :
+                    continue
+
+                if len(chain) > MAX_LENGTH : 
+                    MAX_LENGTH = len(chain)
+                    max_chain = chain 
+           
+            if MAX_LENGTH != 0 : # we have a valid chain
                 self.chain = chain
-                MAX_LENGTH = len(chain)
-        
-        self.lock.release()
-        self.time4 = time.time()
-        self.total_time += (self.time4 - self.time3)
-        self.num_blocks_calculated += 1
-        self.avg_time = (self.total_time) / (self.num_blocks_calculated)
-        print('Average block addition time: ', self.avg_time)
+                break
+            
+       
         return True
     def validate_chain(self,chain):
         """ validate the blockchain """
         #we should enter this function only if we have the lock from consensus
-        self.lock.acquire()
         for block,block_prev in zip(chain,chain[1:]):
             
             if not block_prev.hash == block.previous_hash and block.validate_hash() :

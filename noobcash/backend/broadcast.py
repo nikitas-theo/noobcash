@@ -10,7 +10,8 @@ import state as State
 from transaction import Transaction
 import config
 app = Flask(__name__)
-
+import functools
+print = functools.partial(print, flush=True)
 
 
 #------------------------------------------------------------
@@ -37,7 +38,7 @@ def broadcast(json_obj,rest_point,node_id = None):
         if (node['pub'] == State.state.pub):
             continue
         ip = node["ip"]
-        response = requests.post(f'{ip}/{rest_point}', json=json_obj)
+        response = requests.post('{}/{}'.format(ip,rest_point), json=json_obj)
         if (response.status_code != 200):
             return False
     return True
@@ -65,7 +66,7 @@ def broadcast_nodes_info():
         if node['pub'] == State.state.pub : 
             continue 
         ip = node['ip']
-        res = requests.post(f'{ip}/start')
+        res = requests.post('{}/start'.format(ip))
         
     config.START = 'yes'
 
@@ -90,6 +91,7 @@ API_communication = Blueprint('API_communication',__name__)
 @API_communication.route('/start',methods=['POST'])
 def start():
     config.START = True
+    return make_response("OK",200)
     
 @API_communication.route('/receive_block', methods=['POST'])
 def receive_block():
@@ -112,7 +114,7 @@ def receive_transaction():
     # Call static method, object creation is handled in function
     json_string = request.get_json()
     t,return_val = Transaction.validate_transaction(json_string)
-    print(return_val)
+    print('Received Transaction and is : ',return_val,flush=True)
     return make_response("OK",200)
     
 
@@ -240,7 +242,7 @@ def start_client():
 
     # give coordinator 
     json_data = json.dumps({'ip' : data['host'], 'pub' : State.state.pub})
-    response = requests.post(f'{COORDINATOR_IP}/register_node', json=json_data)
+    response = requests.post('{}/register_node'.format(COORDINATOR_IP), json=json_data)
     State.state.id = response.json()['id']
     print('Our very own id is :',State.state.id)
     return make_response(json.dumps({"id" : State.state.id}),200)

@@ -6,6 +6,9 @@ import simplejson as json
 import base64
 import state as State 
 import config
+import functools
+print = functools.partial(print, flush=True)
+
 class Transaction :
     """ sender : pub key :: string
         receiver : pub key :: string
@@ -65,6 +68,7 @@ class Transaction :
         t = Transaction(**json.loads(json_trans)) 
         
         if not t.verify_signature():
+            print('Signature did not verify')
             return (None,False)
 
         
@@ -80,8 +84,10 @@ class Transaction :
                     pending_removed.append(utxo)
                     break
             if not found:
+                print('Given input UTXO is not found in utxo records')
                 return (None,False)
         if coins < t.amount:
+            print('Not enough UTXO coins in sender')
             return (None,False)
 
 
@@ -133,6 +139,7 @@ class Transaction :
                 break 
         
         if coins < amount:
+            print('Not enough UTXO coins in wallet, requested ', amount, 'but have', coins)
             return (False)
 
         # remove all spent transactions    
