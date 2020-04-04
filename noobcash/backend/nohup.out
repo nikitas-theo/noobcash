@@ -1,0 +1,232 @@
+code
+hadoop-2.7.7
+hadoop-2.7.7.tar.gz
+hello.py
+spark-2.4.4-bin-hadoop2.7
+spark-2.4.4-bin-hadoop2.7.tgz
+1234
+cat: save_pid.txt: No such file or directory
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+1234
+cat: save_pid.txt: No such file or directory
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+1234
+cat: save_pid.txt: No such file or directory
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+1234
+cat: save_pid.txt: No such file or directory
+kill: usage: kill [-s sigspec | -n signum | -sigspec] pid | jobspec ... or kill -l [sigspec]
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (5229) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (23387) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (1404) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+1234
+code/client_test.sh: line 4: kill: (28197) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+mkdir: cannot create directory ‘logs’: File exists
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (1458) - No such process
+1234
+code/client_test.sh: line 4: kill: (28251) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (23450) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+mkdir: cannot create directory ‘logs’: File exists
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (1517) - No such process
+1234
+code/client_test.sh: line 4: kill: (23515) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+1234
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+code/client_test.sh: line 4: kill: (28309) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+mkdir: cannot create directory ‘logs’: File exists
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (23665) - No such process
+1234
+code/client_test.sh: line 4: kill: (1650) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+1234
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+code/client_test.sh: line 4: kill: (28455) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (1709) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (28508) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+1234
+code/client_test.sh: line 4: kill: (23729) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (1764) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (23788) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (28562) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (29651) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (2846) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (24888) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (29824) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (25069) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+1234
+code/client_test.sh: line 4: kill: (3008) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+mkdir: cannot create directory ‘logs’: File exists
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (25162) - No such process
+1234
+code/client_test.sh: line 4: kill: (29917) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (3147) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+mkdir: cannot create directory ‘logs’: File exists
+mkdir: cannot create directory ‘logs’: File exists
+1234
+1234
+code/client_test.sh: line 4: kill: (25245) - No such process
+code/client_test.sh: line 4: kill: (30263) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (3281) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+mkdir: cannot create directory ‘logs’: File exists
+code/client_test.sh: line 3: kill: (25305) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+code/client_test.sh: line 3: kill: (6930) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+code/client_test.sh: line 3: kill: (3330) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+mkdir: cannot create directory ‘logs’: File exists
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+code/client_test.sh: line 3: kill: (30312) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+python3: can't open file 'server.py': [Errno 2] No such file or directory
+./client_test.sh: line 3: kill: (31574) - No such process
+./client_test.sh: line 3: kill: (31574) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+1234/tcp:             7657  7660
+./client_test.sh: line 3: kill: (31574) - No such process
+./client_test.sh: line 3: kill: (7662) - No such process
+ * Running on http://192.168.1.4:1234/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Running on http://192.168.1.5:1234/ (Press CTRL+C to quit)
+ * Restarting with stat
+mkdir: cannot create directory ‘logs’: File exists
+./client_test.sh: line 3: kill: (3453) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+mkdir: cannot create directory ‘logs’: File exists
+mkdir: cannot create directory ‘logs’: File exists
+./client_test.sh: line 3: kill: (25491) - No such process
+./client_test.sh: line 3: kill: (30427) - No such process
+./client_test.sh: line 3: kill: (7711) - No such process
+ * Running on http://192.168.1.2:1234/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Running on http://192.168.1.3:1234/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Running on http://192.168.1.4:1234/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 129-856-790
+ * Running on http://192.168.1.5:1234/ (Press CTRL+C to quit)
+ * Restarting with stat
+mkdir: cannot create directory ‘logs’: File exists
+./client_test.sh: line 3: kill: (8143) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+mkdir: cannot create directory ‘logs’: File exists
+./client_test.sh: line 3: kill: (25572) - No such process
+./client_test.sh: line 3: kill: (30499) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+./client_test.sh: line 3: kill: (3578) - No such process
+ * Running on http://192.168.1.2:1234/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Running on http://192.168.1.4:1234/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Running on http://192.168.1.3:1234/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Running on http://192.168.1.5:1234/ (Press CTRL+C to quit)
+ * Restarting with stat
+mkdir: cannot create directory ‘logs’: File exists
+./client_test.sh: line 3: kill: (25634) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+mkdir: cannot create directory ‘logs’: File exists
+./client_test.sh: line 3: kill: (8235) - No such process
+./client_test.sh: line 3: kill: (30554) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+./client_test.sh: line 3: kill: (3636) - No such process
+ * Running on http://192.168.1.3:1234/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Running on http://192.168.1.5:1234/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Running on http://192.168.1.2:1234/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 673-844-240
+mkdir: cannot create directory ‘logs’: File exists
+./client_test.sh: line 3: kill: (25921) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+mkdir: cannot create directory ‘logs’: File exists
+./client_test.sh: line 3: kill: (3900) - No such process
+./client_test.sh: line 3: kill: (8490) - No such process
+mkdir: cannot create directory ‘logs’: File exists
+./client_test.sh: line 3: kill: (30794) - No such process
+ * Running on http://192.168.1.4:1234/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Running on http://192.168.1.2:1234/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Running on http://192.168.1.5:1234/ (Press CTRL+C to quit)
+ * Restarting with stat
