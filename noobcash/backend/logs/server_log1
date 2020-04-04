@@ -6,68 +6,38 @@
  * Running on http://localhost:1234/ (Press CTRL+C to quit)
  * Restarting with stat
  * Debugger is active!
- * Debugger PIN: 126-468-973
+ * Debugger PIN: 566-084-046
 5
 -------- genesis --------
-127.0.0.1 - - [05/Apr/2020 01:28:10] "[37mPOST /start_coordinator HTTP/1.1[0m" 201 -
-127.0.0.1 - - [05/Apr/2020 01:28:10] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:10] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:10] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:10] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:10] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:11] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:11] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:11] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:11] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:12] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:12] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:12] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-new node id is: 1
-127.0.0.1 - - [05/Apr/2020 01:28:12] "[37mPOST /register_node HTTP/1.1[0m" 200 -
-new node id is: 2
-127.0.0.1 - - [05/Apr/2020 01:28:12] "[37mPOST /register_node HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:12] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-new node id is: 3
-127.0.0.1 - - [05/Apr/2020 01:28:12] "[37mPOST /register_node HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:12] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:13] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:13] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:13] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:13] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:13] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-new node id is: 4
-Broadcasting info
-Broadcasting info
-127.0.0.1 - - [05/Apr/2020 01:28:14] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-True
-True
-True
-True
-True
-Giving command to start
-127.0.0.1 - - [05/Apr/2020 01:28:14] "[37mPOST /register_node HTTP/1.1[0m" 200 -
-Requesting lock
-Acquiring lock
-Inital block was valid, no need to resolve conflict
-Running average block addition time:  0.0018107891082763672
-Releasing lock
-127.0.0.1 - - [05/Apr/2020 01:28:14] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
-Requesting lock
-Acquiring lock
-Resolve Confict
-Requesting lock
-127.0.0.1 - - [05/Apr/2020 01:28:14] "[37mGET /request_chain HTTP/1.1[0m" 200 -
-Acquiring lock
-Inital block was valid, no need to resolve conflict
-Running average block addition time:  0.0024663209915161133
-127.0.0.1 - - [05/Apr/2020 01:28:14] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-Releasing lock
-Requesting lock
-127.0.0.1 - - [05/Apr/2020 01:28:14] "[37mGET /request_chain HTTP/1.1[0m" 200 -
-Requesting lock
-127.0.0.1 - - [05/Apr/2020 01:28:14] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-Requesting lock
-127.0.0.1 - - [05/Apr/2020 01:28:14] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 01:28:14] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-Requesting lock
-127.0.0.1 - - [05/Apr/2020 01:28:14] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:39] "[37mPOST /start_coordinator HTTP/1.1[0m" 201 -
+127.0.0.1 - - [05/Apr/2020 02:19:39] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:39] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:39] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:39] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:40] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:40] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:40] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:40] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:40] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:41] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:41] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:41] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:41] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:42] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:42] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:42] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:42] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:42] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:43] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:43] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:43] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:43] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:43] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:44] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:44] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:44] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:44] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:44] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:45] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:45] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 02:19:45] "[37mGET /notify_start HTTP/1.1[0m" 200 -

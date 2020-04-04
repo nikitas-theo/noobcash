@@ -86,44 +86,44 @@ class State :
         self.UTXOS_BACKUP = deepcopy(self.utxos)
 
         print('Requesting lock')
-        with self.lock :
-            print('Acquiring lock')
+        #self.lock.acquire()
+        print('Acquiring lock')
 
-            #we need to ensure consensus is not running
-            # check for hash and precious hash
-            if not block.validate_hash() or not (block.previous_hash == self.chain[-1].hash) :
+        #we need to ensure consensus is not running
+        # check for hash and precious hash
+        if not block.validate_hash() or not (block.previous_hash == self.chain[-1].hash) :
+            self.resolve_conflict()
+        else :
+            # check for block transactions
+            # check if block contains transactions not in old transactions 
+            # if it does, add them (for utxos). 
+            valid = True 
+            for t in block.transactions:
+                exists = False 
+                for state_t in self.transactions: 
+                    if t.id == state_t.id : 
+                        self.transactions.remove(state_t)
+                        exists = True
+                if not exists : 
+                    valid = Transaction.validate_transaction(t)
+                    if not valid : 
+                        break
+                    self.transactions.remove(t) # remove transaction it has been consumed
+            if not valid : 
                 self.resolve_conflict()
-            else :
-                # check for block transactions
-                # check if block contains transactions not in old transactions 
-                # if it does, add them (for utxos). 
-                valid = True 
-                for t in block.transactions:
-                    exists = False 
-                    for state_t in self.transactions: 
-                        if t.id == state_t.id : 
-                            self.transactions.remove(state_t)
-                            exists = True
-                    if not exists : 
-                        valid = Transaction.validate_transaction(t)
-                        if not valid : 
-                            break
-                        self.transactions.remove(t) # remove transaction it has been consumed
-                if not valid : 
-                    self.resolve_conflict()
-                if valid :
-                    print('Inital block was valid, no need to resolve conflict')       
-            self.end = time.time()
-            self.total_time += (self.end - self.start)
-            self.num_blocks_calculated += 1
-            self.avg_time = (self.total_time) / (self.num_blocks_calculated)
-            print('Running average block addition time: ', self.avg_time,flush=True)
-            #the block is valid, add it to the chain
-            self.chain.append(block)
+            if valid :
+                print('Inital block was valid, no need to resolve conflict')       
+        self.end = time.time()
+        self.total_time += (self.end - self.start)
+        self.num_blocks_calculated += 1
+        self.avg_time = (self.total_time) / (self.num_blocks_calculated)
+        print('Running average block addition time: ', self.avg_time,flush=True)
+        #the block is valid, add it to the chain
+        self.chain.append(block)
 
-            #now release the lock
-            print('Releasing lock')
-       
+        #now release the lock
+        print('Releasing lock')
+        #self.lock.release()
         return True 
 
         
@@ -164,11 +164,12 @@ class State :
         
             
         self.chain = MAX_CHAIN    
+
         return True
 
     def validate_chain(self,chain):
         """ validate the blockchain """
-        
+
         # we check that the first block is genesis 
         if (self.chain[0].to_json() != chain[0].to_json()):
             print('different genesis!')
