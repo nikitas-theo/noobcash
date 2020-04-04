@@ -3,41 +3,11 @@
    WARNING: This is a development server. Do not use it in a production deployment.
    Use a production WSGI server instead.
  * Debug mode: on
- * Running on http://localhost:1234/ (Press CTRL+C to quit)
- * Restarting with stat
- * Debugger is active!
- * Debugger PIN: 566-084-046
-5
--------- genesis --------
-127.0.0.1 - - [05/Apr/2020 02:19:39] "[37mPOST /start_coordinator HTTP/1.1[0m" 201 -
-127.0.0.1 - - [05/Apr/2020 02:19:39] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:39] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:39] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:39] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:40] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:40] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:40] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:40] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:40] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:41] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:41] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:41] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:41] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:42] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:42] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:42] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:42] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:42] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:43] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:43] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:43] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:43] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:43] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:44] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:44] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:44] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:44] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:44] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:45] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:45] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 02:19:45] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+Traceback (most recent call last):
+  File "server.py", line 24, in <module>
+    app.run(host = args.host, port=args.port, debug = True)
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/flask/app.py", line 990, in run
+    run_simple(host, port, self, **options)
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/werkzeug/serving.py", line 988, in run_simple
+    s.bind(server_address)
+OSError: [Errno 99] Cannot assign requested address

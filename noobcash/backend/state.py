@@ -86,7 +86,7 @@ class State :
         self.UTXOS_BACKUP = deepcopy(self.utxos)
 
         print('Requesting lock')
-        #self.lock.acquire()
+        self.lock.acquire()
         print('Acquiring lock')
 
         #we need to ensure consensus is not running
@@ -123,7 +123,7 @@ class State :
 
         #now release the lock
         print('Releasing lock')
-        #self.lock.release()
+        self.lock.release()
         return True 
 
         

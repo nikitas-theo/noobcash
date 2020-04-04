@@ -82,8 +82,11 @@ def new_transaction(receiver, amount,new_id = None):
     t = Transaction.create_transaction(receiver, amount)
     if t == False : 
         return False 
-    return broadcast_transaction(t,new_id)
-
+    ret = broadcast_transaction(t,new_id)
+    if (len(State.state.transactions) == config.CAPACITY):
+        State.state.mine_block()
+    ret = broadcast_transaction(t,new_id)
+    return ret
 # ------------------------------------------
 
 
@@ -116,7 +119,10 @@ def receive_transaction():
     t = Transaction(**json.loads(json_string)) 
 
     return_val = Transaction.validate_transaction(t)
+  
     print('Received Transaction and is : ',return_val,flush=True)
+    if (len(State.state.transactions) == config.CAPACITY):
+        State.state.mine_block()
     return make_response("OK",200)
     
 

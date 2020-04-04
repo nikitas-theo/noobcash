@@ -112,10 +112,7 @@ class Transaction :
         # save transaction
         State.state.transactions.append(t)
 
-        # mine if block is full 
-        if (len(State.state.transactions) == config.CAPACITY):
-            State.state.mine_block()
-        
+   
         return True
     
     @staticmethod
@@ -169,9 +166,7 @@ class Transaction :
 
         State.state.transactions.append(t)
         
-        # mine if block is full 
-        if (len(State.state.transactions) == config.CAPACITY):
-            State.state.mine_block()
+
         
         return t
     
