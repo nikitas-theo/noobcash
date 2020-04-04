@@ -7,6 +7,7 @@ import base64
 import state as State 
 import config
 import functools
+from copy import deepcopy
 print = functools.partial(print, flush=True)
 
 class Transaction :
@@ -15,7 +16,7 @@ class Transaction :
         amount :: float 
         inputs : list of transaction ids :: list(string) 
         outpus : list of utxos 
-        id : transaction hash :: hex number
+        id : transaction hash :: hex string
         #?hash : transaction hash, but as a hash object :: SHA256 obj
         signature :: byte string 
     """
@@ -38,7 +39,7 @@ class Transaction :
         return json.dumps(self.__dict__)
 
     def calculate_hash(self):    
-        self.id = SHA256.new(self.to_json().encode()).hexdigest()
+        self.id = str(SHA256.new(self.to_json().encode()).hexdigest())
 
     def sign_transaction(self):
         hash_obj = SHA256.new(data = self.id.encode())
@@ -56,7 +57,7 @@ class Transaction :
     """ Static methods, not object specific, belong to the class"""
 
     @staticmethod
-    def validate_transaction(json_trans):
+    def validate_transaction(t):
         """ 
             - validate incoming transaction
             - update transaction list
@@ -64,32 +65,31 @@ class Transaction :
             - mine if necessary  
             return :: tuple of (Transaction obj, Bool val)
         """ 
-        # load and verify sig
-        t = Transaction(**json.loads(json_trans)) 
+        # verify sig
         
         if not t.verify_signature():
             print('Signature did not verify')
             return (None,False)
-
-        
-        coins = 0
-        pending_removed = []
-        for utxo_input in t.inputs: 
-            found = False          
-            for utxo in State.state.utxos[t.sender]: 
-            
-                if utxo['id'] == utxo_input and utxo['owner'] == t.sender: 
-                    found = True
-                    coins += utxo['amount']
-                    pending_removed.append(utxo)
-                    break
-            if not found:
-                print('Given input UTXO is not found in utxo records')
-                return (None,False)
-        if coins < t.amount:
-            print('Not enough UTXO coins in sender')
-            return (None,False)
-
+        try : 
+            coins = 0
+            pending_removed = []
+            for utxo_input in t.inputs: 
+                found = False          
+                for utxo in State.state.utxos[t.sender]: 
+                
+                    if utxo['id'] == utxo_input and utxo['owner'] == t.sender: 
+                        found = True
+                        coins += utxo['amount']
+                        pending_removed.append(utxo)
+                        break
+                if not found:
+                    raise Exception('Given input UTXO is not found in utxo records')
+                    
+            if coins < t.amount:
+                raise Exception('Not enough UTXO coins in sender')
+        except Exception as e:
+            print(str(e))
+            return (False)
 
         # remove all spent transactions    
         for utxo in pending_removed: 
@@ -116,7 +116,7 @@ class Transaction :
         if (len(State.state.transactions) == config.CAPACITY):
             State.state.mine_block()
         
-        return (t,True)
+        return True
     
     @staticmethod
     def create_transaction(receiver_key, amount):

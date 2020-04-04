@@ -54,21 +54,23 @@ def broadcast_nodes_info():
                            'transactions' : [t.to_json() for t in State.state.transactions],
                            'nodes' : State.state.nodes})
 
-
+    print('Broadcasting info')
     ret = broadcast(json_obj,'receive_info')  
+    print(ret)
     for node in State.state.nodes.values():
         if node['pub'] == State.state.pub : 
             continue 
-        new_transaction(node['pub'],100)
-    
+        ret = new_transaction(node['pub'],100)
+        print(ret)
+    print('Giving command to start')
     # notify everyone to start transactions
     for node in State.state.nodes.values():
         if node['pub'] == State.state.pub : 
             continue 
         ip = node['ip']
         res = requests.post('{}/start'.format(ip))
-        
-    config.START = 'yes'
+    config.START = 'yes'    
+    
 
 
 
@@ -90,7 +92,7 @@ API_communication = Blueprint('API_communication',__name__)
 
 @API_communication.route('/start',methods=['POST'])
 def start():
-    config.START = True
+    config.START = 'yes'
     return make_response("OK",200)
     
 @API_communication.route('/receive_block', methods=['POST'])
@@ -103,17 +105,17 @@ def receive_block():
     
     # pass to Blockchain to add block
     block.transactions = [Transaction(**json.loads(t)) for t in block.transactions]
+    print('received a block')
     ret = State.state.add_block(block) 
-    if ret : 
-        return make_response("OK",200)
-    else :
-        return make_response("NOT OK",500)
-    
+    return make_response("OK",200)
+
 @API_communication.route('/receive_transaction', methods=['POST'])
 def receive_transaction():
     # Call static method, object creation is handled in function
     json_string = request.get_json()
-    t,return_val = Transaction.validate_transaction(json_string)
+    t = Transaction(**json.loads(json_string)) 
+
+    return_val = Transaction.validate_transaction(t)
     print('Received Transaction and is : ',return_val,flush=True)
     return make_response("OK",200)
     
@@ -151,29 +153,31 @@ def receive_info():
 # All necessary communication for a new node to enter the network 
 @API_communication.route('/register_node', methods=['POST'])
 def register_node():
-    '''
-    An incoming node posts a request to enter the network 
-    - Handle request and post in return 
-    '''
-    data = json.loads(request.get_json())
-    node_ip = data['ip']
-    node_pubkey = data['pub']
-    if (not node_ip or not node_pubkey):
-        return "Invalid", 400
+    
+        '''
+        An incoming node posts a request to enter the network 
+        - Handle request and post in return 
+        '''
+        data = json.loads(request.get_json())
+        node_ip = data['ip']
+        node_pubkey = data['pub']
+        if (not node_ip or not node_pubkey):
+            return "Invalid", 400
 
-    new_id = str(len(State.state.nodes))  # it works
-    print('new node id is:',new_id)
+        new_id = State.state.last_id + 1 #
+        print('new node id is:',new_id)
+        State.state.last_id = new_id
+        new_id = str(new_id)
+        State.state.utxos[node_pubkey] = []
 
-    State.state.utxos[node_pubkey] = []
+        State.state.nodes[new_id] = {}
+        State.state.nodes[new_id]['ip'] = node_ip
+        State.state.nodes[new_id]['pub'] = node_pubkey
 
-    State.state.nodes[new_id] = {}
-    State.state.nodes[new_id]['ip'] = node_ip
-    State.state.nodes[new_id]['pub'] = node_pubkey
-
-    if (int(new_id) == config.NODE_CAPACITY - 1) :
-        broadcast_nodes_info()
-
-    return make_response(json.dumps({'id' : new_id}),200)
+        if (int(new_id) == config.NODE_CAPACITY - 1) :
+            print('Broadcasting info')
+            broadcast_nodes_info()
+        return make_response(json.dumps({'id' : new_id}),200)
 
 # A node requests the chain via a GET request , we return the chain
 @API_communication.route('/request_chain',methods=['GET'])
@@ -195,6 +199,7 @@ def start_coordinator():
     config.DIFFICULTY = int(d['DIFFICULTY'])
     config.CAPACITY = int(d['CAPACITY'])
     config.NODE_CAPACITY = int(d['NODE_CAPACITY'])
+    print(int(d['NODE_CAPACITY']))
     State.state.id = '0'
     State.state.nodes['0'] = {'ip': d['host'], 'pub': State.state.pub}
     State.state.genesis() # Create genesis block and transaction
@@ -240,6 +245,7 @@ def start_client():
     config.DIFFICULTY = int(data['DIFFICULTY'])
     config.CAPACITY = int(data['CAPACITY'])
 
+
     # give coordinator 
     json_data = json.dumps({'ip' : data['host'], 'pub' : State.state.pub})
     response = requests.post('{}/register_node'.format(COORDINATOR_IP), json=json_data)
@@ -249,4 +255,4 @@ def start_client():
 
 @API_communication.route('/notify_start', methods=['GET'])
 def notify_start():
-        return make_response(json.dumps({"resp" : config.START}),200)
+    return make_response(json.dumps({"resp" : config.START}),200)

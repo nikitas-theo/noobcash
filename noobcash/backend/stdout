@@ -1,0 +1,4 @@
+mkdir: cannot create directory ‘logs’: File exists
+1234
+code/client_test.sh: line 4: kill: (6882) - No such process
+python3: can't open file 'server.py': [Errno 2] No such file or directory

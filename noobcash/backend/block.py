@@ -1,6 +1,6 @@
 from time import time
 
-from pymerkle import MerkleTree
+#from pymerkle import MerkleTree
 from Crypto.Hash import SHA256
 import simplejson as json
 import config
@@ -37,12 +37,13 @@ class Block :
 
     def validate_hash(self):
         # validate block hash value
-
+        '''
         tree = MerkleTree()
         for t in self.transactions :
             tree.encryptRecord(t.id.encode()) # make bytestring
         merkle_hash = tree.rootHash
-
+        '''
+        merkle_hash = b'5'
         header = self.previous_hash + self.nonce+\
                 merkle_hash + self.timestamp
         h = SHA256.new()
@@ -53,11 +54,14 @@ class Block :
     def mine(self):
 
         # Create hash of transactions with a Merkle Tree
+        '''
         tree = MerkleTree()
         for t in self.transactions :
             tree.encryptRecord(t.id.encode()) # make bytestring
         merkle_hash = tree.rootHash
-        
+        '''
+        merkle_hash = b'5'
+
         # 32-bit sized nonce 
         for nonce in range(2 << 32):
             # header consists ofev_hash, nonce, merkle of transactions
