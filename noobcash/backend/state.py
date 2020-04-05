@@ -131,6 +131,7 @@ class State :
         '''
         implementation of consensus algorithm
         '''
+        self.lock.acquire()
         # acquire lock so that no new blocks get validated during consensus        
         print('Resolve Confict')
         MAX_LENGTH = len(self.chain)
@@ -164,15 +165,16 @@ class State :
         
             
         self.chain = MAX_CHAIN    
-
+        self.lock.release()
         return True
 
     def validate_chain(self,chain):
         """ validate the blockchain """
-
+        self.lock.acquire()
         # we check that the first block is genesis 
         if (self.chain[0].to_json() != chain[0].to_json()):
             print('different genesis!')
+            self.lock.release()
             return False 
 
         self.transactions = []
@@ -184,20 +186,23 @@ class State :
         for block_prev,block in zip(chain,chain[1:]):
             if not block_prev.hash == block.previous_hash:
                 print('Error, block hash is invalid')
+                self.lock.release()
                 return False 
             if not block.validate_hash():
                 print('Could not validate hash')
+                self.lock.release()
                 return False 
 
             for t in block.transactions:
                 if not Transaction.validate_transaction(t):
-                    print('block transactions are invalid') 
+                    print('block transactions are invalid')
+                    self.lock.release()
                     return False 
     
  
         for tx in self.TRANSACTIONS_BACKUP:
             Transaction.validate_transaction(tx)
-
+        self.lock.release()
         return True
 
 

@@ -240,7 +240,6 @@ def view_transactions():
 def show_balance():
     return json.dumps(State.state.wallet_balance())
 
-
 @API_communication.route('/start_client', methods=['POST'])
 def start_client():
 

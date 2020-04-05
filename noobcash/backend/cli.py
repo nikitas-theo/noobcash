@@ -99,7 +99,7 @@ while(True):
             for key,val in t.items():
                 print('{} : {}'.format(key,val))
     
-    elif (cli == 'balance'):
+    if (cli == 'balance' or cli.startswith('t')):
         """ 
         Print the current balance of the wallet,
         by calculating UTXOs.

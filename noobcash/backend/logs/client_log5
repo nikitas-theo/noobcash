@@ -1,271 +1,254 @@
-t id1 7
-Current wallet balance :  104
-t id2 8
-Current wallet balance :  111
-t id2 7
-Current wallet balance :  104
-t id2 5
-Current wallet balance :  101
-t id1 5
-Current wallet balance :  96
-t id3 6
+t id3 9
+Current wallet balance :  98
+t id0 6
 Current wallet balance :  92
-t id1 6
-Current wallet balance :  86
-t id4 6
-Current wallet balance :  80
-t id4 3
-Current wallet balance :  77
-t id4 4
-Current wallet balance :  73
-t id3 8
-Current wallet balance :  65
-t id4 7
-Current wallet balance :  58
-t id4 8
-Current wallet balance :  50
-t id2 4
-Current wallet balance :  49
-t id1 2
-Current wallet balance :  47
-t id3 3
-Current wallet balance :  44
-t id2 3
-Current wallet balance :  41
-t id1 1
-Current wallet balance :  40
-t id3 1014
-Invalid Transaction
-Current wallet balance :  40
-t id1 7
-Current wallet balance :  36
-t id4 5
-Current wallet balance :  31
-t id4 1025
-Invalid Transaction
-Current wallet balance :  31
-t id3 10
-Current wallet balance :  21
-t id3 1
-Current wallet balance :  20
-t id4 9
-Current wallet balance :  11
-t id2 1
-Current wallet balance :  10
-t id1 3
-Current wallet balance :  7
-t id2 1035
-Invalid Transaction
-Current wallet balance :  7
-t id4 3
-Current wallet balance :  4
-t id4 2
-Current wallet balance :  2
-t id4 1
-Current wallet balance :  1
-t id1 2
-Invalid Transaction
-Current wallet balance :  1
-t id4 6
-Invalid Transaction
-Current wallet balance :  1
-t id2 1
-Current wallet balance :  0
-t id3 1
-Invalid Transaction
-Current wallet balance :  0
-t id2 5
-Invalid Transaction
-Current wallet balance :  0
-t id4 6
-Invalid Transaction
-Current wallet balance :  0
-t id2 4
-Invalid Transaction
-Current wallet balance :  0
-t id3 10
-Invalid Transaction
-Current wallet balance :  0
-t id4 9
-Invalid Transaction
-Current wallet balance :  0
-t id4 3
-Invalid Transaction
-Current wallet balance :  0
-t id3 2
-Invalid Transaction
-Current wallet balance :  0
-t id2 4
-Invalid Transaction
-Current wallet balance :  0
-t id4 2
-Invalid Transaction
-Current wallet balance :  0
 t id3 5
-Invalid Transaction
-Current wallet balance :  0
-t id2 1
-Invalid Transaction
-Current wallet balance :  0
+Current wallet balance :  87
+t id0 2
+Current wallet balance :  98
+t id4 5
+Current wallet balance :  93
+t id3 1
+Current wallet balance :  98
 t id2 10
-Invalid Transaction
-Current wallet balance :  0
+Current wallet balance :  88
+t id2 8
+Current wallet balance :  80
+t id0 9
+Current wallet balance :  71
 t id2 7
+Current wallet balance :  64
+t id2 2
+Current wallet balance :  62
+t id4 10
+Current wallet balance :  62
+t id2 6
+Current wallet balance :  65
+t id2 5
+Current wallet balance :  63
+t id0 10
+Current wallet balance :  53
+t id3 3
+Current wallet balance :  64
+t id4 4
+Current wallet balance :  60
+t id0 3
+Current wallet balance :  57
+t id4 5
+Current wallet balance :  52
+t id2 9
+Current wallet balance :  43
+t id0 6
+Current wallet balance :  46
+t id4 10
+Current wallet balance :  42
+t id3 2
+Current wallet balance :  51
+t id0 7
+Current wallet balance :  46
+t id2 3
+Current wallet balance :  44
+t id2 10
+Current wallet balance :  34
+t id4 4
+Current wallet balance :  40
+t id3 6
+Current wallet balance :  34
+t id2 6
+Current wallet balance :  37
+t id3 8
+Current wallet balance :  35
+t id3 7
+Current wallet balance :  39
+t id0 4
+Current wallet balance :  35
+t id3 3
+Current wallet balance :  32
+t id3 9
+Current wallet balance :  37
+t id3 6
+Current wallet balance :  31
+t id0 6
+Current wallet balance :  25
+t id0 8
+Current wallet balance :  17
+t id4 10
+Current wallet balance :  7
+t id3 5
+Current wallet balance :  2
+t id4 10
+Invalid Transaction
+Current wallet balance :  2
+t id2 2
+Current wallet balance :  7
+t id2 5
+Current wallet balance :  9
+t id4 10
+Invalid Transaction
+Current wallet balance :  9
+t id0 5
+Current wallet balance :  6
+t id2 3
+Current wallet balance :  3
+t id3 7
+Invalid Transaction
+Current wallet balance :  10
+t id3 5
+Current wallet balance :  5
+t id0 4
+Current wallet balance :  1
+t id3 1
+Current wallet balance :  0
+t id0 3
 Invalid Transaction
 Current wallet balance :  0
-t id3 1055
+t id0 1
+Invalid Transaction
+Current wallet balance :  0
+t id4 2
+Invalid Transaction
+Current wallet balance :  0
+t id3 7
+Invalid Transaction
+Current wallet balance :  0
+t id0 6
 Invalid Transaction
 Current wallet balance :  0
 t id3 4
 Invalid Transaction
 Current wallet balance :  0
-t id1 6
-Invalid Transaction
-Current wallet balance :  0
-t id2 8
+t id3 9
 Invalid Transaction
 Current wallet balance :  0
 t id3 2
 Invalid Transaction
 Current wallet balance :  0
-t id2 8
+t id2 2
 Invalid Transaction
 Current wallet balance :  0
-t id2 1
+t id2 3
 Invalid Transaction
 Current wallet balance :  0
-t id1 1
-Invalid Transaction
-Current wallet balance :  0
-t id1 6
-Invalid Transaction
-Current wallet balance :  0
-t id3 8
-Invalid Transaction
-Current wallet balance :  0
-t id4 8
-Invalid Transaction
-Current wallet balance :  0
-t id3 3
-Invalid Transaction
-Current wallet balance :  0
-t id1 7
-Invalid Transaction
-Current wallet balance :  0
-t id1 1
-Invalid Transaction
-Current wallet balance :  0
-t id1 5
-Invalid Transaction
-Current wallet balance :  0
-t id4 6
-Invalid Transaction
-Current wallet balance :  0
-t id4 6
-Invalid Transaction
-Current wallet balance :  0
-t id2 8
-Invalid Transaction
-Current wallet balance :  0
-t id1 5
-Invalid Transaction
-Current wallet balance :  0
-t id1 4
-Invalid Transaction
-Current wallet balance :  0
-t id3 6
-Invalid Transaction
-Current wallet balance :  0
-t id1 3
-Invalid Transaction
-Current wallet balance :  0
-t id1 6
-Invalid Transaction
-Current wallet balance :  0
-t id1 10
-Invalid Transaction
-Current wallet balance :  0
-t id4 7
-Invalid Transaction
-Current wallet balance :  0
-t id3 3
-Invalid Transaction
-Current wallet balance :  0
-t id4 10
-Invalid Transaction
-Current wallet balance :  0
-t id2 5
-Invalid Transaction
-Current wallet balance :  0
-t id3 8
+t id2 9
 Invalid Transaction
 Current wallet balance :  0
 t id3 10
 Invalid Transaction
 Current wallet balance :  0
-t id1 8
+t id0 3
 Invalid Transaction
 Current wallet balance :  0
-t id3 8
+t id2 3
 Invalid Transaction
 Current wallet balance :  0
-t id2 1
+t id3 10
 Invalid Transaction
 Current wallet balance :  0
-t id4 9
+t id0 1
 Invalid Transaction
 Current wallet balance :  0
-t id2 5
+t id2 10
 Invalid Transaction
 Current wallet balance :  0
-t id4 3
+t id0 3
 Invalid Transaction
 Current wallet balance :  0
-t id2 2
+t id4 7
 Invalid Transaction
 Current wallet balance :  0
-t id3 3
+t id2 7
 Invalid Transaction
 Current wallet balance :  0
 t id3 5
 Invalid Transaction
 Current wallet balance :  0
-t id4 2
+t id4 7
 Invalid Transaction
 Current wallet balance :  0
-t id4 5
+t id3 10
 Invalid Transaction
 Current wallet balance :  0
-t id3 8
+t id0 6
 Invalid Transaction
 Current wallet balance :  0
-t id1 4
+t id3 10
 Invalid Transaction
 Current wallet balance :  0
-t id1 2
+t id2 3
 Invalid Transaction
 Current wallet balance :  0
-t id3 6
+t id0 3
 Invalid Transaction
 Current wallet balance :  0
-t id1 9
-Invalid Transaction
-Current wallet balance :  0
-t id2 4
+t id2 8
 Invalid Transaction
 Current wallet balance :  0
 t id2 2
 Invalid Transaction
 Current wallet balance :  0
+t id0 10
+Invalid Transaction
+Current wallet balance :  0
+t id4 4
+Invalid Transaction
+Current wallet balance :  0
+t id2 3
+Invalid Transaction
+Current wallet balance :  0
+t id0 9
+Invalid Transaction
+Current wallet balance :  0
+t id2 4
+Invalid Transaction
+Current wallet balance :  0
+t id2 9
+Invalid Transaction
+Current wallet balance :  0
+t id4 2
+Invalid Transaction
+Current wallet balance :  0
+t id3 2
+Invalid Transaction
+Current wallet balance :  0
+t id0 8
+Invalid Transaction
+Current wallet balance :  0
 t id3 3
 Invalid Transaction
 Current wallet balance :  0
-t id1 3
+t id0 10
 Invalid Transaction
 Current wallet balance :  0
-t id2 1095
+t id3 2
 Invalid Transaction
 Current wallet balance :  0
-t id3 6
+t id4 1
+Invalid Transaction
+Current wallet balance :  0
+t id4 6
+Invalid Transaction
+Current wallet balance :  0
+t id0 6
+Invalid Transaction
+Current wallet balance :  0
+t id4 7
+Invalid Transaction
+Current wallet balance :  0
+t id4 8
+Invalid Transaction
+Current wallet balance :  0
+t id0 1
+Invalid Transaction
+Current wallet balance :  0
+t id3 7
+Invalid Transaction
+Current wallet balance :  0
+t id4 1
+Invalid Transaction
+Current wallet balance :  0
+t id0 4
+Invalid Transaction
+Current wallet balance :  0
+t id2 5
 Invalid Transaction
 Current wallet balance :  0

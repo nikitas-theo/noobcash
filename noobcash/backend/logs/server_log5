@@ -6,4 +6,1369 @@
  * Running on http://localhost:1238/ (Press CTRL+C to quit)
  * Restarting with stat
  * Debugger is active!
- * Debugger PIN: 315-342-589
+ * Debugger PIN: 630-871-424
+Our very own id is : 1
+127.0.0.1 - - [05/Apr/2020 03:45:14] "[37mPOST /start_client HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:14] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:14] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:14] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:15] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:15] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:15] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:15] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:15] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:15] "[37mPOST /receive_info HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+Requesting lock
+Acquiring lock
+Inital block was valid, no need to resolve conflict
+Running average block addition time:  0.0001499652862548828
+Releasing lock
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+Requesting lock
+Acquiring lock
+Inital block was valid, no need to resolve conflict
+Running average block addition time:  0.00015532970428466797
+Releasing lock
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+Requesting lock
+Acquiring lock
+Inital block was valid, no need to resolve conflict
+Running average block addition time:  0.00016029675801595053
+Releasing lock
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+Requesting lock
+Acquiring lock
+Inital block was valid, no need to resolve conflict
+Running average block addition time:  0.0002034306526184082
+Releasing lock
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /start HTTP/1.1[0m" 200 -
+received a block
+Requesting lock
+Acquiring lock
+Inital block was valid, no need to resolve conflict
+Running average block addition time:  0.0004915714263916016
+Releasing lock
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+received a block
+Requesting lock
+Acquiring lock
+Inital block was valid, no need to resolve conflict
+Running average block addition time:  0.0006720622380574545
+Releasing lock
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+Requesting lock
+Acquiring lock
+Inital block was valid, no need to resolve conflict
+Running average block addition time:  0.0006659371512276786
+Releasing lock
+Received Transaction and is :  True
+Requesting lock
+Acquiring lock
+Inital block was valid, no need to resolve conflict
+Running average block addition time:  0.0006469786167144775
+Releasing lock
+received a block
+Requesting lock
+Acquiring lock
+Inital block was valid, no need to resolve conflict
+Running average block addition time:  0.0007322894202338324
+Releasing lock
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+received a block
+Requesting lock
+Acquiring lock
+Inital block was valid, no need to resolve conflict
+Running average block addition time:  0.0008136749267578125
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Releasing lock
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+received a block
+Requesting lock
+Acquiring lock
+Resolve Confict
+Error, block hash is invalid
+Invalid chain
+Error, block hash is invalid
+Invalid chain
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Running average block addition time:  0.011567744341763582
+Releasing lock
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+received a block
+Requesting lock
+Acquiring lock
+Resolve Confict
+Error, block hash is invalid
+Invalid chain
+Error, block hash is invalid
+Invalid chain
+127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Error, block hash is invalid
+Invalid chain
+Given input UTXO is not found in utxo records
+Given input UTXO is not found in utxo records
+Given input UTXO is not found in utxo records
+Given input UTXO is not found in utxo records
+Given input UTXO is not found in utxo records
+Given input UTXO is not found in utxo records
+Given input UTXO is not found in utxo records
+Given input UTXO is not found in utxo records
+Running average block addition time:  0.022575934727986652
+Releasing lock
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  10 but have 2
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  10 but have 9
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  7 but have 3
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  1 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  2 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  7 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  6 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  4 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  9 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  2 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  2 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  9 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  10 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  10 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  1 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  10 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  7 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  7 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  5 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  7 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  10 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  6 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  10 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  8 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  2 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  10 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  4 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  9 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  4 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  9 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  2 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  2 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  8 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  10 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  2 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  1 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  6 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  6 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  7 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  8 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  1 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  7 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  1 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  4 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  5 but have 0
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mGET /balance HTTP/1.1[0m" 200 -
