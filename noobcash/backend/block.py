@@ -45,7 +45,11 @@ class Block :
             tree.encryptRecord(t.id.encode()) # make bytestring
         merkle_hash = tree.rootHash
         '''
-        merkle_hash = b'5'
+        id_trans = [t.id for t in self.transactions]
+        merkle_hash = ''
+        for t_id in id_trans: 
+            merkle_hash += t_id 
+        merkle_hash = merkle_hash.encode()
         header = self.previous_hash + self.nonce+\
                 merkle_hash + self.timestamp
         h = SHA256.new()
@@ -62,8 +66,11 @@ class Block :
             tree.encryptRecord(t.id.encode()) # make bytestring
         merkle_hash = tree.rootHash
         '''
-        merkle_hash = b'5'
-
+        id_trans = [t.id for t in self.transactions]
+        merkle_hash = ''
+        for t_id in id_trans: 
+            merkle_hash += t_id 
+        merkle_hash = merkle_hash.encode()
         # 32-bit sized nonce 
         for nonce in range(2 << 32):
             # header consists ofev_hash, nonce, merkle of transactions

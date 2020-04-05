@@ -97,7 +97,7 @@ def new_transaction(receiver, amount,new_id = None):
     #creates t, the new transaction, and broadcasts it
     #print('Requesting NEW TRANSACTION lock', State.state.lock)
     #State.state.lock.acquire()
-    print(len(State.state.transactions),config.CAPACITY)
+    print('NEW: Current Transactions not in block:',len(State.state.transactions))
     if ((len(State.state.transactions) >= config.CAPACITY)):
         print('NEW: I have to mine the block, if this tx is valid, I have to make a new one.')
         ret = State.state.mine_and_broadcast_block()
@@ -147,14 +147,15 @@ def receive_transaction():
     # Call static method, object creation is handled in function
     #State.state.lock.acquire()
     #time.sleep(0.1)
+    print('RECEIVE  : Current Transactions not in block:',len(State.state.transactions))
     if (len(State.state.transactions) >= config.CAPACITY):
-        #print('RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.')
+        print('RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.')
         State.state.mine_and_broadcast_block()
     json_string = request.get_json()
     t = Transaction(**json.loads(json_string)) 
 
     return_val = Transaction.validate_transaction(t)
-    
+    State.state.coin_distribution()
     #print('Transactions not in block:', len(State.state.transactions))
   
     #print('Received Transaction and is : ',return_val,flush=True)
@@ -270,6 +271,7 @@ def cli_new_transaction():
     if (new_transaction(node['pub'], amount)):
         #print('Releasing CLI NEW TRANSACTION lock', State.state.lock)
         #State.state.lock.release()
+        State.state.coin_distribution()
         return make_response('OK',200)
     else:
         #print('Releasing CLI NEW TRANSACTION lock', State.state.lock)
@@ -294,8 +296,9 @@ def view_transactions():
 #! DONE 
 @API_communication.route('/balance', methods=['GET'])
 def show_balance():
-    return json.dumps(State.state.wallet_balance())
-
+    ret  = json.dumps(State.state.wallet_balance())
+    return ret
+    
 @API_communication.route('/start_client', methods=['POST'])
 def start_client():
 

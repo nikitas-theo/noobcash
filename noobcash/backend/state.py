@@ -94,9 +94,8 @@ class State :
     
     def mine_and_broadcast_block(self):
         #print('Requesting MINE BLOCK lock', self.lock)
-        #self.lock.acquire()
         copy_trans = deepcopy(self.transactions) 
-        block = Block(id = len(self.chain)+1, transactions = copy_trans, previous_hash = self.chain[-1].hash)
+        block = Block(id = len(self.chain)+1, transactions = copy_trans[0:config.CAPACITY], previous_hash = self.chain[-1].hash)
         block.mine()
         print('Block mined')
         if not self.add_block(block):
@@ -107,8 +106,9 @@ class State :
             return False
         print ('Successful mining and broadcast')
         return True
+        
         #print('Releasing MINE BLOCK lock', self.lock)
-        #self.lock.release()
+        
         
     def add_block(self, block):
         """ Validate a block and add it to the chain """
@@ -143,7 +143,7 @@ class State :
             if not valid : 
                 self.resolve_conflict()
             if valid :
-                print('Inital block was valid, no need to resolve conflict')   
+                print('{} :: Inital block was valid, no need to resolve conflict'.format(time.time()))   
                 #the block is valid, add it to the chain
                 self.chain.append(block)    
         self.end = time.time()
@@ -156,6 +156,7 @@ class State :
         #print('Releasing lock')
         #print('Releasing ADD BLOCK lock', self.lock)
         self.lock.release()
+        self.coin_distribution()
         return True 
 
         
@@ -163,16 +164,7 @@ class State :
         '''
         implementation of consensus algorithm
         '''
-        print('Amounts BEFORE resolve conflict')
-        sum_al = 0
-        for utxo in self.utxos.items():
-            print('For node ',self.key_to_id(utxo[0]),': ',end='')
-            summ = 0
-            for utxo1 in utxo[1]:
-               summ += utxo1['amount']
-            print(summ)
-            sum_al += summ 
-        print('All money : ',sum_al)
+
         # acquire lock so that no new blocks get validated during consensus        
         #print('Resolve Confict')
         MAX_LENGTH = len(self.chain)
@@ -189,6 +181,8 @@ class State :
                 continue
             # extract blocks from chain, they are in string format
             chain_temp = response.json()['chain']
+            if(len(chain_temp) <= MAX_LENGTH):
+                continue
             #print('The chain I receive has size ', len(chain_temp))
             chain = []
             for block in chain_temp : 
@@ -203,12 +197,13 @@ class State :
                 continue
 
             if len(chain) > MAX_LENGTH : 
+                print('Actually found a different chain')
                 MAX_LENGTH = len(chain)
                 MAX_CHAIN = chain 
-        
-            
         self.chain = MAX_CHAIN  
-        print('Amounts AFTER resolve conflict')
+        return True
+    
+    def coin_distribution(self):
         sum_al = 0
         for utxo in self.utxos.items():
             print('For node ',self.key_to_id(utxo[0]),': ',end='')
@@ -218,7 +213,6 @@ class State :
             print(summ)
             sum_al += summ 
         print('All money : ',sum_al)
-        return True
 
     def validate_chain(self,chain):
         """ validate the blockchain """
@@ -263,7 +257,6 @@ class State :
         self.transactions = []
         for tx in self.TRANSACTIONS_BACKUP:
             Transaction.validate_transaction(tx)
-        #print('Length of transactions not in block is: ', len(self.transactions))
         #print('Releasing VALIDATE CHAIN lock', self.lock)
         self.lock.release()
         return True

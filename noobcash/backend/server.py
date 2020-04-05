@@ -20,6 +20,8 @@ app = Flask(__name__)
 app.register_blueprint(server)
 app.register_blueprint(API_communication)
 
+
+
 if __name__ == '__main__':    
-    app.run(host = args.host, port=args.port, debug = True)
+    app.run(host = args.host, port=args.port, debug = False,threaded = True)
     
