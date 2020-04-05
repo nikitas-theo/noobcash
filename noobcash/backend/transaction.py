@@ -58,7 +58,7 @@ class Transaction :
 
     @staticmethod
     def validate_transaction(t):
-        print('Requesting VALIDATE TRANSACTION lock', State.state.lock)
+        #print('Requesting VALIDATE TRANSACTION lock', State.state.lock)
         State.state.lock.acquire()
         """ 
             - validate incoming transaction
@@ -72,7 +72,7 @@ class Transaction :
         if not t.verify_signature():
             print('Signature did not verify')
             State.state.lock.release()
-            print('Releasing VALIDATE TRANSACTION lock', State.state.lock)
+            #print('Releasing VALIDATE TRANSACTION lock', State.state.lock)
             return (None,False)
         try : 
             coins = 0
@@ -117,7 +117,7 @@ class Transaction :
         State.state.add_utxo(t.outputs[1])
         # save transaction
         State.state.transactions.append(t)
-        print('Releasing VALIDATE TRANSACTION lock', State.state.lock)
+        #print('Releasing VALIDATE TRANSACTION lock', State.state.lock)
         State.state.lock.release()
 
    
@@ -125,7 +125,7 @@ class Transaction :
     
     @staticmethod
     def create_transaction(receiver_key, amount):
-        print('Requesting CREATE TRANSACTION lock', State.state.lock)
+        #print('Requesting CREATE TRANSACTION lock', State.state.lock)
         State.state.lock.acquire()
         """
             - Create a transaction for broadcasting 
@@ -147,7 +147,7 @@ class Transaction :
         
         if coins < amount:
             print('Not enough UTXO coins in wallet, requested ', amount, 'but have', coins)
-            print('Releasing CREATE TRANSACTION lock', State.state.lock)
+            #print('Releasing CREATE TRANSACTION lock', State.state.lock)
             State.state.lock.release()
             return (False)
 
@@ -177,7 +177,7 @@ class Transaction :
         State.state.add_utxo(t.outputs[1])
 
         State.state.transactions.append(t)
-        print('Releasing CREATE TRANSACTION lock', State.state.lock)
+        #print('Releasing CREATE TRANSACTION lock', State.state.lock)
         State.state.lock.release()
         
         return t

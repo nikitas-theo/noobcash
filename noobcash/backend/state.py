@@ -112,7 +112,7 @@ class State :
         
     def add_block(self, block):
         """ Validate a block and add it to the chain """
-        print('Requesting ADD BLOCK lock', self.lock)
+        #print('Requesting ADD BLOCK lock', self.lock)
         self.lock.acquire()
         #print('Acquiring lock')
         self.start = time.time()
@@ -154,7 +154,7 @@ class State :
 
         #now release the lock
         #print('Releasing lock')
-        print('Releasing ADD BLOCK lock', self.lock)
+        #print('Releasing ADD BLOCK lock', self.lock)
         self.lock.release()
         return True 
 
@@ -165,7 +165,7 @@ class State :
         '''
         # acquire lock so that no new blocks get validated during consensus        
         print('Resolve Confict')
-        MAX_LENGTH = -1
+        MAX_LENGTH = len(self.chain)
         MAX_CHAIN = self.chain
         print('My chain has size ', len(self.chain), ' and the last two blocks are ', self.chain[-2].id, self.chain[-1].id)
         for node in self.nodes.values() :
@@ -202,12 +202,12 @@ class State :
 
     def validate_chain(self,chain):
         """ validate the blockchain """
-        print('Requesting VALIDATE CHAIN lock', self.lock)
+        #print('Requesting VALIDATE CHAIN lock', self.lock)
         self.lock.acquire()
         # we check that the first block is genesis 
         if (self.chain[0].to_json() != chain[0].to_json()):
             print('different genesis!')
-            print('Releasing VALIDATE CHAIN lock', self.lock)
+            #print('Releasing VALIDATE CHAIN lock', self.lock)
             self.lock.release()
             return False 
 
@@ -222,12 +222,12 @@ class State :
             print(block_prev.id, block.id, "Chain under check")
             if not block_prev.hash == block.previous_hash:
                 print('Error, block hash is invalid')
-                print('Releasing VALIDATE CHAIN lock', self.lock)
+                #print('Releasing VALIDATE CHAIN lock', self.lock)
                 self.lock.release()
                 return False 
             if not block.validate_hash():
                 print('Could not validate hash')
-                print('Releasing VALIDATE CHAIN lock', self.lock)
+                #print('Releasing VALIDATE CHAIN lock', self.lock)
                 self.lock.release()
                 return False 
 
@@ -245,7 +245,7 @@ class State :
                 continue
             Transaction.validate_transaction(tx)
         print('Length of transactions not in block is: ', len(self.transactions))
-        print('Releasing VALIDATE CHAIN lock', self.lock)
+        #print('Releasing VALIDATE CHAIN lock', self.lock)
         self.lock.release()
         return True
 
