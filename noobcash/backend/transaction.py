@@ -70,7 +70,7 @@ class Transaction :
         # verify sig
         
         if not t.verify_signature():
-            print('Signature did not verify')
+            #print('Signature did not verify')
             State.state.lock.release()
             #print('Releasing VALIDATE TRANSACTION lock', State.state.lock)
             return (None,False)
@@ -92,8 +92,8 @@ class Transaction :
             if coins < t.amount:
                 raise Exception('Not enough UTXO coins in sender')
         except Exception as e:
-            print(str(e))
-            print('Releasing VALIDATE TRANSACTION lock', State.state.lock)
+            #print(str(e))
+            #print('Releasing VALIDATE TRANSACTION lock', State.state.lock)
             State.state.lock.release()
             return (False)
 
@@ -105,12 +105,12 @@ class Transaction :
         if (coins > t.amount):  
             t.outputs = [{
                 'trans_id': t.id,
-                'id' : t.id + ":0",
+                'id' : t.id ,#+ ":0",
                 'owner': t.receiver,
                 'amount': t.amount
             }, {
                 'trans_id': t.id,
-                'id' : t.id + ":1",
+                'id' : t.id ,#+ ":1",
                 'owner': t.sender,
                 'amount': coins - t.amount
             }]
@@ -119,7 +119,7 @@ class Transaction :
         else:
             t.outputs = [{
                 'trans_id': t.id,
-                'id' : t.id + ":0",
+                'id' : t.id ,#+ ":0",
                 'owner': t.receiver,
                 'amount': t.amount
             }]
@@ -140,7 +140,6 @@ class Transaction :
             - Create a transaction for broadcasting 
             - update transaction listg
             - update utxos 
-            - mine if necessary W
         """
         sender_key = State.state.pub
         inputs = []
@@ -155,7 +154,7 @@ class Transaction :
                 break 
         
         if coins < amount:
-            print('Not enough UTXO coins in wallet, requested ', amount, 'but have', coins)
+            #print('Not enough UTXO coins in wallet, requested ', amount, 'but have', coins)
             #print('Releasing CREATE TRANSACTION lock', State.state.lock)
             State.state.lock.release()
             return (False)
@@ -174,12 +173,12 @@ class Transaction :
         if (coins > t.amount):  
             t.outputs = [{
                 'trans_id': t.id,
-                'id' : t.id + ":0",
+                'id' : t.id ,#+":0",
                 'owner': t.receiver,
                 'amount': t.amount
             }, {
                 'trans_id': t.id,
-                'id' : t.id + ":1",
+                'id' : t.id ,#+":1",
                 'owner': t.sender,
                 'amount': coins - t.amount
             }]
@@ -188,7 +187,7 @@ class Transaction :
         else:
             t.outputs = [{
                 'trans_id': t.id,
-                'id' : t.id + ":0",
+                'id' : t.id ,#+":0",
                 'owner': t.receiver,
                 'amount': t.amount
             }]

@@ -84,7 +84,7 @@ class State :
         return balance 
         
     def genesis(self):
-        print('-------- genesis --------')
+        #print('-------- genesis --------')
         gen_transaction = Transaction(inputs = [],amount = 100*config.NODE_CAPACITY , sender = 0, receiver = self.pub)
         gen_transaction.calculate_hash()
         genesis_block = Block(id = '0',transactions = [gen_transaction], previous_hash = '1', nonce = '0',hash = b'1')
@@ -150,7 +150,7 @@ class State :
         self.total_time += (self.end - self.start)
         self.num_blocks_calculated += 1
         self.avg_time = (self.total_time) / (self.num_blocks_calculated)
-        print('Running average block addition time: ', self.avg_time,flush=True)
+        #print('Running average block addition time: ', self.avg_time,flush=True)
 
         #now release the lock
         #print('Releasing lock')
@@ -163,11 +163,21 @@ class State :
         '''
         implementation of consensus algorithm
         '''
+        print('Amounts BEFORE resolve conflict')
+        sum_al = 0
+        for utxo in self.utxos.items():
+            print('For node ',self.key_to_id(utxo[0]),': ',end='')
+            summ = 0
+            for utxo1 in utxo[1]:
+               summ += utxo1['amount']
+            print(summ)
+            sum_al += summ 
+        print('All money : ',sum_al)
         # acquire lock so that no new blocks get validated during consensus        
-        print('Resolve Confict')
+        #print('Resolve Confict')
         MAX_LENGTH = len(self.chain)
         MAX_CHAIN = self.chain
-        print('My chain has size ', len(self.chain), ' and the last two blocks are ', self.chain[-2].id, self.chain[-1].id)
+        #print('My chain has size ', len(self.chain), ' and the last two blocks are ', self.chain[-2].id, self.chain[-1].id)
         for node in self.nodes.values() :
             if node["pub"] == self.pub :
                 continue 
@@ -179,7 +189,7 @@ class State :
                 continue
             # extract blocks from chain, they are in string format
             chain_temp = response.json()['chain']
-            print('The chain I receive has size ', len(chain_temp))
+            #print('The chain I receive has size ', len(chain_temp))
             chain = []
             for block in chain_temp : 
                 b = Block(**json.loads(block))
@@ -189,7 +199,7 @@ class State :
                 b.previous_hash = str(b.previous_hash).encode()
                 chain.append(b)
             if not self.validate_chain(chain) :
-                print('Invalid chain')
+                #print('Invalid chain')
                 continue
 
             if len(chain) > MAX_LENGTH : 
@@ -198,6 +208,16 @@ class State :
         
             
         self.chain = MAX_CHAIN  
+        print('Amounts AFTER resolve conflict')
+        sum_al = 0
+        for utxo in self.utxos.items():
+            print('For node ',self.key_to_id(utxo[0]),': ',end='')
+            summ = 0
+            for utxo1 in utxo[1]:
+               summ += utxo1['amount']
+            print(summ)
+            sum_al += summ 
+        print('All money : ',sum_al)
         return True
 
     def validate_chain(self,chain):
@@ -206,45 +226,44 @@ class State :
         self.lock.acquire()
         # we check that the first block is genesis 
         if (self.chain[0].to_json() != chain[0].to_json()):
-            print('different genesis!')
+            #print('different genesis!')
             #print('Releasing VALIDATE CHAIN lock', self.lock)
             self.lock.release()
             return False 
 
         self.transactions = []
-        self.temp_transactions = []
+        #self.temp_transactions 
+        # temp_transactions are not necessary as a tx in BACKUP_TRANS will not validate if it is already in a block, 
+        # that is the corresponding utxos will not be avaliable, remember utxos have unique ids.
         gen_transaction = self.chain[0].transactions[0]
         self.utxos = {}
         self.utxos[gen_transaction.receiver]  = [{'trans_id' : gen_transaction.id, 
         'id' : gen_transaction.id + ':0', 'owner' : gen_transaction.receiver , 'amount' : gen_transaction.amount}]
         # replay
         for block_prev,block in zip(chain,chain[1:]):
-            print(block_prev.id, block.id, "Chain under check")
+            #print(block_prev.id, block.id, "Chain under check")
             if not block_prev.hash == block.previous_hash:
-                print('Error, block hash is invalid')
+                #print('Error, block hash is invalid')
                 #print('Releasing VALIDATE CHAIN lock', self.lock)
                 self.lock.release()
                 return False 
             if not block.validate_hash():
-                print('Could not validate hash')
+                #print('Could not validate hash')
                 #print('Releasing VALIDATE CHAIN lock', self.lock)
                 self.lock.release()
                 return False 
 
             for t in block.transactions:
                 if not Transaction.validate_transaction(t):
-                    print('block transactions are invalid')
+                    #print('block transactions are invalid')
                     self.lock.release()
                     return False 
-                self.temp_transactions.append(t)
-            print(block_prev.id, block.id, "connection is correct")
+            #print(block_prev.id, block.id, "connection is correct")
             
         self.transactions = []
         for tx in self.TRANSACTIONS_BACKUP:
-            if tx in self.temp_transactions:
-                continue
             Transaction.validate_transaction(tx)
-        print('Length of transactions not in block is: ', len(self.transactions))
+        #print('Length of transactions not in block is: ', len(self.transactions))
         #print('Releasing VALIDATE CHAIN lock', self.lock)
         self.lock.release()
         return True

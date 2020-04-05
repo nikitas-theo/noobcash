@@ -41,15 +41,15 @@ def broadcast(json_obj,rest_point,node_id = None):
         broadcast_nodes = list(State.state.nodes.values()) 
     else :
         broadcast_nodes = [State.state.nodes[node_id]]
-    if (rest_point == 'receive_transaction'):
-        for utxo in State.state.utxos.items():
-            print('For node ',State.state.key_to_id(utxo[0]),': ',end='')
-            for utxo1 in utxo[1]:
-                print(utxo1['amount'], end=' ')
-            print()
+    #if (rest_point == 'receive_transaction'):
+        #for utxo in State.state.utxos.items():
+            #print('For node ',State.state.key_to_id(utxo[0]),': ',end='')
+            #for utxo1 in utxo[1]:
+                #print(utxo1['amount'], end=' ')
+            #print()
     for node in broadcast_nodes:
         #broadcast to everyone except sender
-        print('Sending to node ',State.state.key_to_id(node['pub']))
+        #print('Sending to node ',State.state.key_to_id(node['pub']))
         if (node['pub'] == State.state.pub):
             continue
         ip = node["ip"]
@@ -69,15 +69,15 @@ def broadcast_nodes_info():
                            'transactions' : [t.to_json() for t in State.state.transactions],
                            'nodes' : State.state.nodes})
 
-    print('Broadcasting info')
+    #print('Broadcasting info')
     ret = broadcast(json_obj,'receive_info')  
-    print(ret)
+    #print(ret)
     for node in State.state.nodes.values():
         if node['pub'] == State.state.pub : 
             continue 
         ret = new_transaction(node['pub'],100)
-        print(ret)
-    print('Giving command to start')
+        #print(ret)
+    #print('Giving command to start')
     # notify everyone to start transactions
     for node in State.state.nodes.values():
         if node['pub'] == State.state.pub : 
@@ -97,7 +97,8 @@ def new_transaction(receiver, amount,new_id = None):
     #creates t, the new transaction, and broadcasts it
     #print('Requesting NEW TRANSACTION lock', State.state.lock)
     #State.state.lock.acquire()
-    if ((len(State.state.transactions) == config.CAPACITY)):
+    print(len(State.state.transactions),config.CAPACITY)
+    if ((len(State.state.transactions) >= config.CAPACITY)):
         print('NEW: I have to mine the block, if this tx is valid, I have to make a new one.')
         ret = State.state.mine_and_broadcast_block()
     t = Transaction.create_transaction(receiver, amount)
@@ -106,7 +107,7 @@ def new_transaction(receiver, amount,new_id = None):
         #State.state.lock.release()
         return False 
     ret = broadcast_transaction(t,new_id)
-    print("Transactions not in block: ", len(State.state.transactions))
+    #print("Transactions not in block: ", len(State.state.transactions))
     #print('Releasing NEW TRANSACTION lock', State.state.lock)
     #State.state.lock.release()
     return ret
@@ -134,7 +135,7 @@ def receive_block():
     
     # pass to Blockchain to add block
     block.transactions = [Transaction(**json.loads(t)) for t in block.transactions]
-    print('received a block')
+    #print('received a block')
     ret = State.state.add_block(block) 
     #print('Releasing RECEIVE BLOCK lock', State.state.lock)
     #State.state.lock.release()
@@ -146,17 +147,17 @@ def receive_transaction():
     # Call static method, object creation is handled in function
     #State.state.lock.acquire()
     #time.sleep(0.1)
-    if (len(State.state.transactions) == config.CAPACITY):
-        print('RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.')
+    if (len(State.state.transactions) >= config.CAPACITY):
+        #print('RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.')
         State.state.mine_and_broadcast_block()
     json_string = request.get_json()
     t = Transaction(**json.loads(json_string)) 
 
     return_val = Transaction.validate_transaction(t)
     
-    print('Transactions not in block:', len(State.state.transactions))
+    #print('Transactions not in block:', len(State.state.transactions))
   
-    print('Received Transaction and is : ',return_val,flush=True)
+    #print('Received Transaction and is : ',return_val,flush=True)
     #print('Releasing RECEIVE TRANSACTION lock', State.state.lock)
     #State.state.lock.release()
     return make_response("OK",200)
@@ -207,7 +208,7 @@ def register_node():
             return "Invalid", 400
 
         new_id = State.state.last_id + 1 #
-        print('new node id is:',new_id)
+        #print('new node id is:',new_id)
         State.state.last_id = new_id
         new_id = str(new_id)
         State.state.utxos[node_pubkey] = []
@@ -217,7 +218,7 @@ def register_node():
         State.state.nodes[new_id]['pub'] = node_pubkey
 
         if (int(new_id) == config.NODE_CAPACITY - 1) :
-            print('Broadcasting info')
+            #print('Broadcasting info')
             broadcast_nodes_info()
         return make_response(json.dumps({'id' : new_id}),200)
 
@@ -245,7 +246,7 @@ def start_coordinator():
     config.DIFFICULTY = int(d['DIFFICULTY'])
     config.CAPACITY = int(d['CAPACITY'])
     config.NODE_CAPACITY = int(d['NODE_CAPACITY'])
-    print(int(d['NODE_CAPACITY']))
+    #print(int(d['NODE_CAPACITY']))
     State.state.id = '0'
     State.state.nodes['0'] = {'ip': d['host'], 'pub': State.state.pub}
     State.state.genesis() # Create genesis block and transaction
@@ -310,7 +311,7 @@ def start_client():
     json_data = json.dumps({'ip' : data['host'], 'pub' : State.state.pub})
     response = requests.post('{}/register_node'.format(COORDINATOR_IP), json=json_data)
     State.state.id = response.json()['id']
-    print('Our very own id is :',State.state.id)
+    #print('Our very own id is :',State.state.id)
     return make_response(json.dumps({"id" : State.state.id}),200)
 
 @API_communication.route('/notify_start', methods=['GET'])
