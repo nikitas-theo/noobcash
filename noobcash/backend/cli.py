@@ -81,7 +81,7 @@ while(True):
     if TEST :
         cli = f.readline()
         if cli == '' :
-             sleep(20)
+             time.sleep(20)
              flag=True
              cli = 'balance'
         cli = 't ' + cli[2:] 
