@@ -45,11 +45,14 @@ if args.test :
 else :
     TEST = False
 
+print('a1')
 if (IS_COORDINATOR):
+    print('a2')
     URL = '{}/start_coordinator'.format(HOST)
     response = requests.post(URL, json=json.dumps({'NODE_CAPACITY': str(NODES),\
                              'host': HOST, 'CAPACITY': str(CAPACITY), 'DIFFICULTY': str(DIFFICULTY)}))
 else:
+    print('a3')
     COORDINATOR_HOST = 'http://{}:{}'.format(args.ch,args.cp)
     URL = '{}/start_client'.format(HOST)
     response = requests.post(URL, json=json.dumps({'host': HOST, 'coordinator_host' : COORDINATOR_HOST, \
