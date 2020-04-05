@@ -1,135 +1,151 @@
 t 1 7
 1 7
-Current wallet balance :  100
+Current wallet balance :  93
 t 2 8
 2 8
-Current wallet balance :  97
+Current wallet balance :  85
 t 2 7
 2 7
-Current wallet balance :  90
+Current wallet balance :  78
 t 2 5
 2 5
-Current wallet balance :  85
+Current wallet balance :  73
 t 1 5
 1 5
-Current wallet balance :  80
+Current wallet balance :  68
 t 3 6
 3 6
-Current wallet balance :  74
+Current wallet balance :  62
 t 1 6
 1 6
-Current wallet balance :  83
+Current wallet balance :  56
 t 4 6
 4 6
-Current wallet balance :  77
+Current wallet balance :  50
 t 4 3
 4 3
-Current wallet balance :  76
+Current wallet balance :  47
 t 4 4
 4 4
-Current wallet balance :  72
+Current wallet balance :  43
 t 3 8
 3 8
-Current wallet balance :  64
+Current wallet balance :  35
 t 4 7
 4 7
-Current wallet balance :  57
+Current wallet balance :  28
 t 4 8
 4 8
-Current wallet balance :  49
+Current wallet balance :  20
 t 2 4
 2 4
-Current wallet balance :  55
+Current wallet balance :  16
 t 1 2
 1 2
-Current wallet balance :  53
+Current wallet balance :  14
 t 3 3
 3 3
-Current wallet balance :  53
+Current wallet balance :  11
 t 2 3
 2 3
-Current wallet balance :  50
+Current wallet balance :  8
 t 1 1
 1 1
-Current wallet balance :  49
+Current wallet balance :  7
 t 3 1014
 3 1014
 Invalid Transaction
-Current wallet balance :  49
+Current wallet balance :  7
 t 1 7
 1 7
-Current wallet balance :  52
+Current wallet balance :  0
 t 4 5
 4 5
-Current wallet balance :  47
+Invalid Transaction
+Current wallet balance :  0
 t 4 1025
 4 1025
 Invalid Transaction
-Current wallet balance :  47
+Current wallet balance :  0
 t 3 10
 3 10
-Current wallet balance :  37
+Invalid Transaction
+Current wallet balance :  0
 t 3 1
 3 1
-Current wallet balance :  39
+Invalid Transaction
+Current wallet balance :  0
 t 4 9
 4 9
-Current wallet balance :  33
+Invalid Transaction
+Current wallet balance :  0
 t 2 1
 2 1
-Current wallet balance :  32
+Invalid Transaction
+Current wallet balance :  0
 t 1 3
 1 3
-Current wallet balance :  29
+Invalid Transaction
+Current wallet balance :  0
 t 2 1035
 2 1035
 Invalid Transaction
-Current wallet balance :  29
+Current wallet balance :  0
 t 4 3
 4 3
-Current wallet balance :  26
+Invalid Transaction
+Current wallet balance :  0
 t 4 2
 4 2
-Current wallet balance :  24
+Invalid Transaction
+Current wallet balance :  0
 t 4 1
 4 1
-Current wallet balance :  23
+Invalid Transaction
+Current wallet balance :  0
 t 1 2
 1 2
-Current wallet balance :  21
+Invalid Transaction
+Current wallet balance :  0
 t 4 6
 4 6
-Current wallet balance :  15
+Invalid Transaction
+Current wallet balance :  0
 t 2 1
 2 1
-Current wallet balance :  14
+Invalid Transaction
+Current wallet balance :  0
 t 3 1
 3 1
-Current wallet balance :  13
+Invalid Transaction
+Current wallet balance :  0
 t 2 5
 2 5
-Current wallet balance :  8
+Invalid Transaction
+Current wallet balance :  0
 t 4 6
 4 6
-Current wallet balance :  2
+Invalid Transaction
+Current wallet balance :  0
 t 2 4
 2 4
 Invalid Transaction
-Current wallet balance :  2
+Current wallet balance :  0
 t 3 10
 3 10
 Invalid Transaction
-Current wallet balance :  2
+Current wallet balance :  0
 t 4 9
 4 9
 Invalid Transaction
-Current wallet balance :  2
+Current wallet balance :  0
 t 4 3
 4 3
 Invalid Transaction
-Current wallet balance :  2
+Current wallet balance :  0
 t 3 2
 3 2
+Invalid Transaction
 Current wallet balance :  0
 t 2 4
 2 4

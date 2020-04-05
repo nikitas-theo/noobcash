@@ -48,7 +48,12 @@ class State :
         self.last_id = 0 # for coordinator only 
         self.total_time = 0
         self.num_blocks_calculated = 0
-
+        
+    def key_to_id(self, key):
+        for utxo in self.utxos.items():
+            if (utxo['owner'] == key):
+                return utxo[0]
+    
     def remove_utxo(self, utxo):
         self.utxos[utxo['owner']].remove(utxo)
 

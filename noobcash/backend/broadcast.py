@@ -30,10 +30,10 @@ def broadcast(json_obj,rest_point,node_id = None):
     """ Broadcast object to network """
     if node_id == None :
         broadcast_nodes = list(State.state.nodes.values()) 
-        
     else :
         broadcast_nodes = [State.state.nodes[node_id]]
-    print(broadcast_nodes)
+    if (rest_point == 'receive_transaction'):
+        print(State.state.utxos)
     for node in broadcast_nodes:
         #broadcast to everyone except sender
         if (node['pub'] == State.state.pub):
