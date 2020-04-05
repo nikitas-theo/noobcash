@@ -82,6 +82,7 @@ while(True):
         cli = f.readline()
         if cli == '' :
              sleep(20)
+             flag=True
              cli = 'balance'
         cli = 't ' + cli[2:] 
     else :
@@ -121,7 +122,8 @@ while(True):
         balance =  response.json()
         print('Current wallet balance : ', balance)
         if TEST:
-            break
+            if flag:    
+                break
     
     elif (cli == 'help'):
         print('Commands:')
