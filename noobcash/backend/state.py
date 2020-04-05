@@ -75,12 +75,12 @@ class State :
     
     def wallet_balance(self): 
         #print('Requesting WALLET BALANCE SHOW lock', self.lock)
-        #self.lock.acquire()
+        self.lock.acquire()
         balance = 0
         for utxo in self.utxos[self.pub]: 
             balance+=utxo['amount']
         #print('Releasing WALLET BALANCE SHOW lock', self.lock)
-        #self.lock.release()
+        self.lock.release()
         return balance 
         
     def genesis(self):
@@ -250,7 +250,7 @@ class State :
                     #print('block transactions are invalid')
                     self.lock.release()
                     return False 
-            #print(block_prev.id, block.id, "connection is correct")
+            print(block_prev.id, block.id, "connection is correct")
             
         self.transactions = []
         for tx in self.TRANSACTIONS_BACKUP:
