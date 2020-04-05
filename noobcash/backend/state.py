@@ -33,10 +33,12 @@ class State :
     """
 
     def generate_wallet(self): 
+        print('Requesting GENERATE WALLET lock', self.lock)
         self.lock.acquire()
         random_generator = Random.new().read 
         self.key  = RSA.generate(2048,random_generator)
         self.pub = self.key.publickey().exportKey().decode()
+        print('Releasing GENERATE WALLET lock', self.lock)
         self.lock.release()
 
     def __init__(self):
@@ -52,28 +54,36 @@ class State :
         self.num_blocks_calculated = 0
         
     def key_to_id(self, key):
+        print('Requesting KEY TO ID lock', self.lock)
         self.lock.acquire()
         for node in self.nodes.items():
             if (key == node[1]['pub']):
+                print('Releasing KEY TO ID lock', self.lock)
                 self.lock.release()
                 return node[0]
     
     def remove_utxo(self, utxo):
+        print('Requesting REMOVE UTXO lock', self.lock)
         self.lock.acquire()
         self.utxos[utxo['owner']].remove(utxo)
+        print('Releasing REMOVE UTXO lock', self.lock)
         self.lock.release()
 
     def add_utxo(self, utxo):
+        print('Requesting ADD UTXO lock', self.lock)
         self.lock.acquire()
         if utxo['owner'] not in self.utxos : self.utxos[utxo['owner']] = []
         self.utxos[utxo['owner']].append(utxo)
+        print('Releasing ADD UTXO lock', self.lock)
         self.lock.release()
     
     def wallet_balance(self): 
+        print('Requesting WALLET BALANCE SHOW lock', self.lock)
         self.lock.acquire()
         balance = 0
         for utxo in self.utxos[self.pub]: 
             balance+=utxo['amount']
+        print('Releasing WALLET BALANCE SHOW lock', self.lock)
         self.lock.release()
         return balance 
         
@@ -87,17 +97,19 @@ class State :
         self.chain.append(genesis_block)
     
     def mine_block(self):
+        print('Requesting MINE BLOCK lock', self.lock)
         self.lock.acquire()
         copy_trans = deepcopy(self.transactions) 
         block = Block(id = len(self.chain)+1, transactions = copy_trans, previous_hash = self.chain[-1].hash)
         block.mine()
         self.add_block(block)
         broadcast.broadcast_block(block)
+        print('Releasing MINE BLOCK lock', self.lock)
         self.lock.release()
         
     def add_block(self, block):
         """ Validate a block and add it to the chain """
-        print('Requesting lock')
+        print('Requesting ADD BLOCK lock', self.lock)
         self.lock.acquire()
         print('Acquiring lock')
         self.start = time.time()
@@ -139,6 +151,7 @@ class State :
 
         #now release the lock
         print('Releasing lock')
+        print('Releasing ADD BLOCK lock', self.lock)
         self.lock.release()
         return True 
 
@@ -147,6 +160,7 @@ class State :
         '''
         implementation of consensus algorithm
         '''
+        print('Requesting RESOLVE CONFLICT lock', self.lock)
         self.lock.acquire()
         # acquire lock so that no new blocks get validated during consensus        
         print('Resolve Confict')
@@ -180,16 +194,19 @@ class State :
                 MAX_CHAIN = chain 
         
             
-        self.chain = MAX_CHAIN    
+        self.chain = MAX_CHAIN  
+        print('Releasing RESOLVE CONFLICT lock', self.lock)
         self.lock.release()
         return True
 
     def validate_chain(self,chain):
         """ validate the blockchain """
+        print('Requesting VALIDATE CHAIN lock', self.lock)
         self.lock.acquire()
         # we check that the first block is genesis 
         if (self.chain[0].to_json() != chain[0].to_json()):
             print('different genesis!')
+            print('Releasing VALIDATE CHAIN lock', self.lock)
             self.lock.release()
             return False 
 
@@ -202,10 +219,12 @@ class State :
         for block_prev,block in zip(chain,chain[1:]):
             if not block_prev.hash == block.previous_hash:
                 print('Error, block hash is invalid')
+                print('Releasing VALIDATE CHAIN lock', self.lock)
                 self.lock.release()
                 return False 
             if not block.validate_hash():
                 print('Could not validate hash')
+                print('Releasing VALIDATE CHAIN lock', self.lock)
                 self.lock.release()
                 return False 
 
@@ -218,6 +237,7 @@ class State :
  
         for tx in self.TRANSACTIONS_BACKUP:
             Transaction.validate_transaction(tx)
+        print('Releasing VALIDATE CHAIN lock', self.lock)
         self.lock.release()
         return True
 

@@ -18,14 +18,18 @@ print = functools.partial(print, flush=True)
 # BROADCASTING
 
 def broadcast_block(block,node_id = None) :
+    print('Requesting BROADCAST BLOCK lock', State.state.lock)
     State.state.lock.acquire()
     json_block = block.to_json()
+    print('Releasing BROADCAST BLOCK lock', State.state.lock)
     State.state.lock.release()
     return broadcast(json_block,'receive_block',node_id)
 
 def broadcast_transaction(t,node_id = None ) :
+    print('Requesting BROADCAST TRANSACTION lock', State.state.lock)
     State.state.lock.acquire()
     json_t = t.to_json()
+    print('Releasing BROADCAST TRANSACTION lock', State.state.lock)
     State.state.lock.release()
     return broadcast(json_t,'receive_transaction',node_id)
 
@@ -51,6 +55,7 @@ def broadcast(json_obj,rest_point,node_id = None):
 
 
 def broadcast_nodes_info():
+    print('Requesting BROADCAST NODES lock', State.state.lock)
     State.state.lock.acquire()
     """
     when all nodes are in the state.nodes dictionary,
@@ -77,6 +82,7 @@ def broadcast_nodes_info():
         ip = node['ip']
         res = requests.post('{}/start'.format(ip))
     config.START = 'yes'    
+    print('Releasing BROADCAST NODES lock', State.state.lock)
     State.state.lock.release()
 
 
@@ -86,14 +92,17 @@ def broadcast_nodes_info():
 
 def new_transaction(receiver, amount,new_id = None):
     #creates t, the new transaction, and broadcasts it
+    print('Requesting NEW TRANSACTION lock', State.state.lock)
     State.state.lock.acquire()
     t = Transaction.create_transaction(receiver, amount)
     if t == False : 
+        print('Releasing NEW TRANSACTION lock', State.state.lock)
         State.state.lock.release()
         return False 
     if (len(State.state.transactions) == config.CAPACITY):
         State.state.mine_block()
     ret = broadcast_transaction(t,new_id)
+    print('Releasing NEW TRANSACTION lock', State.state.lock)
     State.state.lock.release()
     return ret
 # ------------------------------------------
@@ -109,6 +118,7 @@ def start():
     
 @API_communication.route('/receive_block', methods=['POST'])
 def receive_block():
+    print('Requesting RECEIVE BLOCK lock', State.state.lock)
     State.state.lock.acquire()
     json_string = request.get_json()
     block =  Block(**json.loads(json_string))
@@ -120,11 +130,13 @@ def receive_block():
     block.transactions = [Transaction(**json.loads(t)) for t in block.transactions]
     print('received a block')
     ret = State.state.add_block(block) 
+    print('Releasing RECEIVE BLOCK lock', State.state.lock)
     State.state.lock.release()
     return make_response("OK",200)
 
 @API_communication.route('/receive_transaction', methods=['POST'])
 def receive_transaction():
+    print('Requesting RECEIVE TRANSACTION lock', State.state.lock)
     # Call static method, object creation is handled in function
     State.state.lock.acquire()
     json_string = request.get_json()
@@ -135,6 +147,7 @@ def receive_transaction():
     print('Received Transaction and is : ',return_val,flush=True)
     if (len(State.state.transactions) == config.CAPACITY):
         State.state.mine_block()
+    print('Releasing RECEIVE TRANSACTION lock', State.state.lock)
     State.state.lock.release()
     return make_response("OK",200)
     
@@ -201,9 +214,11 @@ def register_node():
 # A node requests the chain via a GET request , we return the chain
 @API_communication.route('/request_chain',methods=['GET'])
 def request_chain():
+    print('Requesting REQUEST CHAIN lock', State.state.lock)
     State.state.lock.acquire()
     block_list = [block.to_json() for block in State.state.chain]        
     json_chain = json.dumps({"chain": block_list})
+    print('Releasing REQUEST CHAIN lock', State.state.lock)
     State.state.lock.release()
     return json_chain 
 
@@ -229,6 +244,7 @@ def start_coordinator():
 
 @API_communication.route('/new_transaction', methods=['POST'])
 def cli_new_transaction():
+    print('Requesting CLI NEW TRANSACTION lock', State.state.lock)
     State.state.lock.acquire()
     json_string = request.get_json()
     d = json.loads(json_string)
@@ -236,9 +252,11 @@ def cli_new_transaction():
     amount = int(d['amount'])
     node = State.state.nodes[node_id]
     if (new_transaction(node['pub'], amount)):
+        print('Releasing CLI NEW TRANSACTION lock', State.state.lock)
         State.state.lock.release()
         return make_response('OK',200)
     else:
+        print('Releasing CLI NEW TRANSACTION lock', State.state.lock)
         State.state.lock.release()
         return make_response('Transaction Failed',400)
         
@@ -247,11 +265,13 @@ def cli_new_transaction():
 # Please read the exercise report before chaning stuff
 @API_communication.route('/view_transactions', methods=['GET'])
 def view_transactions():
+    print('Requesting VIEW LAST BLOCK TRANSACTIONS lock', State.state.lock)
     State.state.lock.acquire()
     # there is always a last block so no need to check for empty chain
     last_block = State.state.chain[-1]
     json_trans = [t.to_json() for t in last_block.transactions]
     res = json.dumps({'transactions' : json_trans})
+    print('Releasing VIEW LAST BLOCK TRANSACTIONS lock', State.state.lock)
     State.state.lock.release()
     return res
 
