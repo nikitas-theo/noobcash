@@ -81,8 +81,10 @@ while(True):
     cli = cli.strip()
     if (cli.startswith('t')):
         print(cli)
-        [node_id,amount] = cli.split()[1:]
-        node_id = node_id[2:]
+        cli2 = cli.split()
+        node_id = cli2[1]
+        amount = cli2[2]
+        print(node_id, amount)
 
         response = requests.post('{}/new_transaction'.format(HOST), json = json.dumps({'recipient_address': '{}'.format(node_id), 'amount': '{}'.format(amount)}))
         if (response.status_code != 200):
