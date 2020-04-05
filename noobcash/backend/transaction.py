@@ -58,6 +58,7 @@ class Transaction :
 
     @staticmethod
     def validate_transaction(t):
+        State.state.lock.acquire()
         """ 
             - validate incoming transaction
             - update transaction list
@@ -69,6 +70,7 @@ class Transaction :
         
         if not t.verify_signature():
             print('Signature did not verify')
+            State.state.lock.release()
             return (None,False)
         try : 
             coins = 0
@@ -89,6 +91,7 @@ class Transaction :
                 raise Exception('Not enough UTXO coins in sender')
         except Exception as e:
             print(str(e))
+            State.state.lock.release()
             return (False)
 
         # remove all spent transactions    
@@ -111,12 +114,15 @@ class Transaction :
         State.state.add_utxo(t.outputs[1])
         # save transaction
         State.state.transactions.append(t)
+        
+        State.state.lock.release()
 
    
         return True
     
     @staticmethod
     def create_transaction(receiver_key, amount):
+        State.state.lock.acquire()
         """
             - Create a transaction for broadcasting 
             - update transaction listg
@@ -137,6 +143,7 @@ class Transaction :
         
         if coins < amount:
             print('Not enough UTXO coins in wallet, requested ', amount, 'but have', coins)
+            State.state.lock.release()
             return (False)
 
         # remove all spent transactions    
@@ -166,7 +173,7 @@ class Transaction :
 
         State.state.transactions.append(t)
         
-
+        State.state.lock.release()
         
         return t
     

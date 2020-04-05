@@ -33,9 +33,11 @@ class State :
     """
 
     def generate_wallet(self): 
+        self.lock.acquire()
         random_generator = Random.new().read 
         self.key  = RSA.generate(2048,random_generator)
         self.pub = self.key.publickey().exportKey().decode()
+        self.lock.release()
 
     def __init__(self):
        
@@ -50,21 +52,29 @@ class State :
         self.num_blocks_calculated = 0
         
     def key_to_id(self, key):
+        self.lock.acquire()
         for node in self.nodes.items():
             if (key == node[1]['pub']):
+                self.lock.release()
                 return node[0]
     
     def remove_utxo(self, utxo):
+        self.lock.acquire()
         self.utxos[utxo['owner']].remove(utxo)
+        self.lock.release()
 
     def add_utxo(self, utxo):
+        self.lock.acquire()
         if utxo['owner'] not in self.utxos : self.utxos[utxo['owner']] = []
         self.utxos[utxo['owner']].append(utxo)
+        self.lock.release()
     
     def wallet_balance(self): 
+        self.lock.acquire()
         balance = 0
         for utxo in self.utxos[self.pub]: 
             balance+=utxo['amount']
+        self.lock.release()
         return balance 
         
     def genesis(self):
@@ -77,22 +87,23 @@ class State :
         self.chain.append(genesis_block)
     
     def mine_block(self):
-        
+        self.lock.acquire()
         copy_trans = deepcopy(self.transactions) 
         block = Block(id = len(self.chain)+1, transactions = copy_trans, previous_hash = self.chain[-1].hash)
         block.mine()
         self.add_block(block)
         broadcast.broadcast_block(block)
+        self.lock.release()
         
     def add_block(self, block):
         """ Validate a block and add it to the chain """
+        print('Requesting lock')
+        self.lock.acquire()
+        print('Acquiring lock')
         self.start = time.time()
         self.TRANSACTIONS_BACKUP = deepcopy(self.transactions)
         self.UTXOS_BACKUP = deepcopy(self.utxos)
 
-        print('Requesting lock')
-        self.lock.acquire()
-        print('Acquiring lock')
 
         #we need to ensure consensus is not running
         # check for hash and precious hash

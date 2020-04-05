@@ -18,11 +18,15 @@ print = functools.partial(print, flush=True)
 # BROADCASTING
 
 def broadcast_block(block,node_id = None) :
+    State.state.lock.acquire()
     json_block = block.to_json()
+    State.state.lock.release()
     return broadcast(json_block,'receive_block',node_id)
 
 def broadcast_transaction(t,node_id = None ) :
+    State.state.lock.acquire()
     json_t = t.to_json()
+    State.state.lock.release()
     return broadcast(json_t,'receive_transaction',node_id)
 
 
@@ -47,6 +51,7 @@ def broadcast(json_obj,rest_point,node_id = None):
 
 
 def broadcast_nodes_info():
+    State.state.lock.acquire()
     """
     when all nodes are in the state.nodes dictionary,
     notify all nodes about the others
@@ -72,7 +77,7 @@ def broadcast_nodes_info():
         ip = node['ip']
         res = requests.post('{}/start'.format(ip))
     config.START = 'yes'    
-    
+    State.state.lock.release()
 
 
 
@@ -81,12 +86,15 @@ def broadcast_nodes_info():
 
 def new_transaction(receiver, amount,new_id = None):
     #creates t, the new transaction, and broadcasts it
+    State.state.lock.acquire()
     t = Transaction.create_transaction(receiver, amount)
     if t == False : 
+        State.state.lock.release()
         return False 
     if (len(State.state.transactions) == config.CAPACITY):
         State.state.mine_block()
     ret = broadcast_transaction(t,new_id)
+    State.state.lock.release()
     return ret
 # ------------------------------------------
 
@@ -101,6 +109,7 @@ def start():
     
 @API_communication.route('/receive_block', methods=['POST'])
 def receive_block():
+    State.state.lock.acquire()
     json_string = request.get_json()
     block =  Block(**json.loads(json_string))
     block.hash = str(block.hash).encode()
@@ -111,11 +120,13 @@ def receive_block():
     block.transactions = [Transaction(**json.loads(t)) for t in block.transactions]
     print('received a block')
     ret = State.state.add_block(block) 
+    State.state.lock.release()
     return make_response("OK",200)
 
 @API_communication.route('/receive_transaction', methods=['POST'])
 def receive_transaction():
     # Call static method, object creation is handled in function
+    State.state.lock.acquire()
     json_string = request.get_json()
     t = Transaction(**json.loads(json_string)) 
 
@@ -124,6 +135,7 @@ def receive_transaction():
     print('Received Transaction and is : ',return_val,flush=True)
     if (len(State.state.transactions) == config.CAPACITY):
         State.state.mine_block()
+    State.state.lock.release()
     return make_response("OK",200)
     
 
@@ -189,8 +201,10 @@ def register_node():
 # A node requests the chain via a GET request , we return the chain
 @API_communication.route('/request_chain',methods=['GET'])
 def request_chain():
+    State.state.lock.acquire()
     block_list = [block.to_json() for block in State.state.chain]        
     json_chain = json.dumps({"chain": block_list})
+    State.state.lock.release()
     return json_chain 
 
 
@@ -215,14 +229,17 @@ def start_coordinator():
 
 @API_communication.route('/new_transaction', methods=['POST'])
 def cli_new_transaction():
+    State.state.lock.acquire()
     json_string = request.get_json()
     d = json.loads(json_string)
     node_id = d['recipient_address']
     amount = int(d['amount'])
     node = State.state.nodes[node_id]
     if (new_transaction(node['pub'], amount)):
+        State.state.lock.release()
         return make_response('OK',200)
     else:
+        State.state.lock.release()
         return make_response('Transaction Failed',400)
         
 
@@ -230,10 +247,12 @@ def cli_new_transaction():
 # Please read the exercise report before chaning stuff
 @API_communication.route('/view_transactions', methods=['GET'])
 def view_transactions():
+    State.state.lock.acquire()
     # there is always a last block so no need to check for empty chain
     last_block = State.state.chain[-1]
     json_trans = [t.to_json() for t in last_block.transactions]
     res = json.dumps({'transactions' : json_trans})
+    State.state.lock.release()
     return res
 
 #! DONE 
@@ -261,4 +280,6 @@ def start_client():
 
 @API_communication.route('/notify_start', methods=['GET'])
 def notify_start():
+    State.state.lock.acquire()
     return make_response(json.dumps({"resp" : config.START}),200)
+    State.state.lock.release()
