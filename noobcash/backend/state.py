@@ -90,6 +90,7 @@ class State :
         genesis_block = Block(id = '0',transactions = [gen_transaction], previous_hash = '1', nonce = '0',hash = b'1')
         self.utxos[self.pub] = [{'trans_id' : gen_transaction.id, 
         'id' : gen_transaction.id + ':0', 'owner' : gen_transaction.receiver , 'amount' : gen_transaction.amount}]
+        self.time0 = time.time()
         self.chain.append(genesis_block)
     
     def mine_and_broadcast_block(self):
@@ -151,7 +152,13 @@ class State :
         #now release the lock
         #print('Releasing lock')
         #print('Releasing ADD BLOCK lock', self.lock)
-        print('&&&&&& Adding block to blockchain at time : $',time.time())
+        
+        self.time1 = time.time()
+        self.total_time = self.time1 - self.time0
+        self.time0 = self.time1
+        self.num_blocks_calculated += 1
+        print('Average time by now', self.total_time/self.num_blocks_calculated)
+        print('Number of blocks', self.num_blocks_calculated)
         self.coin_distribution()
         self.lock.release()
         
