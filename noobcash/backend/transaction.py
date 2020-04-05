@@ -102,19 +102,28 @@ class Transaction :
             State.state.remove_utxo(utxo)
 
         # create outputs
-        t.outputs = [{
-            'trans_id': t.id,
-            'id' : t.id + ":0",
-            'owner': t.receiver,
-            'amount': t.amount
-        }, {
-            'trans_id': t.id,
-            'id' : t.id + ":1",
-            'owner': t.sender,
-            'amount': coins - t.amount
-        }]
-        State.state.add_utxo(t.outputs[0])
-        State.state.add_utxo(t.outputs[1])
+        if (coins > t.amount):  
+            t.outputs = [{
+                'trans_id': t.id,
+                'id' : t.id + ":0",
+                'owner': t.receiver,
+                'amount': t.amount
+            }, {
+                'trans_id': t.id,
+                'id' : t.id + ":1",
+                'owner': t.sender,
+                'amount': coins - t.amount
+            }]
+            State.state.add_utxo(t.outputs[0])
+            State.state.add_utxo(t.outputs[1])
+        else:
+            t.outputs = [{
+                'trans_id': t.id,
+                'id' : t.id + ":0",
+                'owner': t.receiver,
+                'amount': t.amount
+            }]
+            State.state.add_utxo(t.outputs[0])
         # save transaction
         State.state.transactions.append(t)
         #print('Releasing VALIDATE TRANSACTION lock', State.state.lock)
@@ -161,20 +170,29 @@ class Transaction :
         t.calculate_hash()
         t.sign_transaction()
 
-        t.outputs = [{
-            'trans_id': t.id,
-            'id' : t.id + ':0',
-            'owner': t.receiver,
-            'amount': t.amount
-        }, {
-            'trans_id': t.id,
-            'id' : t.id + ':1',
-            'owner': t.sender,
-            'amount': coins - t.amount
-        }]
-
-        State.state.add_utxo(t.outputs[0])
-        State.state.add_utxo(t.outputs[1])
+        # create outputs
+        if (coins > t.amount):  
+            t.outputs = [{
+                'trans_id': t.id,
+                'id' : t.id + ":0",
+                'owner': t.receiver,
+                'amount': t.amount
+            }, {
+                'trans_id': t.id,
+                'id' : t.id + ":1",
+                'owner': t.sender,
+                'amount': coins - t.amount
+            }]
+            State.state.add_utxo(t.outputs[0])
+            State.state.add_utxo(t.outputs[1])
+        else:
+            t.outputs = [{
+                'trans_id': t.id,
+                'id' : t.id + ":0",
+                'owner': t.receiver,
+                'amount': t.amount
+            }]
+            State.state.add_utxo(t.outputs[0])
 
         State.state.transactions.append(t)
         #print('Releasing CREATE TRANSACTION lock', State.state.lock)
