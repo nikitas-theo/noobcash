@@ -74,17 +74,18 @@ if TEST:
     num_trans = 0
 
 flag=False
+cnt = 0
 while(True):
 
     """ CLI implementation """
     
     if TEST :
+        cnt+=1
         cli = f.readline()
         if cli == '' :
-             time.sleep(20)
-             flag=True
-             cli = 'balance'
+            break
         else:
+            print(cnt)
             cli = 't ' + cli[2:] 
     else :
         cli = input('(cli) > ')
