@@ -2,6 +2,7 @@ mkdir logs
 fuser -n tcp -k 1234
 kill -9 `cat save_pid.txt`
 
+nohup ./kill_all_tests.sh
 
 nohup python3 server.py 192.168.1.1 1234 > ./logs/server_log1 &
 nohup ssh user@m2 "cd code && ./client_test.sh" &

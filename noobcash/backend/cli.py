@@ -75,7 +75,7 @@ while(True):
         cli = f.readline()
         if cli == '' :
              break 
-        cli = 't ' + cli 
+        cli = 't ' + cli[2:] 
     else :
         cli = input('(cli) > ')
     cli = cli.strip()
