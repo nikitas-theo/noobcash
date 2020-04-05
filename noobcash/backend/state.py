@@ -50,9 +50,9 @@ class State :
         self.num_blocks_calculated = 0
         
     def key_to_id(self, key):
-        for utxo in self.utxos.items():
-            if (utxo['owner'] == key):
-                return utxo[0]
+        for node in self.nodes.items():
+            if (key == node[1]['pub']):
+                return node[0]
     
     def remove_utxo(self, utxo):
         self.utxos[utxo['owner']].remove(utxo)

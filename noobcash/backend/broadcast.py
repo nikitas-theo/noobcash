@@ -33,7 +33,8 @@ def broadcast(json_obj,rest_point,node_id = None):
     else :
         broadcast_nodes = [State.state.nodes[node_id]]
     if (rest_point == 'receive_transaction'):
-        print(State.state.utxos)
+        for utxo in State.state.utxos.values():
+            print(State.state.key_to_id(utxo['owner']), utxo['amount'])
     for node in broadcast_nodes:
         #broadcast to everyone except sender
         if (node['pub'] == State.state.pub):
