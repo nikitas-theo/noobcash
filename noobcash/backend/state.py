@@ -52,6 +52,7 @@ class State :
         self.last_id = 0 # for coordinator only 
         self.total_time = 0
         self.num_blocks_calculated = 0
+        self.time0 = time.time()
         
     def key_to_id(self, key):
         for node in self.nodes.items():
@@ -90,7 +91,6 @@ class State :
         genesis_block = Block(id = '0',transactions = [gen_transaction], previous_hash = '1', nonce = '0',hash = b'1')
         self.utxos[self.pub] = [{'trans_id' : gen_transaction.id, 
         'id' : gen_transaction.id + ':0', 'owner' : gen_transaction.receiver , 'amount' : gen_transaction.amount}]
-        self.time0 = time.time()
         self.chain.append(genesis_block)
     
     def mine_and_broadcast_block(self):
