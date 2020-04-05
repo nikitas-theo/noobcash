@@ -6,1389 +6,746 @@
  * Running on http://localhost:1237/ (Press CTRL+C to quit)
  * Restarting with stat
  * Debugger is active!
- * Debugger PIN: 271-373-072
+ * Debugger PIN: 127-650-126
 Our very own id is : 3
-127.0.0.1 - - [05/Apr/2020 03:45:15] "[37mPOST /start_client HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:15] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_info HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:15] "[37mPOST /start_client HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:15] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:15] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:15] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_info HTTP/1.1[0m" 200 -
 received a block
 Requesting lock
 Acquiring lock
 Inital block was valid, no need to resolve conflict
-Running average block addition time:  0.002008676528930664
+Running average block addition time:  0.0013544559478759766
 Releasing lock
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 received a block
 Requesting lock
 Acquiring lock
 Inital block was valid, no need to resolve conflict
-Running average block addition time:  0.0016516447067260742
+Running average block addition time:  0.0012841224670410156
 Releasing lock
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mGET /notify_start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mGET /notify_start HTTP/1.1[0m" 200 -
 received a block
 Requesting lock
 Acquiring lock
 Inital block was valid, no need to resolve conflict
-Running average block addition time:  0.0014001528422037761
+Running average block addition time:  0.0014055569966634114
 Releasing lock
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 received a block
 Requesting lock
 Acquiring lock
 Inital block was valid, no need to resolve conflict
-Running average block addition time:  0.00137406587600708
+Running average block addition time:  0.0012701749801635742
 Releasing lock
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /start HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /start HTTP/1.1[0m" 200 -
 received a block
 Requesting lock
 Acquiring lock
 Inital block was valid, no need to resolve conflict
-Running average block addition time:  0.0014154911041259766
+Running average block addition time:  0.0012179374694824218
 Releasing lock
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
-received a block
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mGET /notify_start HTTP/1.1[0m" 200 -
 Requesting lock
 Acquiring lock
 Inital block was valid, no need to resolve conflict
-Running average block addition time:  0.0012631018956502278
+Running average block addition time:  0.0010625123977661133
 Releasing lock
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 received a block
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Requesting lock
 Acquiring lock
-Inital block was valid, no need to resolve conflict
-Running average block addition time:  0.0014488015856061662
+Resolve Confict
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Running average block addition time:  0.010556902204241072
 Releasing lock
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
 received a block
 Requesting lock
 Acquiring lock
 Resolve Confict
-received a block
-Requesting lock
-received a block
-Requesting lock
 Error, block hash is invalid
 Invalid chain
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
 Error, block hash is invalid
 Invalid chain
-Running average block addition time:  0.015545427799224854
+Error, block hash is invalid
+Invalid chain
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Error, block hash is invalid
+Invalid chain
+Running average block addition time:  0.019985616207122803
 Releasing lock
-127.0.0.1 - - [05/Apr/2020 03:45:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+received a block
+Requesting lock
 Acquiring lock
 Resolve Confict
 Error, block hash is invalid
 Invalid chain
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
 Error, block hash is invalid
 Invalid chain
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
 Error, block hash is invalid
 Invalid chain
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
-Running average block addition time:  0.040292978286743164
+Received Transaction and is :  True
+127.0.0.1 - - [05/Apr/2020 04:29:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Error, block hash is invalid
+Invalid chain
+Running average block addition time:  0.030348910225762263
 Releasing lock
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
-Acquiring lock
-Resolve Confict
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
 received a block
 Requesting lock
-Error, block hash is invalid
-Invalid chain
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-block transactions are invalid
-Invalid chain
-received a block
-Requesting lock
-Error, block hash is invalid
-Invalid chain
-Error, block hash is invalid
-Invalid chain
-Running average block addition time:  0.039796066284179685
-Releasing lock
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
 Acquiring lock
 Resolve Confict
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Error, block hash is invalid
+Invalid chain
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Error, block hash is invalid
 Invalid chain
 Error, block hash is invalid
 Invalid chain
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Error, block hash is invalid
 Invalid chain
-Error, block hash is invalid
-Invalid chain
-Running average block addition time:  0.050595240159468216
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Running average block addition time:  0.03587331771850586
 Releasing lock
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Acquiring lock
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Resolve Confict
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
-Error, block hash is invalid
-Invalid chain
-Error, block hash is invalid
-Invalid chain
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Error, block hash is invalid
-Invalid chain
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Error, block hash is invalid
-Invalid chain
-Running average block addition time:  0.07022074858347575
-Releasing lock
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:18] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-Given input UTXO is not found in utxo records
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:19] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mGET /balance HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:20] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mGET /balance HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  False
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:17] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mGET /balance HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  8 but have 5
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  10 but have 5
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mGET /balance HTTP/1.1[0m" 200 -
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  1 but have 0
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  8 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  2 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  5 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  5 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  7 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  3 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  3 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  3 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  1 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  10 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  6 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  9 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  10 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  1 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  9 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  2 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  10 but have 6
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mGET /balance HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  5 but have 2
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  5 but have 2
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mGET /balance HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:22] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mGET /balance HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mGET /balance HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  4 but have 2
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  6 but have 2
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  3 but have 2
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  3 but have 2
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  8 but have 2
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  8 but have 2
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mGET /balance HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mGET /balance HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  9 but have 5
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  9 but have 5
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  9 but have 5
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  6 but have 5
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  8 but have 2
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  5 but have 2
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  8 but have 3
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  10 but have 3
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
 Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:24] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  5 but have 1
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
 Not enough UTXO coins in wallet, requested  3 but have 1
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  7 but have 1
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+[{'ip': 'http://localhost:1234', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAm33l3U7/G+QakGYNYupu\nkD+sduE9s3MmbVYpn46sB+ViTaqGvY8W57UwTPyAQJXLkQYwKavF0tlMVRktAk0H\nuGaXnR9YDMMz0J77Uk1szO2p4Mz26QHklV7aoiuktrLDphiEz2ur27VciyZoVGG8\nh9t2HTRoMrv1z1dciX60XIEDTqsps5/FwfTUT5L+JXRZIlIB72GxiZ/f1OAjxunr\noV7XZkV5PhQOFMSPWBUnSh2lcIi4qz+YLNy8pSQn2cKg7qNA85E66Xky5ALLjoUa\nZx8EG0hUA7/znThLrHw3x+m1uFDPG7fOWV4EKhfXiII6y6g0njaGsVk1iWrnarYa\nYQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1238', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw3j5WUbe26QTg4tuwCoB\n3PInrZVgXjsqKf0eZXoY/NDbMBLrvzMsX1hFumKV/cjOivuLFrKod2mGDsmVzD5m\nBTJ7V8/hXaS1fteB4g1mHtMcSNEnd34l7ZIfGnHESoOK2j1EIK+ymFzQ/vu0VU/Z\nkt2VKILaXV1CESn1CvQR8aCgPgFe99B3Loq30PRSi0x5NjzRAW0GT9ohBkwzDCKY\nAuo3pD0O+r8ijgbQDoH2UJSc4RzBblhyPvPra3Q20+dRM4iXwsI9AjcEEor4QZNr\nwULuAL4gTbcxN0lw/XMG/ysa1I//VDMih9xUOZDv0BO3QQKKumyY7wI+Pn1Qt1gy\nWwIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1235', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtTvRGwTHJ7iT3w1YiDAW\nive5rSJfal5ePS4Z5J9wqJb4epGBNBcQGUko9cZRGQeA16Ay+e8SQTi5tPksMr9J\naRhWERIoEEzM5IhOBMxGOll79VezdPjCHRuL4WIBjSGjqfife9Vfylaq5C+sNV8d\nYSms1LrudXOEn76ppdCV1YdlnVTRdKjSaS1qNyoxMaqULoN0QLLODBI7Pme/ph+o\nUftXK1uSv5Ta6ZY1OJcqW/Rt2E0l64mAy1yC+fiAogCPkxJtDUKTKY31PSgXIyIa\n+jofBdWpJLonbNJ/m80tsv4EBkVj2S+ylZZgdZ+3+dzFG40ClY/GXq9OmNAZi5mJ\n6wIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1237', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqUo2/7xHco11EHx+m5FM\nRfBeZ7CwDjDR7+ZuWQ2q7YsyFjjN2237B/o4cpMDNGMJj65GUYhEtD8FG1wYKNqi\nB7G06Oj/jpEc65mPst+MKfGyjg4Us6TWcddIzmP+G6H11M0Dptzf+e3lciMIJkZY\nnblETzpsxbwuuccjr1k/FxdmUAKozoe5T8CkbebGjcYJTw4Vklva7TQeVHgu8HpM\n2IP8KWkBMoIr48dbFewxhbRBC1SyAZFMGpGn6t371l+syBsur8J0p5zSlb7Wt0s2\ng1MUkGSw10hR+zs/srAsOu20QNyoRlJ4XSqbxqkASGM/ZHizFEQayxXSdCAz1Moy\nGQIDAQAB\n-----END PUBLIC KEY-----'}, {'ip': 'http://localhost:1236', 'pub': '-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoBGWp+Emw52Pgao+2qyO\n31t69sQ7RR5TWlSJN6YHeU9ZKSyRIYkY2YJ2N5cQPyBdZmyjhlpS7f8s7lvlmJ91\nRW52uxWzqW4yyNw6G1VUs9KWLf08FaB/V1sKrUiD8vpkyXIzjDRjYZzS3pswouF7\nN1aZwSqSXh5osZ/jeGO0PSEUdMGP7pHThpy3OuahOeoLNkH11czj7Nv6jfoQL7a7\nfVCBMhXNS0hCJQt2A9WOdpfsmOut6ZkpaEBE49TH/OeOgVaD+2UK0N5fDwqFfgmy\nqKRv/HGWOjU60qTJPhs8ebf/yhdB4NNKWMgJJot2pxqkMmSYNmT81Y9PPJDz2mrP\nGwIDAQAB\n-----END PUBLIC KEY-----'}]
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  8 but have 1
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  6 but have 1
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  7 but have 1
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  8 but have 1
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  6 but have 1
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  5 but have 1
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  2 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  10 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  9 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  3 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  4 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  6 but have 4
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  10 but have 4
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  6 but have 4
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:25] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  7 but have 2
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  5 but have 2
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  9 but have 2
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  True
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
 Not enough UTXO coins in wallet, requested  8 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  7 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
-Given input UTXO is not found in utxo records
-Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
-Not enough UTXO coins in wallet, requested  1 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
 Not enough UTXO coins in wallet, requested  2 but have 0
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mGET /balance HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  5 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  5 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  7 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  1 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  10 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  6 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  9 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:26] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  10 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  1 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  9 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  2 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  10 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  4 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  5 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  5 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  2 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  4 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  9 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  4 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
 Given input UTXO is not found in utxo records
 Received Transaction and is :  False
-127.0.0.1 - - [05/Apr/2020 03:45:27] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  6 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  8 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  8 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  2 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  4 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  2 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  2 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  8 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  7 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  9 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  8 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  5 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  1 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  5 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  7 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  8 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+Given input UTXO is not found in utxo records
+Received Transaction and is :  False
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  6 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  7 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  8 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  6 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:19] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  5 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  1 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  2 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  10 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  9 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  4 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  1 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  6 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  10 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  6 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  3 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  7 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  5 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  6 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  9 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  2 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  8 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  7 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  1 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -
+Not enough UTXO coins in wallet, requested  2 but have 0
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[1m[31mPOST /new_transaction HTTP/1.1[0m" 400 -
+127.0.0.1 - - [05/Apr/2020 04:29:20] "[37mGET /balance HTTP/1.1[0m" 200 -

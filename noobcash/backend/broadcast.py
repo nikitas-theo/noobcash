@@ -30,17 +30,16 @@ def broadcast(json_obj,rest_point,node_id = None):
     """ Broadcast object to network """
     if node_id == None :
         broadcast_nodes = list(State.state.nodes.values()) 
+        
     else :
         broadcast_nodes = [State.state.nodes[node_id]]
-
+    print(broadcast_nodes)
     for node in broadcast_nodes:
         #broadcast to everyone except sender
         if (node['pub'] == State.state.pub):
             continue
         ip = node["ip"]
         response = requests.post('{}/{}'.format(ip,rest_point), json=json_obj)
-        if (response.status_code != 200):
-            return False
     return True
 
 
@@ -82,7 +81,6 @@ def new_transaction(receiver, amount,new_id = None):
     t = Transaction.create_transaction(receiver, amount)
     if t == False : 
         return False 
-    ret = broadcast_transaction(t,new_id)
     if (len(State.state.transactions) == config.CAPACITY):
         State.state.mine_block()
     ret = broadcast_transaction(t,new_id)
