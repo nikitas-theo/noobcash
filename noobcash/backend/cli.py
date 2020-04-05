@@ -73,6 +73,7 @@ if TEST:
     start = time.time()
     num_trans = 0
 
+flag=False
 while(True):
 
     """ CLI implementation """
@@ -80,7 +81,8 @@ while(True):
     if TEST :
         cli = f.readline()
         if cli == '' :
-             break 
+             sleep(20)
+             cli = 'balance'
         cli = 't ' + cli[2:] 
     else :
         cli = input('(cli) > ')
@@ -118,6 +120,8 @@ while(True):
         response = requests.get('{}/balance'.format(HOST))
         balance =  response.json()
         print('Current wallet balance : ', balance)
+        if TEST:
+            break
     
     elif (cli == 'help'):
         print('Commands:')
