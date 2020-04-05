@@ -115,7 +115,6 @@ class State :
         #print('Requesting ADD BLOCK lock', self.lock)
         self.lock.acquire()
         #print('Acquiring lock')
-        self.start = time.time()
         self.TRANSACTIONS_BACKUP = deepcopy(self.transactions)
         self.UTXOS_BACKUP = deepcopy(self.utxos)
 
@@ -146,17 +145,16 @@ class State :
                 print('{} :: Inital block was valid, no need to resolve conflict'.format(time.time()))   
                 #the block is valid, add it to the chain
                 self.chain.append(block)    
-        self.end = time.time()
-        self.total_time += (self.end - self.start)
-        self.num_blocks_calculated += 1
-        self.avg_time = (self.total_time) / (self.num_blocks_calculated)
+
         #print('Running average block addition time: ', self.avg_time,flush=True)
 
         #now release the lock
         #print('Releasing lock')
         #print('Releasing ADD BLOCK lock', self.lock)
-        self.lock.release()
+        print('&&&&&& Adding block to blockchain at time : $',time.time())
         self.coin_distribution()
+        self.lock.release()
+        
         return True 
 
         

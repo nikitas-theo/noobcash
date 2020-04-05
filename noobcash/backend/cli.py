@@ -67,6 +67,9 @@ while(True):
         break
 if TEST: 
     f = open('./{}nodes/transactions{}.txt'.format(n_nodes,my_id))
+    start = time.time()
+    num_trans = 0
+
 while(True):
 
     """ CLI implementation """
@@ -80,12 +83,15 @@ while(True):
         cli = input('(cli) > ')
     cli = cli.strip()
     if (cli.startswith('t')):
-        print(cli)
+      
         cli2 = cli.split()
         node_id = cli2[1]
         amount = cli2[2]
-        print(node_id, amount)
-
+        if TEST :
+            print(cli)
+            print(node_id, amount)
+            num_trans+=1    
+        
         response = requests.post('{}/new_transaction'.format(HOST), json = json.dumps({'recipient_address': '{}'.format(node_id), 'amount': '{}'.format(amount)}))
         if (response.status_code != 200):
             print('Invalid Transaction')
@@ -125,3 +131,6 @@ while(True):
     else :
         print('`{}`'.format(cli))
         print('Unknown command, see [help]')
+if TEST : 
+    end = time.time()
+    print('Transaction throughput (Trans/sec) : ',num_trans/(start - end))
