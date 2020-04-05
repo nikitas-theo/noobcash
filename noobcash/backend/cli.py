@@ -84,7 +84,8 @@ while(True):
              time.sleep(20)
              flag=True
              cli = 'balance'
-        cli = 't ' + cli[2:] 
+        else:
+            cli = 't ' + cli[2:] 
     else :
         cli = input('(cli) > ')
     cli = cli.strip()
