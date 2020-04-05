@@ -82,6 +82,6 @@ class Block :
         if solved :
             self.hash = hash_value.encode()
             self.nonce = nonce
-            self.timestamp = timestamp            
+            self.timestamp = timestamp    
         else : 
             self.mine()

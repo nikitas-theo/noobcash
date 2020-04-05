@@ -33,13 +33,13 @@ class State :
     """
 
     def generate_wallet(self): 
-        print('Requesting GENERATE WALLET lock', self.lock)
-        self.lock.acquire()
+        #print('Requesting GENERATE WALLET lock', self.lock)
+        #self.lock.acquire()
         random_generator = Random.new().read 
         self.key  = RSA.generate(2048,random_generator)
         self.pub = self.key.publickey().exportKey().decode()
-        print('Releasing GENERATE WALLET lock', self.lock)
-        self.lock.release()
+        #print('Releasing GENERATE WALLET lock', self.lock)
+        #self.lock.release()
 
     def __init__(self):
        
@@ -54,37 +54,33 @@ class State :
         self.num_blocks_calculated = 0
         
     def key_to_id(self, key):
-        print('Requesting KEY TO ID lock', self.lock)
-        self.lock.acquire()
         for node in self.nodes.items():
             if (key == node[1]['pub']):
-                print('Releasing KEY TO ID lock', self.lock)
-                self.lock.release()
                 return node[0]
     
     def remove_utxo(self, utxo):
-        print('Requesting REMOVE UTXO lock', self.lock)
-        self.lock.acquire()
+        #print('Requesting REMOVE UTXO lock', self.lock)
+        #self.lock.acquire()
         self.utxos[utxo['owner']].remove(utxo)
-        print('Releasing REMOVE UTXO lock', self.lock)
-        self.lock.release()
+        #print('Releasing REMOVE UTXO lock', self.lock)
+        #self.lock.release()
 
     def add_utxo(self, utxo):
-        print('Requesting ADD UTXO lock', self.lock)
-        self.lock.acquire()
+        #print('Requesting ADD UTXO lock', self.lock)
+        #self.lock.acquire()
         if utxo['owner'] not in self.utxos : self.utxos[utxo['owner']] = []
         self.utxos[utxo['owner']].append(utxo)
-        print('Releasing ADD UTXO lock', self.lock)
-        self.lock.release()
+        #print('Releasing ADD UTXO lock', self.lock)
+        #self.lock.release()
     
     def wallet_balance(self): 
-        print('Requesting WALLET BALANCE SHOW lock', self.lock)
-        self.lock.acquire()
+        #print('Requesting WALLET BALANCE SHOW lock', self.lock)
+        #self.lock.acquire()
         balance = 0
         for utxo in self.utxos[self.pub]: 
             balance+=utxo['amount']
-        print('Releasing WALLET BALANCE SHOW lock', self.lock)
-        self.lock.release()
+        #print('Releasing WALLET BALANCE SHOW lock', self.lock)
+        #self.lock.release()
         return balance 
         
     def genesis(self):
@@ -96,22 +92,29 @@ class State :
         'id' : gen_transaction.id + ':0', 'owner' : gen_transaction.receiver , 'amount' : gen_transaction.amount}]
         self.chain.append(genesis_block)
     
-    def mine_block(self):
-        print('Requesting MINE BLOCK lock', self.lock)
-        self.lock.acquire()
+    def mine_and_broadcast_block(self):
+        #print('Requesting MINE BLOCK lock', self.lock)
+        #self.lock.acquire()
         copy_trans = deepcopy(self.transactions) 
         block = Block(id = len(self.chain)+1, transactions = copy_trans, previous_hash = self.chain[-1].hash)
         block.mine()
-        self.add_block(block)
-        broadcast.broadcast_block(block)
-        print('Releasing MINE BLOCK lock', self.lock)
-        self.lock.release()
+        print('Block mined')
+        if not self.add_block(block):
+            print('Could not add block')
+            return False
+        if not (broadcast.broadcast_block(block)):
+            print('Could not broadcast block as a result of mining')
+            return False
+        print ('Successful mining and broadcast')
+        return True
+        #print('Releasing MINE BLOCK lock', self.lock)
+        #self.lock.release()
         
     def add_block(self, block):
         """ Validate a block and add it to the chain """
         print('Requesting ADD BLOCK lock', self.lock)
         self.lock.acquire()
-        print('Acquiring lock')
+        #print('Acquiring lock')
         self.start = time.time()
         self.TRANSACTIONS_BACKUP = deepcopy(self.transactions)
         self.UTXOS_BACKUP = deepcopy(self.utxos)
@@ -140,17 +143,17 @@ class State :
             if not valid : 
                 self.resolve_conflict()
             if valid :
-                print('Inital block was valid, no need to resolve conflict')       
+                print('Inital block was valid, no need to resolve conflict')   
+                #the block is valid, add it to the chain
+                self.chain.append(block)    
         self.end = time.time()
         self.total_time += (self.end - self.start)
         self.num_blocks_calculated += 1
         self.avg_time = (self.total_time) / (self.num_blocks_calculated)
         print('Running average block addition time: ', self.avg_time,flush=True)
-        #the block is valid, add it to the chain
-        self.chain.append(block)
 
         #now release the lock
-        print('Releasing lock')
+        #print('Releasing lock')
         print('Releasing ADD BLOCK lock', self.lock)
         self.lock.release()
         return True 
@@ -160,12 +163,11 @@ class State :
         '''
         implementation of consensus algorithm
         '''
-        print('Requesting RESOLVE CONFLICT lock', self.lock)
-        self.lock.acquire()
         # acquire lock so that no new blocks get validated during consensus        
         print('Resolve Confict')
-        MAX_LENGTH = len(self.chain)
+        MAX_LENGTH = -1
         MAX_CHAIN = self.chain
+        print('My chain has size ', len(self.chain), ' and the last two blocks are ', self.chain[-2].id, self.chain[-1].id)
         for node in self.nodes.values() :
             if node["pub"] == self.pub :
                 continue 
@@ -177,6 +179,7 @@ class State :
                 continue
             # extract blocks from chain, they are in string format
             chain_temp = response.json()['chain']
+            print('The chain I receive has size ', len(chain_temp))
             chain = []
             for block in chain_temp : 
                 b = Block(**json.loads(block))
@@ -195,8 +198,6 @@ class State :
         
             
         self.chain = MAX_CHAIN  
-        print('Releasing RESOLVE CONFLICT lock', self.lock)
-        self.lock.release()
         return True
 
     def validate_chain(self,chain):
@@ -211,12 +212,14 @@ class State :
             return False 
 
         self.transactions = []
+        self.temp_transactions = []
         gen_transaction = self.chain[0].transactions[0]
         self.utxos = {}
         self.utxos[gen_transaction.receiver]  = [{'trans_id' : gen_transaction.id, 
         'id' : gen_transaction.id + ':0', 'owner' : gen_transaction.receiver , 'amount' : gen_transaction.amount}]
         # replay
         for block_prev,block in zip(chain,chain[1:]):
+            print(block_prev.id, block.id, "Chain under check")
             if not block_prev.hash == block.previous_hash:
                 print('Error, block hash is invalid')
                 print('Releasing VALIDATE CHAIN lock', self.lock)
@@ -233,10 +236,15 @@ class State :
                     print('block transactions are invalid')
                     self.lock.release()
                     return False 
-    
- 
+                self.temp_transactions.append(t)
+            print(block_prev.id, block.id, "connection is correct")
+            
+        self.transactions = []
         for tx in self.TRANSACTIONS_BACKUP:
+            if tx in self.temp_transactions:
+                continue
             Transaction.validate_transaction(tx)
+        print('Length of transactions not in block is: ', len(self.transactions))
         print('Releasing VALIDATE CHAIN lock', self.lock)
         self.lock.release()
         return True
