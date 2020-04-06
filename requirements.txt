@@ -1,3 +1,4 @@
 pycrypto
 pymerkle
 flask
+python==3.5
