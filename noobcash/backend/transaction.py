@@ -58,7 +58,7 @@ class Transaction :
 
     @staticmethod
     def validate_transaction(t):
-        State.state.lock.acquire()
+        #State.state.lock.acquire()
         #print('Requesting VALIDATE TRANSACTION lock', State.state.lock)
         """ 
             - validate incoming transaction
@@ -94,7 +94,7 @@ class Transaction :
         except Exception as e:
             print(str(e))
             #print('Releasing VALIDATE TRANSACTION lock', State.state.lock)
-            State.state.lock.release()
+            #State.state.lock.release()
             return (False)
 
         # remove all spent transactions    
@@ -127,7 +127,7 @@ class Transaction :
         # save transaction
         State.state.transactions.append(t)
         #print('Releasing VALIDATE TRANSACTION lock', State.state.lock)
-        State.state.lock.release()
+        #State.state.lock.release()
    
         return True
     
@@ -140,7 +140,7 @@ class Transaction :
             - update utxos 
 
         """
-        State.state.lock.acquire()
+        #State.state.lock.acquire()
         sender_key = State.state.pub
         inputs = []
 
@@ -156,7 +156,7 @@ class Transaction :
         if coins < amount:
             print('Not enough UTXO coins in wallet, requested ', amount, 'but have', coins)
             #print('Releasing CREATE TRANSACTION lock', State.state.lock)
-            State.state.lock.release()
+            #State.state.lock.release()
             return (False)
 
         # remove all spent transactions    
@@ -195,7 +195,7 @@ class Transaction :
 
         State.state.transactions.append(t)
         #print('Releasing CREATE TRANSACTION lock', State.state.lock)
-        State.state.lock.release()
+        #State.state.lock.release()
         return t
     
 

@@ -116,7 +116,6 @@ class State :
         self.lock.acquire()
         #print('Acquiring lock')
         self.TRANSACTIONS_BACKUP = deepcopy(self.transactions)
-        self.UTXOS_BACKUP = deepcopy(self.utxos)
 
 
         #we need to ensure consensus is not running
@@ -218,8 +217,8 @@ class State :
         self.lock.acquire()
         # we check that the first block is genesis 
         if (self.chain[0].to_json() != chain[0].to_json()):
-            #print('different genesis!')
-            #print('Releasing VALIDATE CHAIN lock', self.lock)
+            print('different genesis!')
+            print('Releasing VALIDATE CHAIN lock', self.lock)
             self.lock.release()
             return False 
 
@@ -255,7 +254,7 @@ class State :
         self.transactions = []
         for tx in self.TRANSACTIONS_BACKUP:
             Transaction.validate_transaction(tx)
-        #print('Releasing VALIDATE CHAIN lock', self.lock)
+        print('Releasing VALIDATE CHAIN lock', self.lock)
         self.lock.release()
         return True
 

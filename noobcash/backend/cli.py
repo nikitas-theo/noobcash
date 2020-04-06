@@ -133,4 +133,4 @@ while(True):
         print('Unknown command, see [help]')
 if TEST : 
     end = time.time()
-    print('Transaction throughput (Trans/sec) : ',num_trans/(start - end))
+    print('Transaction throughput (Trans/sec) : ',num_trans/(end-start))
