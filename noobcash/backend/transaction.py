@@ -17,7 +17,7 @@ class Transaction :
         inputs : list of transaction ids :: list(string) 
         outpus : list of utxos 
         id : transaction hash :: hex string
-        #?hash : transaction hash, but as a hash object :: SHA256 obj
+        hash : transaction hash, but as a hash object :: SHA256 obj
         signature :: byte string 
     """
 
@@ -58,8 +58,6 @@ class Transaction :
 
     @staticmethod
     def validate_transaction(t):
-        #State.state.lock.acquire()
-        #print('Requesting VALIDATE TRANSACTION lock', State.state.lock)
         """ 
             - validate incoming transaction
             - update transaction list
@@ -72,7 +70,6 @@ class Transaction :
         if not t.verify_signature():
             print('Signature did not verify')
             State.state.lock.release()
-            #print('Releasing VALIDATE TRANSACTION lock', State.state.lock)
             return (None,False)
         try : 
             coins = 0
@@ -93,8 +90,6 @@ class Transaction :
                 raise Exception('Not enough UTXO coins in sender')
         except Exception as e:
             print(str(e))
-            #print('Releasing VALIDATE TRANSACTION lock', State.state.lock)
-            #State.state.lock.release()
             return (False)
 
         # remove all spent transactions    
@@ -124,23 +119,20 @@ class Transaction :
                 'amount': t.amount
             }]
             State.state.add_utxo(t.outputs[0])
-        # save transaction
+
         State.state.transactions.append(t)
-        #print('Releasing VALIDATE TRANSACTION lock', State.state.lock)
-        #State.state.lock.release()
+   
    
         return True
     
     @staticmethod
     def create_transaction(receiver_key, amount):
-        #print('Requesting CREATE TRANSACTION lock', State.state.lock)
         """
             - Create a transaction for broadcasting 
             - update transaction listg
             - update utxos 
 
         """
-        #State.state.lock.acquire()
         sender_key = State.state.pub
         inputs = []
 
@@ -155,11 +147,9 @@ class Transaction :
         
         if coins < amount:
             print('Not enough UTXO coins in wallet, requested ', amount, 'but have', coins)
-            #print('Releasing CREATE TRANSACTION lock', State.state.lock)
-            #State.state.lock.release()
+ 
             return (False)
 
-        # remove all spent transactions    
         for utxo in pending_removed: 
             State.state.remove_utxo(utxo)
 
@@ -194,8 +184,7 @@ class Transaction :
             State.state.add_utxo(t.outputs[0])
 
         State.state.transactions.append(t)
-        #print('Releasing CREATE TRANSACTION lock', State.state.lock)
-        #State.state.lock.release()
+
         return t
     
 

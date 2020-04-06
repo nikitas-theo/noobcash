@@ -39,12 +39,13 @@ class Block :
 
     def validate_hash(self):
         # validate block hash value
-        '''
+        # Merkle Tree implementation -- requires Pyhton>=3.6
+        """
         tree = MerkleTree()
         for t in self.transactions :
             tree.encryptRecord(t.id.encode()) # make bytestring
         merkle_hash = tree.rootHash
-        '''
+        """
         id_trans = [t.id for t in self.transactions]
         merkle_hash = ''
         for t_id in id_trans: 
@@ -60,12 +61,12 @@ class Block :
     def mine(self):
 
         # Create hash of transactions with a Merkle Tree
-        '''
+        """
         tree = MerkleTree()
         for t in self.transactions :
             tree.encryptRecord(t.id.encode()) # make bytestring
         merkle_hash = tree.rootHash
-        '''
+        """
         id_trans = [t.id for t in self.transactions]
         merkle_hash = ''
         for t_id in id_trans: 

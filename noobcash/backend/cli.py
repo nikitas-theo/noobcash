@@ -70,22 +70,17 @@ while(True):
         break
 if TEST: 
     f = open('./{}nodes/transactions{}.txt'.format(n_nodes,my_id))
-    start = time.time()
-    num_trans = 0
 
-flag=False
-cnt = 0
+
 while(True):
 
     """ CLI implementation """
     
     if TEST :
-        cnt+=1
         cli = f.readline()
         if cli == '' :
             break
         else:
-            print(cnt)
             cli = 't ' + cli[2:] 
     else :
         cli = input('(cli) > ')
@@ -98,8 +93,7 @@ while(True):
         if TEST :
             print(cli)
             print(node_id, amount)
-            num_trans+=1    
-        
+
         response = requests.post('{}/new_transaction'.format(HOST), json = json.dumps({'recipient_address': '{}'.format(node_id), 'amount': '{}'.format(amount)}))
         if (response.status_code != 200):
             print('Invalid Transaction')
@@ -115,7 +109,7 @@ while(True):
             for key,val in t.items():
                 print('{} : {}'.format(key,val))
     
-    if (cli == 'balance' or cli.startswith('t')):
+    if (cli == 'balance'):
         """ 
         Print the current balance of the wallet,
         by calculating UTXOs.
@@ -123,9 +117,6 @@ while(True):
         response = requests.get('{}/balance'.format(HOST))
         balance =  response.json()
         print('Current wallet balance : ', balance)
-        if TEST:
-            if flag:    
-                break
     
     elif (cli == 'help'):
         print('Commands:')
@@ -142,6 +133,3 @@ while(True):
     else :
         print('`{}`'.format(cli))
         print('Unknown command, see [help]')
-if TEST : 
-    end = time.time()
-    print('Transaction throughput (Trans/sec) : ',num_trans/(end-start))
