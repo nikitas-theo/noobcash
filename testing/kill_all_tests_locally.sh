@@ -4,4 +4,4 @@ do
     echo ${PORT_NUMBER}
 done
 kill -9 `cat save_pid.txt`
-
+rm save_pid.txt

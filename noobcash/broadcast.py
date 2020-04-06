@@ -1,5 +1,3 @@
-from Crypto.PublicKey import RSA
-from Crypto import Random
 from flask import Flask, request, Blueprint, make_response
 import requests
 import simplejson as json
@@ -9,8 +7,10 @@ from block import Block
 import state as State
 from transaction import Transaction
 import config
-import time
+
+
 app = Flask(__name__)
+
 import functools
 print = functools.partial(print, flush=True)
 

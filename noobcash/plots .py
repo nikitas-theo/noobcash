@@ -1,9 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[17]:
-
-
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -32,9 +26,6 @@ def autolabel(rects):
                 ha='center', va='bottom')
 
 plt.savefig('Throughput.pdf')
-
-
-# In[16]:
 
 
 import numpy as np
@@ -66,10 +57,3 @@ def autolabel(rects):
                 ha='center', va='bottom')
 
 plt.savefig('Average Block Time.pdf')
-
-
-# In[ ]:
-
-
-
-

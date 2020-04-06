@@ -1,14 +1,16 @@
 from Crypto.Hash import SHA256
 from Crypto.PublicKey import RSA
 from Crypto.Signature import PKCS1_v1_5
-from Crypto import Random
+
 import simplejson as json
 import base64
-import state as State 
-import config
+
 import functools
 from copy import deepcopy
 print = functools.partial(print, flush=True)
+
+import state as State 
+import config
 
 class Transaction :
     """ sender : pub key :: string
@@ -187,17 +189,3 @@ class Transaction :
 
         return t
     
-
-if __name__ == '__main__':
-    hash  = SHA256.new(b'234234223')
-    print(hash.hexdigest())
-    random_generator = Random.new().read 
-    key  = RSA.generate(2048,random_generator)
-    pub = key.publickey()
-    signer = PKCS1_v1_5.new(key)
-    sig = signer.sign(hash)
-    print(sig)
-    verifier = PKCS1_v1_5.new(pub) 
-    print(verifier.verify(hash, sig))
-
-

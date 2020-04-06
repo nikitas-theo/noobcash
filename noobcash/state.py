@@ -1,7 +1,5 @@
 from Crypto.PublicKey import RSA
-from Crypto.Hash import SHA256
 from Crypto import Random
-from random import randint
 
 from copy import deepcopy
 
@@ -11,9 +9,9 @@ import requests
 import config
 from block import Block
 from transaction import Transaction
+import broadcast
 
 from flask import Flask
-import broadcast
 
 from threading import RLock
 import time
@@ -46,7 +44,7 @@ class State :
         self.chain = []
         self.nodes = {}
         self.transactions = []
-        self.last_id = 0 # for coordinator only 
+        self.last_id = 0
         self.total_time = 0
         self.num_blocks_calculated = 0
         self.avg = None
@@ -108,50 +106,58 @@ class State :
         if not block.validate_hash() or not (block.previous_hash == self.chain[-1].hash) :
             self.resolve_conflict()
         else :
-            # check for block transactions
-            # check if block contains transactions not in old transactions 
-            # if it does, add them (for utxos). 
+
             valid = True 
             for t in block.transactions:
+                
                 exists = False 
                 for state_t in self.transactions: 
                     if t.id == state_t.id : 
                         self.transactions.remove(state_t)
                         exists = True
+                
                 if not exists : 
                     valid = Transaction.validate_transaction(t)
                     if not valid : 
-                        break
-                    self.transactions.remove(t) # remove transaction it has been consumed
-            if not valid : 
-                self.resolve_conflict()
-            if valid :
-                print('{} :: Inital block was valid, no need to resolve conflict'.format(time.time()))   
-                #the block is valid, add it to the chain
+                        break  
+                    self.transactions.remove(t) 
+
+
+            if valid : 
                 self.chain.append(block)    
+            else : 
+                self.resolve_conflict()
+            
 
-
-        # we check that the first block is genesis 
+        # Block statistics  
         if (self.time0 != None):
+
             if self.num_blocks_calculated >= 5 :
+                
                 if self.num_blocks_calculated == 5 : 
-                    self.num_blocks_calculated == 1    
+                    self.num_blocks_calculated == 1  
+
                 self.time1 = time.time()
                 self.total_time = self.time1 - self.time0
                 self.time0 = self.time1
                 self.num_blocks_calculated += 1
+                
                 if (self.avg == None):
                     self.avg = self.total_time/self.num_blocks_calculated
                 else:
                     self.avg = ((self.avg)*(self.num_blocks_calculated - 1) + self.total_time)/self.num_blocks_calculated
+            
             else :
                 self.num_blocks_calculated += 1
 
         else : 
             self.time0 = time.time()
+        
         print('Average time by now', self.avg)
         print('Number of blocks', self.num_blocks_calculated)
+        
         self.coin_distribution()
+        
         self.lock.release()
         
         return True 
@@ -201,6 +207,7 @@ class State :
     
     def coin_distribution(self):
         sum_al = 0
+        print('Coin Distribution')
         for utxo in self.utxos.items():
             print('For node ',self.key_to_id(utxo[0]),': ',end='')
             summ = 0
@@ -208,10 +215,12 @@ class State :
                summ += utxo1['amount']
             print(summ)
             sum_al += summ 
-        print('All money : ',sum_al)
+        print('Overall system Coins : ',sum_al)
 
     def validate_chain(self,chain):
+        
         """ validate the blockchain """
+        
         # we check that the first block is genesis 
         if (self.chain[0].to_json() != chain[0].to_json()):
             print('different genesis!')
