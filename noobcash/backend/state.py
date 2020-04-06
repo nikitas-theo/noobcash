@@ -52,6 +52,7 @@ class State :
         self.last_id = 0 # for coordinator only 
         self.total_time = 0
         self.num_blocks_calculated = 0
+        self.avg = None
         self.time0 = time.time()
         
     def key_to_id(self, key):
@@ -157,7 +158,11 @@ class State :
         self.total_time = self.time1 - self.time0
         self.time0 = self.time1
         self.num_blocks_calculated += 1
-        print('Average time by now', self.total_time/self.num_blocks_calculated)
+        if (self.avg == None):
+            self.avg = self.total_time/self.num_blocks_calculated
+        else:
+            self.avg = ((self.avg)*(self.num_blocks_calculated - 1) + self.total_time)/self.num_blocks_calculated
+        print('Average time by now', self.avg)
         print('Number of blocks', self.num_blocks_calculated)
         self.coin_distribution()
         self.lock.release()
