@@ -52,6 +52,8 @@ class State :
         self.last_id = 0 # for coordinator only 
         self.total_time = 0
         self.num_blocks_calculated = 0
+        self.avg = None
+        self.time0 = time.time()
         
     def key_to_id(self, key):
         for node in self.nodes.items():
@@ -75,12 +77,12 @@ class State :
     
     def wallet_balance(self): 
         #print('Requesting WALLET BALANCE SHOW lock', self.lock)
-        #self.lock.acquire()
+        self.lock.acquire()
         balance = 0
         for utxo in self.utxos[self.pub]: 
             balance+=utxo['amount']
         #print('Releasing WALLET BALANCE SHOW lock', self.lock)
-        #self.lock.release()
+        self.lock.release()
         return balance 
         
     def genesis(self):
@@ -150,7 +152,17 @@ class State :
         #now release the lock
         #print('Releasing lock')
         #print('Releasing ADD BLOCK lock', self.lock)
-        print('&&&&&& Adding block to blockchain at time : $',time.time())
+        
+        self.time1 = time.time()
+        self.total_time = self.time1 - self.time0
+        self.time0 = self.time1
+        self.num_blocks_calculated += 1
+        if (self.avg == None):
+            self.avg = self.total_time/self.num_blocks_calculated
+        else:
+            self.avg = ((self.avg)*(self.num_blocks_calculated - 1) + self.total_time)/self.num_blocks_calculated
+        print('Average time by now', self.avg)
+        print('Number of blocks', self.num_blocks_calculated)
         self.coin_distribution()
         self.lock.release()
         
@@ -249,7 +261,7 @@ class State :
                     #print('block transactions are invalid')
                     self.lock.release()
                     return False 
-            #print(block_prev.id, block.id, "connection is correct")
+            print(block_prev.id, block.id, "connection is correct")
             
         self.transactions = []
         for tx in self.TRANSACTIONS_BACKUP:

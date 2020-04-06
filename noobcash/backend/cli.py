@@ -45,11 +45,14 @@ if args.test :
 else :
     TEST = False
 
+print('a1')
 if (IS_COORDINATOR):
+    print('a2')
     URL = '{}/start_coordinator'.format(HOST)
     response = requests.post(URL, json=json.dumps({'NODE_CAPACITY': str(NODES),\
                              'host': HOST, 'CAPACITY': str(CAPACITY), 'DIFFICULTY': str(DIFFICULTY)}))
 else:
+    print('a3')
     COORDINATOR_HOST = 'http://{}:{}'.format(args.ch,args.cp)
     URL = '{}/start_client'.format(HOST)
     response = requests.post(URL, json=json.dumps({'host': HOST, 'coordinator_host' : COORDINATOR_HOST, \
@@ -70,15 +73,20 @@ if TEST:
     start = time.time()
     num_trans = 0
 
+flag=False
+cnt = 0
 while(True):
 
     """ CLI implementation """
     
     if TEST :
+        cnt+=1
         cli = f.readline()
         if cli == '' :
-             break 
-        cli = 't ' + cli[2:] 
+            break
+        else:
+            print(cnt)
+            cli = 't ' + cli[2:] 
     else :
         cli = input('(cli) > ')
     cli = cli.strip()
@@ -115,6 +123,9 @@ while(True):
         response = requests.get('{}/balance'.format(HOST))
         balance =  response.json()
         print('Current wallet balance : ', balance)
+        if TEST:
+            if flag:    
+                break
     
     elif (cli == 'help'):
         print('Commands:')
