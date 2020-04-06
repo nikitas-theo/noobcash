@@ -167,7 +167,7 @@ def register_node():
         if (not node_ip or not node_pubkey):
             return "Invalid", 400
 
-        new_id = State.state.last_id + 1 #
+        new_id = State.state.last_id + 1 
         print('new node id is:',new_id)
         State.state.last_id = new_id
         new_id = str(new_id)

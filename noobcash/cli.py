@@ -43,20 +43,16 @@ if args.test :
 else :
     TEST = False
 
-print('a1')
 if (IS_COORDINATOR):
-    print('a2')
     URL = '{}/start_coordinator'.format(HOST)
     response = requests.post(URL, json=json.dumps({'NODE_CAPACITY': str(NODES),\
                              'host': HOST, 'CAPACITY': str(CAPACITY), 'DIFFICULTY': str(DIFFICULTY)}))
 else:
-    print('a3')
     COORDINATOR_HOST = 'http://{}:{}'.format(args.ch,args.cp)
     URL = '{}/start_client'.format(HOST)
     response = requests.post(URL, json=json.dumps({'host': HOST, 'coordinator_host' : COORDINATOR_HOST, \
                                                    'CAPACITY': str(CAPACITY), 'DIFFICULTY': str(DIFFICULTY)}))
 my_id = response.json()['id']
-
 # wait for server to notify that every network node has received node info
 while(True):
     response2 = requests.get('{}/notify_start'.format(HOST))
@@ -67,6 +63,7 @@ while(True):
     else:
         break
 if TEST: 
+    print('System node id : ',my_id)
     f = open('../{}nodes/transactions{}.txt'.format(n_nodes,my_id))
 
 
@@ -75,19 +72,20 @@ while(True):
     """ CLI implementation """
     
     if TEST :
+    
         cli = f.readline()
-        if cli == '' :
-            break
-        else:
-            cli = 't ' + cli[2:] 
+        if cli == '' : break
+        else: cli = 't ' + cli[2:] 
+    
     else :
+        
         cli = input('(cli) > ')
+    
     cli = cli.strip()
+    
     if (cli.startswith('t')):
-      
-        cli2 = cli.split()
-        node_id = cli2[1]
-        amount = cli2[2]
+    
+        [node_id,amount] = cli.split()[1:]
         if TEST :
             print(cli)
         response = requests.post('{}/new_transaction'.format(HOST), json = json.dumps({'recipient_address': '{}'.format(node_id), 'amount': '{}'.format(amount)}))
@@ -96,6 +94,7 @@ while(True):
 
     
     elif (cli == 'view'):
+
         response = requests.get('{}/view_transactions'.format(HOST))
         ret = response.json()
         print('Showing latest block transactions:')
@@ -112,7 +111,7 @@ while(True):
         """
         response = requests.get('{}/balance'.format(HOST))
         balance =  response.json()
-        print('Current wallet balance : ', balance)
+        print('Current wallet balance : ', balance) 
     
     elif (cli == 'help'):
         print('Commands:')

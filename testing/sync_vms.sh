@@ -1,4 +1,4 @@
-echo "Every vm (including master) will be synced"
+echo "Every vm (including master) will be synced with the github repository"
 git pull
 scp {state.py,transaction.py,broadcast.py,server.py,cli.py} user@m2:/home/user/
 scp {state.py,transaction.py,broadcast.py,server.py,cli.py} user@m3:/home/user/
