@@ -1,0 +1,2018 @@
+ * Serving Flask app "server" (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://localhost:1234/ (Press CTRL+C to quit)
+-------- genesis --------
+127.0.0.1 - - [06/Apr/2020 17:57:46] "[37mPOST /start_coordinator HTTP/1.1[0m" 201 -
+127.0.0.1 - - [06/Apr/2020 17:57:46] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:46] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:46] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:46] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:47] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:47] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:47] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:47] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:47] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:48] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:48] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:48] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:48] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:48] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:49] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:49] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:49] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:49] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:49] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:50] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:50] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:50] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:50] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:51] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:51] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:51] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+new node id is: 1
+127.0.0.1 - - [06/Apr/2020 17:57:51] "[37mPOST /register_node HTTP/1.1[0m" 200 -
+new node id is: 2
+127.0.0.1 - - [06/Apr/2020 17:57:51] "[37mPOST /register_node HTTP/1.1[0m" 200 -
+new node id is: 3
+127.0.0.1 - - [06/Apr/2020 17:57:51] "[37mPOST /register_node HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:51] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+new node id is: 4
+NEW: Current Transactions not in block: 0
+NEW: Current Transactions not in block: 1
+NEW: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:57:51] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:52] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+Block mined
+1586185072.3065605 :: Inital block was valid, no need to resolve conflict
+Average time by now None
+Number of blocks 0
+For node  0 : 400
+For node  1 : 100
+For node  2 : 0
+For node  3 : 0
+For node  4 : 0
+All money :  500
+Successful mining and broadcast
+127.0.0.1 - - [06/Apr/2020 17:57:52] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+NEW: Current Transactions not in block: 1
+NEW: I have to mine the block, if this tx is valid, I have to make a new one.
+Block mined
+1586185072.4061503 :: Inital block was valid, no need to resolve conflict
+Average time by now None
+Number of blocks 1
+For node  0 : 300
+For node  1 : 100
+For node  2 : 100
+For node  3 : 0
+For node  4 : 0
+All money :  500
+Successful mining and broadcast
+NEW: Current Transactions not in block: 1
+NEW: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:57:52] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:52] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:53] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:53] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:53] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:53] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:53] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:54] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+Block mined
+1586185074.3431535 :: Inital block was valid, no need to resolve conflict
+Average time by now None
+Number of blocks 2
+For node  0 : 200
+For node  1 : 100
+For node  2 : 100
+For node  3 : 100
+For node  4 : 0
+All money :  500
+Successful mining and broadcast
+127.0.0.1 - - [06/Apr/2020 17:57:54] "[37mPOST /register_node HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:54] "[37mGET /notify_start HTTP/1.1[0m" 200 -
+NEW: Current Transactions not in block: 1
+NEW: I have to mine the block, if this tx is valid, I have to make a new one.
+1586185074.8027174 :: Inital block was valid, no need to resolve conflict
+Average time by now None
+Number of blocks 3
+For node  0 : 100
+For node  1 : 100
+For node  2 : 100
+For node  3 : 100
+For node  4 : 100
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:54] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+Block mined
+RECEIVE  : Current Transactions not in block: 0
+For node  0 : 100
+For node  1 : 91
+For node  2 : 100
+For node  3 : 109
+For node  4 : 100
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now None
+Number of blocks 4
+For node  0 : 100
+For node  1 : 91
+For node  2 : 100
+For node  3 : 109
+For node  4 : 100
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now None
+Number of blocks 5
+For node  0 : 100
+For node  1 : 91
+For node  2 : 100
+For node  3 : 109
+For node  4 : 100
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185075.3607602 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.509035587310791
+Number of blocks 6
+For node  0 : 100
+For node  1 : 91
+For node  2 : 100
+For node  3 : 109
+For node  4 : 100
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.47625385011945454
+Number of blocks 7
+For node  0 : 100
+For node  1 : 91
+For node  2 : 100
+For node  3 : 109
+For node  4 : 100
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+Block mined
+1586185075.812327 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.43823346495628357
+Number of blocks 8
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  0 : 93
+For node  1 : 98
+For node  2 : 100
+For node  3 : 109
+For node  4 : 100
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:55] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:56] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:56] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.421159823735555
+Number of blocks 9
+For node  0 : 93
+For node  1 : 98
+For node  2 : 100
+For node  3 : 109
+For node  4 : 100
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:56] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:56] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:56] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 0
+For node  0 : 99
+For node  1 : 92
+For node  2 : 100
+For node  3 : 109
+For node  4 : 100
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:56] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:57:56] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:56] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+For node  0 : 99
+For node  1 : 92
+For node  2 : 106
+For node  3 : 103
+For node  4 : 100
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:56] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:56] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.42305023670196534
+Number of blocks 10
+For node  0 : 99
+For node  1 : 92
+For node  2 : 106
+For node  3 : 103
+For node  4 : 100
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:56] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:56] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:56] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 2
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:57:56] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:57] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+1586185077.2154489 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.446281454779885
+Number of blocks 11
+For node  0 : 99
+For node  1 : 92
+For node  2 : 106
+For node  3 : 103
+For node  4 : 100
+All money :  500
+Block mined
+127.0.0.1 - - [06/Apr/2020 17:57:57] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:57] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4201972683270772
+Number of blocks 12
+For node  0 : 99
+For node  1 : 92
+For node  2 : 106
+For node  3 : 103
+For node  4 : 100
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:57] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:57] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+For node  0 : 99
+For node  1 : 92
+For node  2 : 102
+For node  3 : 103
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:57] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Average time by now 0.3961164951324463
+Number of blocks 13
+For node  0 : 99
+For node  1 : 92
+For node  2 : 102
+For node  3 : 103
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:57] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:57] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:57] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.3731872183935983
+Number of blocks 14
+For node  0 : 99
+For node  1 : 92
+For node  2 : 102
+For node  3 : 103
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:57] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:57] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:57] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:57] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:57] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:58] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+For node  0 : 99
+For node  1 : 92
+For node  2 : 102
+For node  3 : 108
+For node  4 : 99
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:58] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:58] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185078.4357054 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.408611536026001
+Number of blocks 15
+For node  0 : 99
+For node  1 : 92
+For node  2 : 102
+For node  3 : 108
+For node  4 : 99
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:58] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:58] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:58] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4040568768978119
+Number of blocks 16
+For node  0 : 99
+For node  1 : 92
+For node  2 : 102
+For node  3 : 108
+For node  4 : 99
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:58] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:58] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:59] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:59] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:59] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.40897367982303395
+Number of blocks 17
+For node  0 : 99
+For node  1 : 92
+For node  2 : 102
+For node  3 : 108
+For node  4 : 99
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:59] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:59] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.39180747667948407
+Number of blocks 18
+For node  0 : 99
+For node  1 : 92
+For node  2 : 102
+For node  3 : 108
+For node  4 : 99
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:57:59] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:59] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:59] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:59] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:57:59] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  0 : 99
+For node  1 : 92
+For node  2 : 102
+For node  3 : 108
+For node  4 : 99
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:00] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:00] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+NEW: Current Transactions not in block: 2
+NEW: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:58:00] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+1586185080.2735727 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4193167184528552
+Number of blocks 19
+For node  0 : 99
+For node  1 : 92
+For node  2 : 102
+For node  3 : 108
+For node  4 : 99
+All money :  500
+Successful mining and broadcast
+127.0.0.1 - - [06/Apr/2020 17:58:01] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4587539792060852
+Number of blocks 20
+For node  0 : 91
+For node  1 : 92
+For node  2 : 110
+For node  3 : 108
+For node  4 : 99
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:01] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:01] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:01] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:01] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:02] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:02] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 2
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+Block mined
+Average time by now 0.47874248595464797
+Number of blocks 21
+For node  0 : 91
+For node  1 : 92
+For node  2 : 110
+For node  3 : 108
+For node  4 : 99
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:02] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:02] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4625593532215465
+Number of blocks 22
+For node  0 : 91
+For node  1 : 92
+For node  2 : 110
+For node  3 : 108
+For node  4 : 99
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:02] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+1586185082.4837599 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4424875300863515
+Number of blocks 23
+For node  0 : 91
+For node  1 : 92
+For node  2 : 110
+For node  3 : 108
+For node  4 : 99
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:02] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:02] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:02] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:02] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:58:03] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+For node  0 : 91
+For node  1 : 87
+For node  2 : 110
+For node  3 : 113
+For node  4 : 99
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:03] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:03] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+1586185083.553953 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.46864185730616253
+Number of blocks 24
+For node  0 : 91
+For node  1 : 87
+For node  2 : 110
+For node  3 : 113
+For node  4 : 99
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:03] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:03] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:03] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+Average time by now 0.4708011817932129
+Number of blocks 25
+For node  0 : 91
+For node  1 : 87
+For node  2 : 110
+For node  3 : 113
+For node  4 : 99
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:04] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:04] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:04] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+For node  0 : 91
+For node  1 : 87
+127.0.0.1 - - [06/Apr/2020 17:58:04] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  2 : 110
+For node  3 : 105
+For node  4 : 107
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:04] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:04] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185084.909124 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4847213396659264
+Number of blocks 26
+For node  0 : 91
+For node  1 : 87
+For node  2 : 110
+For node  3 : 105
+For node  4 : 107
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:04] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:05] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4922639617213496
+Number of blocks 27
+For node  0 : 91
+For node  1 : 87
+For node  2 : 110
+For node  3 : 105
+For node  4 : 107
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:05] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:05] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:05] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:05] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.48963938440595356
+Number of blocks 28
+For node  0 : 91
+For node  1 : 87
+For node  2 : 110
+For node  3 : 105
+For node  4 : 107
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:06] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:06] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:06] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:06] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:06] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185086.6529024 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4950516799400593
+Number of blocks 29
+For node  0 : 91
+For node  1 : 87
+For node  2 : 104
+For node  3 : 111
+For node  4 : 107
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:06] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:06] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:07] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.49466049671173096
+Number of blocks 30
+For node  0 : 91
+For node  1 : 87
+For node  2 : 104
+For node  3 : 111
+For node  4 : 107
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:07] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:07] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+Block mined
+127.0.0.1 - - [06/Apr/2020 17:58:07] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4941922080132269
+Number of blocks 31
+For node  0 : 91
+For node  1 : 87
+For node  2 : 104
+For node  3 : 111
+For node  4 : 107
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:07] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:07] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:07] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4851068928837776
+Number of blocks 32
+For node  0 : 91
+For node  1 : 87
+For node  2 : 104
+For node  3 : 111
+For node  4 : 107
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:07] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:07] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:08] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:08] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185088.0898974 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4782841350093032
+Number of blocks 33
+For node  0 : 91
+For node  1 : 87
+For node  2 : 104
+For node  3 : 111
+For node  4 : 107
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:08] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:08] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:08] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:08] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+Given input UTXO is not found in utxo records
+For node  0 : 91
+For node  1 : 87
+For node  2 : 104
+For node  3 : 111
+For node  4 : 107
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:08] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:08] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+127.0.0.1 - - [06/Apr/2020 17:58:08] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4741695628446691
+Number of blocks 34
+For node  0 : 91
+For node  1 : 87
+For node  2 : 104
+For node  3 : 111
+For node  4 : 107
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:08] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  0 : 91
+For node  1 : 87
+For node  2 : 104
+For node  3 : 111
+For node  4 : 107
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:08] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+1586185088.5775688 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.46488661766052247
+Number of blocks 35
+For node  0 : 100
+For node  1 : 87
+For node  2 : 104
+For node  3 : 102
+For node  4 : 107
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:08] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+NEW: Current Transactions not in block: 0
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:58:08] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+1586185088.7805212 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4576102958785163
+Number of blocks 36
+For node  0 : 93
+For node  1 : 87
+For node  2 : 111
+For node  3 : 102
+For node  4 : 107
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:08] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:09] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:09] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:09] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+Given input UTXO is not found in utxo records
+For node  0 : 93
+For node  1 : 87
+For node  2 : 111
+For node  3 : 102
+For node  4 : 107
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:09] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:09] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:09] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:09] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4741646534687764
+Number of blocks 37
+For node  0 : 93
+For node  1 : 87
+For node  2 : 111
+For node  3 : 102
+For node  4 : 107
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:09] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+For node  0 : 97
+For node  1 : 87
+For node  2 : 111
+For node  3 : 102
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:09] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:09] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:09] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4643884207073011
+Number of blocks 38
+For node  0 : 97
+For node  1 : 87
+For node  2 : 111
+For node  3 : 102
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:09] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:09] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:10] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+127.0.0.1 - - [06/Apr/2020 17:58:10] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Actually found a different chain
+Average time by now 0.45687300730974245
+Number of blocks 39
+For node  0 : 97
+For node  1 : 87
+For node  2 : 111
+For node  3 : 102
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:10] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:10] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4481576502323151
+Number of blocks 40
+For node  0 : 97
+For node  1 : 87
+For node  2 : 111
+For node  3 : 102
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:10] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:10] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:10] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:10] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:10] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:10] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  0 : 97
+For node  1 : 87
+For node  2 : 111
+For node  3 : 102
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:10] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:10] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+NEW: Current Transactions not in block: 0
+127.0.0.1 - - [06/Apr/2020 17:58:10] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:58:10] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+Actually found a different chain
+Block mined
+Average time by now 0.45935063827328565
+Number of blocks 41
+For node  0 : 92
+For node  1 : 87
+For node  2 : 110
+For node  3 : 102
+For node  4 : 109
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:11] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:11] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:11] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:11] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4561122428803217
+Number of blocks 42
+For node  0 : 92
+For node  1 : 87
+For node  2 : RECEIVE  : Current Transactions not in block: 1
+110
+For node  3 : RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+102
+For node  4 : 109
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:11] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:11] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:11] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+Average time by now 0.46663340302400813
+Number of blocks 43
+For node  0 : 92
+For node  1 : 87
+For node  2 : 110
+For node  3 : 102
+For node  4 : 109
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:12] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+127.0.0.1 - - [06/Apr/2020 17:58:12] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.465341026132757
+Number of blocks 44
+For node  0 : 92
+For node  1 : 87
+For node  2 : 127.0.0.1 - - [06/Apr/2020 17:58:12] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+110
+For node  3 : 102
+For node  4 : 109
+All money :  500
+1586185092.8450866 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.45657118161519367
+Number of blocks 45
+For node  0 : 92
+For node  1 : 87
+For node  2 : 110
+For node  3 : 102
+For node  4 : 109
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:12] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:12] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+For node  0 : 92
+For node  1 : 87
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  2 : 120
+For node  3 : 92
+For node  4 : 109
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4545938294866811
+Number of blocks 46
+For node  0 : 92
+For node  1 : 87
+For node  2 : 120
+For node  3 : 92
+For node  4 : 109
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+For node  0 : 94
+For node  1 : 85
+For node  2 : 120
+For node  3 : 92
+For node  4 : 109
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+For node  0 : 94
+For node  1 : 86
+For node  2 : 120
+For node  3 : 92
+For node  4 : 108
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Block mined
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4578413658953728
+Number of blocks 47
+For node  0 : 94
+For node  1 : 86
+For node  2 : 120
+For node  3 : 92
+For node  4 : 108
+All money :  500
+1586185093.8258672 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4483584513266881
+Number of blocks 48
+For node  0 : 94
+For node  1 : 86
+For node  2 : 120
+For node  3 : 92
+For node  4 : 108
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:13] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:14] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:14] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4454889540769616
+Number of blocks 49
+For node  0 : 94
+For node  1 : 86
+For node  2 : 120
+For node  3 : 92
+For node  4 : 108
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:14] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:14] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:14] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:14] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:14] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.44842814445495605
+Number of blocks 50
+For node  0 : 94
+For node  1 : 86
+For node  2 : 120
+For node  3 : 92
+For node  4 : 108
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:14] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:14] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+Given input UTXO is not found in utxo records
+For node  0 : 94
+127.0.0.1 - - [06/Apr/2020 17:58:14] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  1 : 86
+For node  2 : 120
+For node  3 : 92
+For node  4 : 108
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:14] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:14] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:15] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185095.1580617 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.44806911431106866
+Number of blocks 51
+For node  0 : 94
+For node  1 : 86
+For node  2 : 120
+For node  3 : 92
+For node  4 : 108
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:15] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:15] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:15] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:15] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.44526118957079375
+Number of blocks 52
+For node  0 : 94
+For node  1 : 86
+For node  2 : 120
+For node  3 : 92
+For node  4 : 108
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:15] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+For node  0 : 94
+For node  1 : 86
+For node  2 : 120
+For node  3 : 92
+For node  4 : 108
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:15] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+NEW: Current Transactions not in block: 1
+NEW: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:58:15] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.44353773458948675
+Number of blocks 53
+For node  0 : 94
+For node  1 : 86
+For node  2 : 120
+For node  3 : 92
+For node  4 : 108
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:15] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185096.0995376 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.44070691532558864
+Number of blocks 54
+For node  0 : 94
+127.0.0.1 - - [06/Apr/2020 17:58:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  1 : 86
+For node  2 : 120
+For node  3 : 92
+For node  4 : 108
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:16] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 0
+For node  0 : 99
+For node  1 : 86
+For node  2 : 127.0.0.1 - - [06/Apr/2020 17:58:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+120
+For node  3 : 92
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:16] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:58:16] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4495200677351518
+Number of blocks 55
+For node  0 : 99
+For node  1 : 86
+For node  2 : 120
+For node  3 : 92
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:17] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185097.7509787 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4543651470116207
+Number of blocks 56
+For node  0 : 99
+For node  1 : 86
+For node  2 : 120
+For node  3 : 92
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:17] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+Block mined
+Block mined
+127.0.0.1 - - [06/Apr/2020 17:58:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4481779608810157
+Number of blocks 57
+For node  0 : 99
+For node  1 : 86
+For node  2 : 120
+For node  3 : 92
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.44235793886513547
+Number of blocks 58
+For node  0 : 99
+For node  1 : 86
+For node  2 : 120
+For node  3 : 92
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:17] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:18] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:18] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:18] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 0
+For node  0 : 99
+For node  1 : 94
+For node  2 : 120
+For node  3 : 84
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:18] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.43854381674427095
+Number of blocks 59
+For node  0 : 99
+For node  1 : 94
+For node  2 : 120
+For node  3 : 84
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:18] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:18] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:18] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+For node  0 : 99
+For node  1 : 89
+For node  2 : 120
+For node  3 : 84
+For node  4 : 108
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:18] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:18] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:18] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+127.0.0.1 - - [06/Apr/2020 17:58:18] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185099.3745584 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4511335770289103
+Number of blocks 60
+For node  0 : 94
+For node  1 : 94
+For node  2 : 120
+For node  3 : 84
+For node  4 : 108
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:19] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:19] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 2
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:58:19] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+Average time by now 0.4489683362304187
+Number of blocks 61
+For node  0 : 94
+For node  1 : 94
+For node  2 : 120
+For node  3 : 84
+For node  4 : 108
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:19] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:19] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4439178628306235
+Number of blocks 62
+For node  0 : 94
+For node  1 : 94
+For node  2 : 120
+For node  3 : 84
+For node  4 : 108
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:19] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+1586185099.8302011 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4368837523081946
+Number of blocks 63
+For node  0 : 94
+For node  1 : 94
+For node  2 : 120
+For node  3 : 84
+For node  4 : 108
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:19] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:19] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:20] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:20] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:20] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:20] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:20] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.43606460466980934
+Number of blocks 64
+For node  0 : 94
+For node  1 : 94
+For node  2 : 120
+For node  3 : 84
+For node  4 : 108
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:20] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:20] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:20] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:20] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:20] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:20] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+For node  0 : 94
+For node  1 : 94
+For node  2 : 122
+For node  3 : 84
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:21] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:21] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185101.4966307 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4490781784057617
+Number of blocks 65
+For node  0 : 94
+For node  1 : 94
+For node  2 : 122
+For node  3 : 84
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:21] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:21] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:22] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.45111881602894177
+Number of blocks 66
+For node  0 : 94
+For node  1 : 94
+For node  2 : 122
+For node  3 : 84
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:22] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:22] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:22] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:22] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:22] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.45002321342923746
+Number of blocks 67
+For node  0 : 94
+For node  1 : 94
+For node  2 : 122
+For node  3 : 84
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:22] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+For node  0 : 94
+For node  1 : 94
+For node  2 : 122
+For node  3 : 84
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:22] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+NEW: Current Transactions not in block: 1
+NEW: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:58:22] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:22] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:22] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:22] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+Given input UTXO is not found in utxo records
+Actually found a different chain
+Average time by now 0.45557423549539905
+Number of blocks 68
+For node  0 : 94
+For node  1 : 94
+For node  2 : 122
+For node  3 : 84
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+Average time by now 0.4498028824294823
+Number of blocks 69
+For node  0 : 94
+For node  1 : 94
+For node  2 : 122
+For node  3 : 84
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.44431153365543913
+Number of blocks 70
+For node  0 : 94
+For node  1 : 94
+For node  2 : 122
+For node  3 : 84
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+Average time by now 0.43919188203945964
+Number of blocks 71
+For node  0 : 94
+For node  1 : 94
+For node  2 : 122
+For node  3 : 84
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 0
+For node  0 : 94
+For node  1 : 94
+For node  2 : 131
+For node  3 : 75
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.438982841041353
+Number of blocks 72
+For node  0 : 94
+For node  1 : 94
+For node  2 : 131
+For node  3 : 75
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:23] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:24] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:58:24] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185104.1548195 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4363709083975178
+Number of blocks 73
+127.0.0.1 - - [06/Apr/2020 17:58:24] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  0 : 94
+For node  1 : 94
+For node  2 : 131
+For node  3 : 75
+127.0.0.1 - - [06/Apr/2020 17:58:24] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:24] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:24] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+127.0.0.1 - - [06/Apr/2020 17:58:24] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:24] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+Average time by now 0.4426845795399434
+Number of blocks 74
+For node  0 : 88
+For node  1 : 94
+For node  2 : 131
+For node  3 : 81
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:25] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+1586185105.3170216 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4401399485270182
+Number of blocks 75
+For node  0 : 88
+For node  1 : 93
+For node  2 : 131
+For node  3 : 127.0.0.1 - - [06/Apr/2020 17:58:25] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+82
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:25] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:25] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+127.0.0.1 - - [06/Apr/2020 17:58:25] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:25] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+Average time by now 0.44341794754329483
+Number of blocks 76
+For node  0 : 88
+For node  1 : 93
+For node  2 : 131
+For node  3 : 82
+For node  4 : 106
+All money :  500
+1586185106.0585709 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4384040460958109
+Number of blocks 77
+For node  0 : 88
+For node  1 : 93
+For node  2 : 130
+For node  3 : 83
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:26] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:26] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+127.0.0.1 - - [06/Apr/2020 17:58:26] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:26] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:26] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.44329476050841504
+Number of blocks 78
+For node  0 : 88
+For node  1 : 93
+For node  2 : Block mined
+130
+For node  3 : 83
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:27] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:27] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:27] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+Given input UTXO is not found in utxo records
+For node  0 : 88
+For node  1 : 93
+For node  2 : 130
+For node  3 : 83
+Average time by now 0.4444179052039038
+Number of blocks 79
+For node  0 : 88
+For node  1 : 93
+For node  2 : 130
+For node  3 : 83
+For node  4 : 106
+All money :  500
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:27] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:27] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:27] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185107.7094033 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.44260370135307314
+Number of blocks 80
+For node  0 : 88
+For node  1 : 127.0.0.1 - - [06/Apr/2020 17:58:27] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+93
+For node  2 : 127.0.0.1 - - [06/Apr/2020 17:58:27] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+137
+For node  3 : 76
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:27] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+Given input UTXO is not found in utxo records
+For node  0 : 88
+127.0.0.1 - - [06/Apr/2020 17:58:27] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  1 : 93
+For node  2 : 137
+For node  3 : 76
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:27] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:27] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:27] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Actually found a different chain
+Average time by now 0.4434804651472304
+Number of blocks 81
+For node  0 : 88
+For node  1 : 93
+For node  2 : 137
+For node  3 : 76
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.43965424270164677
+Number of blocks 82
+For node  0 : 88
+For node  1 : 93
+For node  2 : 137
+For node  3 : 76
+For node  4 : 106
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  0 : 88
+For node  1 : 102
+For node  2 : 137
+For node  3 : 76
+For node  4 : 97
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Average time by now 0.4352158379842
+Number of blocks 83
+For node  0 : 88
+For node  1 : 102
+For node  2 : 137
+For node  3 : 76
+For node  4 : 97
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4322239415986197
+Number of blocks 84
+For node  0 : 88
+For node  1 : 102
+For node  2 : 137
+For node  3 : 76
+For node  4 : 97
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185108.8268142 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4296502674327177
+Number of blocks 85
+For node  0 : 88
+For node  1 : 102
+For node  2 : 137
+For node  3 : 76
+For node  4 : 97
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 0
+For node  0 : 88
+For node  1 : 102
+For node  2 : 137
+For node  3 : 71
+For node  4 : 102
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:28] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:29] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:29] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:29] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:29] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+Given input UTXO is not found in utxo records
+For node  0 : 88
+For node  1 : 102
+For node  2 : 137
+For node  3 : 71
+For node  4 : 102
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:29] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Average time by now 0.43193416817243707
+Number of blocks 86
+For node  0 : 88
+For node  1 : 102
+For node  2 : 137
+For node  3 : 71
+For node  4 : 102
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:29] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:29] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  0 : 88
+For node  1 : 102
+For node  2 : 137
+For node  3 : 71
+For node  4 : 102
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:29] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+NEW: Current Transactions not in block: 1
+NEW: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:58:29] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:29] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185109.8624814 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4317360773853872
+Number of blocks 87
+RECEIVE  : Current Transactions not in block: 0
+For node  0 : For node  0 : 88
+88
+For node  1 : For node  1 : 92
+For node  2 : 92
+147
+For node  3 : 71
+For node  4 : 102
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:30] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+For node  2 : 147
+For node  3 : 71
+For node  4 : 102
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:30] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:30] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:30] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:30] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+Block mined
+127.0.0.1 - - [06/Apr/2020 17:58:31] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+Average time by now 0.4435440247709101
+Number of blocks 88
+For node  0 : 88
+For node  1 : 92
+For node  2 : 147
+For node  3 : 71
+For node  4 : 102
+All money :  500
+1586185111.3390226 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.43856714816575637
+Number of blocks 89
+For node  0 : 88
+For node  1 : 92
+For node  2 : 147
+For node  3 : 71
+For node  4 : 102
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:31] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.43482369052039255
+Number of blocks 90
+For node  0 : 88
+For node  1 : 92
+For node  2 : 147
+For node  3 : 71
+For node  4 : 102
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:31] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:31] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:31] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:31] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:31] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:31] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:32] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:32] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:32] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:32] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+127.0.0.1 - - [06/Apr/2020 17:58:33] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:33] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:33] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4486469331678453
+Number of blocks 91
+For node  0 : 82
+For node  1 : 98
+For node  2 : 147
+For node  3 : 71
+For node  4 : 102
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:33] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+1586185113.1370153 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4438097736109858
+Number of blocks 92
+For node  0 : 82
+For node  1 : 98
+For node  2 : 147
+For node  3 : 69
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:33] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:33] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:33] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+Given input UTXO is not found in utxo records
+For node  0 : 82
+For node  1 : 98
+For node  2 : 147
+For node  3 : 69
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:33] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Average time by now 0.4404994954345047
+Number of blocks 93
+For node  0 : 82
+For node  1 : 98
+For node  2 : 147
+For node  3 : 69
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:33] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+Average time by now 0.4364568121889804
+Number of blocks 94
+For node  0 : 82
+For node  1 : 98
+For node  2 : 147
+For node  3 : 69
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:33] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:33] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:33] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:33] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:33] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:33] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:33] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:58:34] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:34] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:34] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:34] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:34] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185114.3504167 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4425677399886282
+Number of blocks 95
+For node  0 : 82
+For node  1 : 98
+For node  2 : 147
+127.0.0.1 - - [06/Apr/2020 17:58:34] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  3 : 69
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:34] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:34] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4417345349987348
+Number of blocks 96
+For node  0 : 82
+For node  1 : 98
+For node  2 : 147
+For node  3 : 69
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:34] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:34] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:34] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+127.0.0.1 - - [06/Apr/2020 17:58:34] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.44053988358409135
+Number of blocks 97
+For node  0 : 82
+For node  1 : 98
+For node  2 : 147
+For node  3 : 69
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:35] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.43692060149445827
+Number of blocks 98
+For node  0 : 82
+For node  1 : 98
+For node  2 : 147
+For node  3 : 69
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:35] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:35] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:35] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:35] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 0
+For node  0 : 82
+For node  1 : 90
+For node  2 : 155
+For node  3 : 69
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:35] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:35] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185115.2129748 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.43339872841883187
+Number of blocks 99
+For node  0 : 83
+For node  1 : 90
+For node  2 : 155
+For node  3 : 69
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:35] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:35] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:35] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:35] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+Given input UTXO is not found in utxo records
+For node  0 : 83
+For node  1 : 90
+For node  2 : 155
+For node  3 : 69
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:35] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:35] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:35] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:36] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:36] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:36] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  0 : 83
+For node  1 : 90
+For node  2 : 155
+For node  3 : 69
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:36] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+NEW: Current Transactions not in block: 1
+NEW: I have to mine the block, if this tx is valid, I have to make a new one.
+Block mined
+Average time by now 0.4453383827209473
+Number of blocks 100
+For node  0 : 83
+For node  1 : 90
+For node  2 : 155
+For node  3 : 69
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:36] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+1586185116.8411088 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.44093629157189096
+Number of blocks 101
+For node  0 : 83
+For node  1 : 90
+For node  2 : 155
+For node  3 : 69
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:37] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.44467123115763946
+Number of blocks 102
+For node  0 : 83
+For node  1 : 90
+For node  2 : 155
+For node  3 : 69
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:37] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:37] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:37] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:38] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:38] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:38] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:38] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 0
+For node  0 : 92
+For node  1 : 81
+For node  2 : 155
+For node  3 : 69
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:38] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:58:38] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:38] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:38] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4535532067122969
+Number of blocks 103
+For node  0 : 92
+For node  1 : 81
+For node  2 : 155
+For node  3 : 69
+For node  4 : 103
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:39] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:39] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:39] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+127.0.0.1 - - [06/Apr/2020 17:58:39] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4525792048527644
+Number of blocks 104
+For node  0 : 86
+For node  1 : 81
+For node  2 : 155
+For node  3 : 69
+For node  4 : 109
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:39] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:39] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185119.5836816 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4502585638137091
+Number of blocks 105
+For node  0 : 93
+For node  1 : 81
+For node  2 : 155
+For node  3 : 62
+For node  4 : 109
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:39] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:39] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+127.0.0.1 - - [06/Apr/2020 17:58:39] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:39] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4501932094681938
+Number of blocks 106
+For node  0 : 93
+For node  1 : 81
+For node  2 : 155
+For node  3 : 62
+For node  4 : 109
+All money :  500
+RECEIVE  : Current Transactions not in block: 2
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:58:40] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:40] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:40] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 2
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:58:40] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+1586185120.640518 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4517195157915632
+Number of blocks 107
+For node  0 : 93
+For node  1 : 81
+For node  2 : 155
+For node  3 : 67
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:40] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:40] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:41] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:41] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:41] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:41] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+Given input UTXO is not found in utxo records
+For node  0 : 93
+For node  1 : 81
+For node  2 : 155
+For node  3 : 67
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:41] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+Average time by now 0.45920660760667587
+Number of blocks 108
+For node  0 : 93
+For node  1 : 81
+For node  2 : 155
+For node  3 : 67
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:42] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:42] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+127.0.0.1 - - [06/Apr/2020 17:58:42] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:42] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+Actually found a different chain
+127.0.0.1 - - [06/Apr/2020 17:58:42] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.46446145565137953
+Number of blocks 109
+For node  0 : 93
+For node  1 : 81
+For node  2 : 155
+For node  3 : 67
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:43] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:43] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Actually found a different chain
+127.0.0.1 - - [06/Apr/2020 17:58:43] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:43] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.46611689654263583
+Number of blocks 110
+For node  0 : 93
+For node  1 : 85
+For node  2 : 151
+For node  3 : 67
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:43] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+Given input UTXO is not found in utxo records
+For node  0 : 93
+For node  1 : 85
+127.0.0.1 - - [06/Apr/2020 17:58:43] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  2 : 151
+For node  3 : 67
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:43] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:43] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+Average time by now 0.4650220419909503
+Number of blocks 111
+For node  0 : 93
+For node  1 : 85
+For node  2 : 151
+For node  3 : 67
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:43] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:43] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:44] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.4617620770420347
+Number of blocks 112
+For node  0 : 93
+For node  1 : 85
+For node  2 : 151
+For node  3 : 67
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:44] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+Average time by now 0.45838931598494537
+Number of blocks 113
+For node  0 : 93
+For node  1 : 85
+For node  2 : 151
+For node  3 : 67
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:44] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:44] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:44] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:44] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:44] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:58:44] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:44] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 1
+RECEIVE: I have to mine the block, if this tx is valid, I have to make a new one.
+127.0.0.1 - - [06/Apr/2020 17:58:44] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.46084642201139214
+127.0.0.1 - - [06/Apr/2020 17:58:44] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Number of blocks 114
+For node  0 : 93
+For node  1 : 85
+For node  2 : 151
+For node  3 : 67
+For node  4 : 104
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:45] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+1586185125.0183184 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4584101448888364
+Successful mining and broadcast
+Number of blocks 115
+For node  0 : 127.0.0.1 - - [06/Apr/2020 17:58:45] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Given input UTXO is not found in utxo records
+For node  0 : 93
+For node  1 : 85
+For node  2 : 151
+For node  3 : 59
+For node  4 : 112
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:45] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+93
+For node  1 : 85
+For node  2 : 151
+For node  3 : 59
+For node  4 : 112
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:45] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:45] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:45] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:45] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:45] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:45] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+For node  0 : 93
+For node  1 : 85
+For node  2 : 151
+For node  3 : 59
+For node  4 : 112
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:45] "[37mPOST /new_transaction HTTP/1.1[0m" 200 -
+NEW: Current Transactions not in block: 1
+NEW: I have to mine the block, if this tx is valid, I have to make a new one.
+Block mined
+Block mined
+Average time by now 0.4672738765848094
+Number of blocks 116
+For node  0 : 93
+For node  1 : 85
+For node  2 : 151
+For node  3 : 59
+For node  4 : 112
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:46] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+1586185126.5313635 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.46350357063815123
+Number of blocks 117
+For node  0 : 93
+For node  1 : 85
+For node  2 : 151
+For node  3 : 127.0.0.1 - - [06/Apr/2020 17:58:46] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+59
+For node  4 : 112
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:46] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:46] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:46] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+RECEIVE  : Current Transactions not in block: 0
+For node  0 : 93
+For node  1 : 88
+For node  2 : 148
+127.0.0.1 - - [06/Apr/2020 17:58:46] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Block mined
+For node  3 : 59
+Average time by now 0.4624426950842647
+For node  4 : Number of blocks 118
+112
+For node  0 : All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:46] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+93
+For node  1 : 88
+For node  2 : 148
+For node  3 : 59
+For node  4 : 112
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:46] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Average time by now 0.45966411237957094
+Number of blocks 119
+For node  0 : 93
+For node  1 : 88
+For node  2 : 148
+For node  3 : 59
+For node  4 : 112
+All money :  500
+Average time by now 0.4572836359341939
+Number of blocks 120
+For node  0 : 93
+For node  1 : 88
+For node  2 : 148
+For node  3 : 59
+For node  4 : 112
+All money :  500
+1586185127.3350163 :: Inital block was valid, no need to resolve conflict
+Average time by now 0.4547807382158011
+Number of blocks 121
+For node  0 : 93
+For node  1 : 88
+For node  2 : 148
+For node  3 : 59
+For node  4 : 112
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:47] "[37mPOST /receive_block HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:47] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:47] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:47] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:47] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+127.0.0.1 - - [06/Apr/2020 17:58:48] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:48] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:48] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:48] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+For node  0 : 90
+For node  1 : 81
+For node  2 : 155
+For node  3 : 59
+For node  4 : 115
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:48] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:48] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:48] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:48] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:48] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+Successful mining and broadcast
+Given input UTXO is not found in utxo records
+For node  0 : 90
+For node  1 : 81
+For node  2 : 155
+For node  3 : 59
+For node  4 : 115
+All money :  500
+127.0.0.1 - - [06/Apr/2020 17:58:49] "[37mPOST /receive_transaction HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:49] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:49] "[37mGET /request_chain HTTP/1.1[0m" 200 -
+127.0.0.1 - - [06/Apr/2020 17:58:49] "[37mGET /request_chain HTTP/1.1[0m" 200 -

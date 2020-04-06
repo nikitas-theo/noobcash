@@ -1,0 +1,73 @@
+a1
+a3
+t 2 6
+t 4 8
+t 0 9
+t 2 10
+t 1 8
+t 2 9
+t 2 7
+t 4 5
+t 4 2
+t 0 7
+t 4 8
+Invalid Transaction
+t 1 3
+Traceback (most recent call last):
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/urllib3/connectionpool.py", line 384, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/urllib3/connectionpool.py", line 380, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/nikitas/anaconda3/lib/python3.7/http/client.py", line 1336, in getresponse
+    response.begin()
+  File "/home/nikitas/anaconda3/lib/python3.7/http/client.py", line 306, in begin
+    version, status, reason = self._read_status()
+  File "/home/nikitas/anaconda3/lib/python3.7/http/client.py", line 275, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+http.client.RemoteDisconnected: Remote end closed connection without response
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/requests/adapters.py", line 449, in send
+    timeout=timeout
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/urllib3/connectionpool.py", line 638, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/urllib3/util/retry.py", line 368, in increment
+    raise six.reraise(type(error), error, _stacktrace)
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/urllib3/packages/six.py", line 685, in reraise
+    raise value.with_traceback(tb)
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/urllib3/connectionpool.py", line 600, in urlopen
+    chunked=chunked)
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/urllib3/connectionpool.py", line 384, in _make_request
+    six.raise_from(e, None)
+  File "<string>", line 2, in raise_from
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/urllib3/connectionpool.py", line 380, in _make_request
+    httplib_response = conn.getresponse()
+  File "/home/nikitas/anaconda3/lib/python3.7/http/client.py", line 1336, in getresponse
+    response.begin()
+  File "/home/nikitas/anaconda3/lib/python3.7/http/client.py", line 306, in begin
+    version, status, reason = self._read_status()
+  File "/home/nikitas/anaconda3/lib/python3.7/http/client.py", line 275, in _read_status
+    raise RemoteDisconnected("Remote end closed connection without"
+urllib3.exceptions.ProtocolError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "./../noobcash//cli.py", line 95, in <module>
+    response = requests.post('{}/new_transaction'.format(HOST), json = json.dumps({'recipient_address': '{}'.format(node_id), 'amount': '{}'.format(amount)}))
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/requests/api.py", line 116, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/requests/api.py", line 60, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/requests/sessions.py", line 533, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/requests/sessions.py", line 646, in send
+    r = adapter.send(request, **kwargs)
+  File "/home/nikitas/anaconda3/lib/python3.7/site-packages/requests/adapters.py", line 498, in send
+    raise ConnectionError(err, request=request)
+requests.exceptions.ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
