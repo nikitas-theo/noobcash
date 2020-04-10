@@ -1,7 +1,8 @@
 ## Noobcash : a blockchain system implementation 
  
-The system was implemented for the  2019-20 Distributed Systems course at the NTUA 
-A joint effort of : <stelKasouridis>, <orestisChardouvelis> , <nikitas-theo> 
+The system was implemented for the  2019-20 Distributed Systems course at the NTUA
+
+A joint effort of :    <[nikitas-theo](https://github.com/nikitas-theo)\> , <[stelkasouridis](https://github.com/stelkasouridis)\>, <[orestischar](https://github.com/orestischar)\> 
 
 * Consensus is guaranteed by Proof of Work. 
 * Communication is achieved  with Flask REST API

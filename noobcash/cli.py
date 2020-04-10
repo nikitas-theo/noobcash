@@ -98,7 +98,7 @@ while(True):
         ret = response.json()
         print('Showing latest block transactions:')
         for i,t in enumerate(ret['transactions']): 
-            print('Transaction #{}\n'.format(i+1))
+            print('\nTransaction #{}\n'.format(i+1))
             t = json.loads(t)
             for key,val in t.items():
                 print('{} : {}'.format(key,val))
