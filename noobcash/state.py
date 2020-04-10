@@ -78,7 +78,7 @@ class State :
         gen_utxo = [{'trans_id' : gen_transaction.id, 
         'id' : gen_transaction.id + ':0', 'owner' : gen_transaction.receiver , 'amount' : gen_transaction.amount}]
         # add gen_utxo to transaction output
-        gen_transactions.outputs = [gen_utxo]
+        gen_transaction.outputs = [gen_utxo]
         genesis_block = Block(id = '0',transactions = [gen_transaction], previous_hash = '1', nonce = '0',hash = b'1')  
         self.utxos[self.pub] = gen_utxo 
         self.chain.append(genesis_block)

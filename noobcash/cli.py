@@ -80,9 +80,8 @@ while(True):
     else :
         
         cli = input('(cli) > ')
-    
     cli = cli.strip()
-    
+    if cli == '' : continue 
     if (cli.startswith('t')):
     
         [node_id,amount] = cli.split()[1:]
