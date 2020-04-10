@@ -116,7 +116,7 @@ while(True):
     elif (cli == 'help'):
         print('Commands:')
         print('[t <recipient_id> amount]:')
-        print('\t\t Give <amount> noobchash coins to network node with id <recipient_id>, usecase: id3 100 \\n')
+        print('\t\t Give <amount> noobchash coins to network node with id <recipient_id>, usecase: 3 100 \\n')
         print('[view]:')
         print('\t\tview all transactions in the latest block of the blockchain')
         print('[balance]:')
